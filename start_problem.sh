@@ -137,7 +137,7 @@ do
 		read ans
 		if [ "$ans" = y ];
 		then
-			mkdir ${dir}
+			mkdir ${user}/${dir}
 			printf "\e[32m%s\033[0m\n" "$dir"
 			break ;
 		fi
@@ -162,13 +162,14 @@ read problem_num
 #######    problem initalize    ########
 ########################################
 # echo ${PWD}
+number=1
 mkdir ${barking_dir}/${user}/${dir}/${problem_num}
-number=0
+mkdir ${barking_dir}/${user}/${dir}/${problem_num}/test/
+
 while [ $number -lt 5 ]
 do
-	touch ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}_test_${number}.txt
+	touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
  	((number++))
 done
-cd ${barking_dir}/${user}/${dir}/${problem_num}
 vim ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}.cpp
 open https://www.acmicpc.net/problem/${problem_num}

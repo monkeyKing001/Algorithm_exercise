@@ -91,13 +91,13 @@ else
 	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
 	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
 fi
-echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp" >> ./vimrc
-echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c" >> ./vimrc
+echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp" >> ~/.vimrc
+echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c" >> ~/.vimrc
 vim -c "source %" -c "PluginInstall" -c "q" -c "q"
 
 
 ########################################
 #######     setting alias       ########
 ########################################
-echo "alias gogo=\"source ${cur_dir}/start_problem.sh\"" >> ${HOME}/${rc}
+echo "alias gogo=\"cd ${cur_dir} && source ${cur_dir}/start_problem.sh\"" >> ${HOME}/${rc}
 source ~/${rc}
