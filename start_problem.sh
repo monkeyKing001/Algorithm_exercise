@@ -85,12 +85,6 @@ do
 	user_arr+=("$var")
 done
 
-# ${#ArrayName[@]}
-
-#input user name
-#printf "\e[1;32m"
-#echo "${user_arr[@]}"
-#printf "\033[0m" 
 print_user_fuc
 
 printf "Input your user name : "
@@ -110,9 +104,6 @@ do
 			printf "\e[32m%s\033[0m\n" "$user"
 			break ;
 		fi
-#		printf "\033[1;32m"
-#		echo "${user_arr[@]}"
-#		printf "\033[0m"
 		print_user_fuc
 		printf "Input your user name : "
 		read user
@@ -133,19 +124,8 @@ do
 	dir_arr+=("$var")
 done
 
-#for i in */
-#do
-#	dir_arr+=($i)
-#	dir_arr+=("\t")
-#done
-
-# input project dir
-#printf "\e[1;32m"
-#echo "${dir_arr[@]}"
-#printf "\033[0m" 
 print_dir_fuc
 dir=
-#read dir"?Input dir name : "
 printf "Input dir name : "
 read dir
 while :
@@ -161,9 +141,6 @@ do
 			printf "\e[32m%s\033[0m\n" "$dir"
 			break ;
 		fi
-#		printf "\033[1;32m"
-#		echo "${dir_arr[@]}"
-#		printf "\033[0m"
 		print_dir_fuc
 		printf "Input dir name : "
 		read dir
@@ -173,16 +150,11 @@ do
 	fi
 done
 
-#while read -p "input dir name : " dir || [ ! -d ${dir} ]
-#do
-#done
 
 ########################################
 #######    input problem_num    ########
 ########################################
 problem_num=
-#read -p "input problem num : " problem_num #bash 
-#read problem_num"?input problem num : "	#zsh
 printf "Input problem num : "				#both
 read problem_num
 

@@ -62,7 +62,7 @@ printf "%s\n" ${shell}
 printf "%s\n" ${cur_dir}
 
 ########################################
-#######    get pwd and shell    ########
+#######    get shellrc name     ########
 ########################################
 if [ "${shell}" = "zsh" ];
 then
@@ -71,6 +71,29 @@ else
 	rc=".bashrc"
 fi
 echo ${rc}
+
+########################################
+######    vim c, cpp template   ########
+########################################
+# make templates dir
+temp_dir="templates"
+if [ ! ~/.vim/${temp_dir} ];
+then
+	mkdir ~/.vim/${temp_dir} 
+fi
+
+# download templates
+STR1 = `uname -a | grep Mac`
+if [$STR1 -n ]; then
+	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+else 
+	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+fi
+echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp" >> ./vimrc
+echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c" >> ./vimrc
+vim -c "source %" -c "PluginInstall" -c "q" -c "q"
 
 
 ########################################
