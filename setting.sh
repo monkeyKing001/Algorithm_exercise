@@ -76,5 +76,5 @@ echo ${rc}
 ########################################
 #######     setting alias       ########
 ########################################
-echo "alias gogo=\"source ${cur_dir}/start_problem.sh"
+echo "alias gogo=\"source ${cur_dir}/start_problem.sh\"" >> ${HOME}/${rc}
 source ~/${rc}

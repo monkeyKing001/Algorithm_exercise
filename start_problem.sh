@@ -50,6 +50,29 @@ barking_dir=`echo $PWD`
 user_arr=()
 dir_arr=()
 
+########################################
+#########    print function    #########
+########################################
+print_user_fuc() {
+	for var in "${user_arr[@]}"
+	do
+		printf "\033[1;32m"
+		printf "%s\t\t" ${var}
+		printf "\033[0m"
+	done
+	printf "\n"
+}
+
+print_dir_fuc() {
+	for var in "${dir_arr[@]}"
+	do
+		printf "\033[1;32m"
+		printf "%s\t\t" ${var}
+		printf "\033[0m"
+	done
+	printf "\n"
+}
+
 cd ${barking_dir}/
 
 ########################################
@@ -60,13 +83,15 @@ for i in ${barking_dir}/*/
 do
 	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
 	user_arr+=("$var")
-	user_arr+=("\t")
 done
 
+# ${#ArrayName[@]}
+
 #input user name
-printf "\e[1;32m"
-echo "${user_arr[@]}"
-printf "\033[0m" 
+#printf "\e[1;32m"
+#echo "${user_arr[@]}"
+#printf "\033[0m" 
+print_user_fuc
 
 printf "Input your user name : "
 read user
@@ -85,9 +110,10 @@ do
 			printf "\e[32m%s\033[0m\n" "$user"
 			break ;
 		fi
-		printf "\033[1;32m"
-		echo "${user_arr[@]}"
-		printf "\033[0m"
+#		printf "\033[1;32m"
+#		echo "${user_arr[@]}"
+#		printf "\033[0m"
+		print_user_fuc
 		printf "Input your user name : "
 		read user
 	else
@@ -105,7 +131,6 @@ for i in ${barking_dir}/${user}/*/
 do
 	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
 	dir_arr+=("$var")
-	dir_arr+=("\t")
 done
 
 #for i in */
@@ -115,9 +140,10 @@ done
 #done
 
 # input project dir
-printf "\e[1;32m"
-echo "${dir_arr[@]}"
-printf "\033[0m" 
+#printf "\e[1;32m"
+#echo "${dir_arr[@]}"
+#printf "\033[0m" 
+print_dir_fuc
 dir=
 #read dir"?Input dir name : "
 printf "Input dir name : "
@@ -135,9 +161,10 @@ do
 			printf "\e[32m%s\033[0m\n" "$dir"
 			break ;
 		fi
-		printf "\033[1;32m"
-		echo "${dir_arr[@]}"
-		printf "\033[0m"
+#		printf "\033[1;32m"
+#		echo "${dir_arr[@]}"
+#		printf "\033[0m"
+		print_dir_fuc
 		printf "Input dir name : "
 		read dir
 	else
