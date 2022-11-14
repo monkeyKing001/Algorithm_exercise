@@ -39,19 +39,71 @@ echo "&&&&&&&(((//(/**//#%%##((/**//***.           .... . .          .((########
 echo "######%%#//((///(#%%#(//*/*,,    *((#%%%%%%#,.....            ,/(((#####%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##&&%#((((((/********,,**,,***//*,,*/*,*////(#%%%"
 echo "@@@@@@@@@@&(,,*//(((*,,,.       .///#%%&@@@@@%/.        .,/(%%%&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%%#((/////*********,*,,****,,,,****,,,,****//*//(%"
 echo "@@@@@@@@@@@@&/,***,..        ./%&%@@@@@@@@@@@@@@@@@@@@&&&%%%%&@@@@@@@@@@                                                            @@@@@@@@@@@@@@@@@&#%##(/*,,*****************,,***************,...,,*"
-echo "%%##%%%%%%&@@@@#,       ./#%%%%&@@@@@@@@&&@&%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Breaking Monkeying gets started  with a new problem!!   %%%%%%%%%%%%%%%&&&&%##(//**,,,,//////(#%&&&&&&&&&&&&&%(***,***/(((/*"
+echo "%%##%%%%%%&@@@@#,       ./#%%%%&@@@@@@@@&&@&%%%%%%%%%%%%%%%%%%%%%%%%%%%%             Let's get started  with a new problem!!        %%%%%%%%%%%%%%%&&&&%##(//**,,,,//////(#%&&&&&&&&&&&&&%(***,***/(((/*"
 echo "%%##########(((((///////**/**////*/////////(((((#####%%%%%%%%%&&&&@@@@@@                                                            @@@@@@@@@@@@@@@@@@@@&&/,....,,(&@@@@@@@@@@@@@@@@@@@@@@@@@&#/,*//((#("
 echo "...........  ..   ...   ..                         .,,......,,,,,***//((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((####%%&&&&%/.  ..       *(#######((/*////*,,,,......,..,,**("
 echo "...............................,,.......,,,,,,,,,,,,,,,*///((((###%%%%%%%%%&%&&&&&&&&&&%%%%%%%%%%%%%%%%%%&&&&&&&&&&&%%%%&&%&&&&&%%%%%%%%%%%%%&&&&&&&&&%#(//*//***,,,,,***////*********//*****,,.,......."
 
-barking_dir=~/Algorithm/barking_dog
+#input barking_dir
+arg_dir=$1
+barking_dir=`echo $PWD`
+user_arr=()
 dir_arr=()
 
 cd ${barking_dir}/
 
+########################################
+#########   input user_name    #########
+########################################
+# make user name list
 for i in ${barking_dir}/*/
 do
-	var=`echo "$i" | cut -d '/' -f6`
+	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
+	user_arr+=("$var")
+	user_arr+=("\t")
+done
+
+#input user name
+printf "\e[1;32m"
+echo "${user_arr[@]}"
+printf "\033[0m" 
+
+printf "Input your user name : "
+read user
+while :
+do
+	if [ ! -d ${user} ];
+	then
+		printf "\e[31mError : no such user name --> %s\n\e[1;0m" ${user}
+		printf "do you want to make new user name of \e[31m%s\e[1;0m? [y/n] : " ${user}
+		read ans
+		if [ "$ans" = y ];
+		then
+			mkdir ${user}
+			mkdir ${user}/temp
+			touch ${user}/README.md
+			printf "\e[32m%s\033[0m\n" "$user"
+			break ;
+		fi
+		printf "\033[1;32m"
+		echo "${user_arr[@]}"
+		printf "\033[0m"
+		printf "Input your user name : "
+		read user
+	else
+		printf "\e[32m%s\033[0m\n" "${user}"
+		break ;
+	fi
+done
+
+########################################
+#########    input dir_name    #########
+########################################
+# make project dir list
+cd ${barking_dir}/
+for i in ${barking_dir}/${user}/*/
+do
+	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
 	dir_arr+=("$var")
 	dir_arr+=("\t")
 done
@@ -62,22 +114,28 @@ done
 #	dir_arr+=("\t")
 #done
 
-printf "\e[32m"
+# input project dir
+printf "\e[1;32m"
 echo "${dir_arr[@]}"
 printf "\033[0m" 
-########################################
-#########    input dir_name    #########
-########################################
 dir=
 #read dir"?Input dir name : "
 printf "Input dir name : "
 read dir
 while :
 do
-	if [ ! -d ${dir} ];
+	if [ ! -d ${user}/${dir} ];
 	then
-		printf "\e[31mError : wrong directory name.\n"
-		printf "\e[32m"
+		printf "\e[31mError : no such directory name -- %s\n\e[1;0m" ${dir}
+		printf "do you want to make directory name of \e[31m%s\e[1;0m? [y/n] : " ${dir}
+		read ans
+		if [ "$ans" = y ];
+		then
+			mkdir ${dir}
+			printf "\e[32m%s\033[0m\n" "$dir"
+			break ;
+		fi
+		printf "\033[1;32m"
 		echo "${dir_arr[@]}"
 		printf "\033[0m"
 		printf "Input dir name : "
@@ -105,12 +163,13 @@ read problem_num
 #######    problem initalize    ########
 ########################################
 # echo ${PWD}
-mkdir ${barking_dir}/${dir}/${problem_num}
+mkdir ${barking_dir}/${user}/${dir}/${problem_num}
 number=0
 while [ $number -lt 5 ]
 do
-	touch ${barking_dir}/${dir}/${problem_num}/${problem_num}_test_${number}.txt
+	touch ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}_test_${number}.txt
  	((number++))
 done
-cd ${barking_dir}/${dir}/${problem_num}
-vim ${barking_dir}/${dir}/${problem_num}/${problem_num}.cpp
+cd ${barking_dir}/${user}/${dir}/${problem_num}
+vim ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}.cpp
+open https://www.acmicpc.net/problem/${problem_num}
