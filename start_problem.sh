@@ -117,7 +117,6 @@ done
 #########    input dir_name    #########
 ########################################
 # make project dir list
-cd ${barking_dir}/
 for i in ${barking_dir}/${user}/*/
 do
 	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
@@ -171,5 +170,6 @@ do
 	touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
  	((number++))
 done
+cd ${barking_dir}/${user}/${dir}/${problem_num}
 vim ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}.cpp
 open https://www.acmicpc.net/problem/${problem_num}
