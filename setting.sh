@@ -44,32 +44,34 @@ then
 fi
 
 # download templates
-STR1=`uname -a | grep Mac`
-if [ "$STR1" != "" ]; then
-	# MACOS
-	printf "\033[1;34m"
-	printf "downloading skeleton files for MACOS\n"
-	printf ".\n.\n.\n"
-	printf "\033[0m"
-	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
-	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-	printf "\033[1;34m"
-	printf ".\n.\n.\n"
-	printf "completed downloading skeleton files.\n"
-	printf "\033[0m"
-else 
-	# linux
-	printf "\033[1;34m"
-	printf "downloading skeleton files for LINUX\n"
-	printf ".\n.\n.\n"
-	printf "\033[0m"
-	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
-	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-	printf "\033[1;34m"
-	printf ".\n.\n.\n"
-	printf "completed downloading skeleton files.\n"
-	printf "\033[0m"
-fi
+curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+#STR1=`uname -a | grep Mac`
+#if [ "$STR1" != "" ]; then
+#	# MACOS
+#	printf "\033[1;34m"
+#	printf "downloading skeleton files for MACOS\n"
+#	printf ".\n.\n.\n"
+#	printf "\033[0m"
+#	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+#	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+#	printf "\033[1;34m"
+#	printf ".\n.\n.\n"
+#	printf "completed downloading skeleton files.\n"
+#	printf "\033[0m"
+#else 
+#	# linux
+#	printf "\033[1;34m"
+#	printf "downloading skeleton files for LINUX\n"
+#	printf ".\n.\n.\n"
+#	printf "\033[0m"
+#	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+#	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+#	printf "\033[1;34m"
+#	printf ".\n.\n.\n"
+#	printf "completed downloading skeleton files.\n"
+#	printf "\033[0m"
+#fi
 
 # update vimrc
 exist_c_temp=`cat ~/.vimrc | grep "~/.vim/templates/skeleton.c"`
