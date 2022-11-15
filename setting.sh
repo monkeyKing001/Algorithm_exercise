@@ -44,8 +44,16 @@ then
 fi
 
 # download templates
+printf "\033[1;34m"
+printf "downloading skeleton files for LINUX\n"
+printf ".\n.\n.\n"
+printf "\033[0m"
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+printf "\033[1;34m"
+printf ".\n.\n.\n"
+printf "completed downloading skeleton files.\n"
+printf "\033[0m"
 #STR1=`uname -a | grep Mac`
 #if [ "$STR1" != "" ]; then
 #	# MACOS
