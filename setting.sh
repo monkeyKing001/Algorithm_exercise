@@ -77,7 +77,7 @@ echo ${rc}
 ########################################
 # make templates dir
 temp_dir="templates"
-if [ ! ~/.vim/${temp_dir} ];
+if [ ! -d ~/.vim/${temp_dir} ];
 then
 	mkdir ~/.vim/${temp_dir} 
 fi
