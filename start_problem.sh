@@ -137,6 +137,11 @@ do
 		if [ "$ans" = y ];
 		then
 			mkdir ${user}/${dir}
+			cd ${user}/${dir}
+			touch README.md
+			echo "# ${dir}" > README.md
+			echo "| level | problem | my_ans | hint |" >> README.md
+			echo "| :--: | :--: | :--: | :--: |" >> README.md
 			printf "\e[32m%s\033[0m\n" "$dir"
 			break ;
 		fi
@@ -150,12 +155,15 @@ do
 done
 
 
+cd ${barking_dir}/${user}/${dir}/
 ########################################
 #######    input problem_num    ########
 ########################################
 problem_num=
 printf "Input problem num : "				#both
 read problem_num
+
+echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
 
 ########################################
 #######    problem initalize    ########
