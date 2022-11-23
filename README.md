@@ -6,12 +6,11 @@
 
 run below codes
 
-`git clone https://github.com/monkeyKing001/Algorithm_exercise.git`
-
-`cd Algorithm_exercise`
-
-`source setting.sh`
-
+```
+git clone https://github.com/monkeyKing001/Algorithm_exercise.git
+cd Algorithm_exercise
+source setting.sh
+```
 
 ### Step 2. Running - 1
 You can run the training program with a simple commad line `gogo`. 
@@ -26,6 +25,8 @@ Enjoy your problem set.
 
 #### if you are using linux through WSL2, you might run below code for open browser
 
-`export BROWSER="powershell.exe /C start"`
+```
+export BROWSER="powershell.exe /C start"
+```
 
 editing PATH in .bashrc (or .zshrc) and source .bashrc(or .zshrc) are optional.
