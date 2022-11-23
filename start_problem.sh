@@ -163,7 +163,7 @@ problem_num=
 printf "Input problem num : "				#both
 read problem_num
 
-echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
+echo "| ? | <https://www.acmicpc.net/problem/${problem_num}> | [${problem_num}](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
 
 ########################################
 #######    problem initalize    ########
