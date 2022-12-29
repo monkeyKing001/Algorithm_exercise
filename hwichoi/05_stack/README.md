@@ -2,3 +2,6 @@
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
 | ? | [05_stack](https://www.acmicpc.net/problem/05_stack) | [05_stack.cpp](./05_stack/05_stack.cpp) |  |
+| ? | [10828](https://www.acmicpc.net/problem/10828) | [10828.cpp](./10828/10828.cpp) |  |
+| ? | [10773](https://www.acmicpc.net/problem/10773) | [10773.cpp](./10773/10773.cpp) |  |
+| ? | [9012](https://www.acmicpc.net/problem/9012) | [9012.cpp](./9012/9012.cpp) |  |
