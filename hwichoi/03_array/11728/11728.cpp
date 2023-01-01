@@ -20,25 +20,17 @@ int	main(int argc, char **argv)
 		cin >> input;
 		b.push_back(input);
 	}
-	for (int e : b)
-		a.push_back(e);
-	int	buffer;
-	for (int i = 0; i < a.size() - 1; i++)
+	vector<int> c;
+	an++;
+	bn++;
+	while (an < a.size() || bn < b.size())
 	{
-		int	j;
-		j = i + 1;
-		while (j < a.size())
-		{
-			if (a[i] > a[j])
-			{
-				buffer = a[i];
-				a[i] = a[j];
-				a[j] = buffer;
-			}
-			j++;
-		}
+		if ((a[an] > b[bn] || an >= a.size()) && bn < b.size())
+			c.push_back(b[bn++]);
+		else
+			c.push_back(a[an++]);
 	}
-	for (int e : a)
+	for (int e : c)
 		cout << e << ' ';
 	cout << '\n';
 	return (0);
