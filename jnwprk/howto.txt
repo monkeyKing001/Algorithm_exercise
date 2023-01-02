@@ -1,0 +1,10 @@
+0. Algorithm_exercise 폴더에 git bash
+1. git pull origin main
+2. jnwprk\0x## 디렉토리 생성
+3. jnwprk 폴더에서 code .
+
+4. build -> 터미널에서 cmd /c 'test.exe < test#.txt' 실행 후 정답 확인
+
+5. git add *
+6. git commit -m "message"
+7. git push origin main 
