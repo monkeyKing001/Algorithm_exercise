@@ -184,6 +184,10 @@ do
 	touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
  	((number++))
 done
+
+#cpp and Makefile
 cd ${barking_dir}/${user}/${dir}/${problem_num}
-vim ${barking_dir}/${user}/${dir}/${problem_num}/${problem_num}.cpp
+cp ~/.vim/templates/skeleton_makefile ./Makefile
+echo "SRC = ${problem_num}.cpp" | cat - Makefile > temp && mv temp Makefile
+vim ./${problem_num}.cpp
 open https://www.acmicpc.net/problem/${problem_num}

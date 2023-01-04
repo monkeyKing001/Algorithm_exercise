@@ -50,56 +50,56 @@ printf ".\n.\n.\n"
 printf "\033[0m"
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
 printf "\033[1;34m"
 printf ".\n.\n.\n"
 printf "completed downloading skeleton files.\n"
 printf "\033[0m"
-#STR1=`uname -a | grep Mac`
-#if [ "$STR1" != "" ]; then
-#	# MACOS
-#	printf "\033[1;34m"
-#	printf "downloading skeleton files for MACOS\n"
-#	printf ".\n.\n.\n"
-#	printf "\033[0m"
-#	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
-#	curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-#	printf "\033[1;34m"
-#	printf ".\n.\n.\n"
-#	printf "completed downloading skeleton files.\n"
-#	printf "\033[0m"
-#else 
-#	# linux
-#	printf "\033[1;34m"
-#	printf "downloading skeleton files for LINUX\n"
-#	printf ".\n.\n.\n"
-#	printf "\033[0m"
-#	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
-#	wget https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-#	printf "\033[1;34m"
-#	printf ".\n.\n.\n"
-#	printf "completed downloading skeleton files.\n"
-#	printf "\033[0m"
-#fi
 
 # update vimrc
-exist_c_temp=`cat ~/.vimrc | grep "~/.vim/templates/skeleton.c"`
-
-if [ "${exist_c_temp}" = "" ];
-then
-	printf "\033[1;37m"
-	printf "updated vimrc; :autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c\n"
-	printf "\033[0m"
-	echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c" >> ~/.vimrc
-fi
-
-exist_cpp_temp=`cat ~/.vimrc | grep "~/.vim/templates/skeleton.cpp"`
-if [ "${exist_cpp_temp}" = "" ];
-then
-	printf "\033[1;37m"
-	printf "updated vimrc; :autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.cpp\n"
-	printf "\033[0m"
-	echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp" >> ~/.vimrc
-fi
+# c_template
+temp_list=(skeleton.c skeleton.cpp skeleton_makefile) 
+for temp_file in "${temp_list[@]}"
+do
+	exist=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
+	if [ "${exist}" = "" ];
+	then
+		printf "\033[1;37m"
+		printf "updated vimrc; :autocmd BufNewFile Makefile 0r ~/.vim/templates/${temp_file}\n"
+		printf "\033[0m"
+		echo ":autocmd BufNewFile Makefile 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
+	fi
+done
+#temp_file="skeleton.c"
+#exist_c_temp=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
+#if [ "${temp_file}" = "" ];
+#then
+#	printf "\033[1;37m"
+#	printf "updated vimrc; :autocmd BufNewFile *.c 0r ~/.vim/templates/${temp_file}\n"
+#	printf "\033[0m"
+#	echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
+#fi
+#
+## cpp_template
+#temp_file="skeleton.cpp"
+#exist_cpp_temp=`cat ~/.vimrc | grep "~/.vim/templates/${cpp_temp}"`
+#if [ "${exist_cpp_temp}" = "" ];
+#then
+#	printf "\033[1;37m"
+#	printf "updated vimrc; :autocmd BufNewFile *.cpp 0r ~/.vim/templates/${cpp_temp}\n"
+#	printf "\033[0m"
+#	echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/${cpp_temp}" >> ~/.vimrc
+#fi
+#
+## make_template
+#exist_makefile_temp=`cat ~/.vimrc | grep "~/.vim/templates/skeleton_makefile"`
+#if [ "${exist_makefile_temp}" = "" ];
+#then
+#	printf "\033[1;37m"
+#	printf "updated vimrc; :autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton_makefile\n"
+#	printf "\033[0m"
+#	echo ":autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton_makefile" >> ~/.vimrc
+#fi
 
 vim -c "source %" -c "PluginInstall" -c "q" -c "q"
 

@@ -5,7 +5,7 @@
 #include <climits>
 
 using namespace std;
-int n, max_weight, current_weight;
+long long n, max_weight;
 
 bool comp(int r1, int r2)
 {
@@ -22,18 +22,14 @@ int	main(int argc, char **argv)
 		cin >> weight;
 		ropes[i] = weight;
 	}
-	int total_selected_num = 0;
 	sort(ropes.begin(), ropes.end(), comp);
 //	for (int i = 0; i < n; ++i)
 //		cout << ropes[i] << endl;
-	max_weight = ropes[1];
-	total_selected_num = 1;
-	for (int i = 1; i < n; ++i) {
-		if (ropes[i] >= max_weight / total_selected_num)
-		{
-			total_selected_num++;
-			max_weight = ropes[i] * total_selected_num;
-		}
+	for (int i = 0; i < n; i++)
+	{
+		long long temp_max = ropes[i] * (i + 1);
+		max_weight = max(max_weight, temp_max);
+		//cout << "max_weight = " << max_weight << endl;
 	}
 	cout << max_weight;
 
