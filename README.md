@@ -49,6 +49,5 @@ Just prepare the test txt file in `./test` directory.
 this is example how you can test your code:
 ```
 make t=1
-make t-2
 ```
 this make command means you are going to compile your solution source code and test with 1.txt.
