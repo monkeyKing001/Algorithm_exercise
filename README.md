@@ -42,7 +42,7 @@ export BROWSER="powershell.exe /C start"
 ```
 If you want to maintain this configuration continuously, copy and paste `export BROWSER="powershell.exe /C start"` in ~/.bashrc file and run `source ~/.bashrc`
 
-### Step 3. Ran and Test
+## Step 3. Ran and Test
 #### make rules
 ---
 Once you start a problem, Makefile will be created in your problem directory.
