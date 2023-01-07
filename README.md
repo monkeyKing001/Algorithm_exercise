@@ -42,12 +42,18 @@ export BROWSER="powershell.exe /C start"
 ```
 If you want to maintain this configuration continuously, copy and paste `export BROWSER="powershell.exe /C start"` in ~/.bashrc file and run `source ~/.bashrc`
 
-### Step 3. Test
-Once you start a problem solving, Makefile will be created in your problem directory.
-You can compile and tTst your code with just one line `make t=<testnumber>`.
-Just prepare the test txt file in `./test` directory.
+## Step 3. Ran and Test
+#### make rules
+---
+Once you start a problem, Makefile will be created in your problem directory.
+You can compile and test your code with just one line.
+Belows are make rule examples
+1. `make` : make the bin file `a.out` with <problem>.cpp
+2. `make run` : run bin file `./a.out`
+3. `make test t=<test_num>` : run bin file with test txt input file.
+Just prepare the test txt file in `./test` directory before run the test.
 this is example how you can test your code:
 ```
-make t=1
+make test t=1
 ```
 this make command means you are going to compile your solution source code and test with 1.txt.
