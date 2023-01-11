@@ -1,0 +1,4 @@
+2
+push_front 1
+pop_back
+
