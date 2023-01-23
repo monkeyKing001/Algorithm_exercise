@@ -1,17 +1,17 @@
-SRC = 11653.cpp
+SRC = 6064.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =
 CDEBUG = -g -fsanitize=address -std=c++11
 RM = rm -f
-CC = c++
+CC = g++
 SRC_DIR = .
 OBJ_DIR = .
 BIN_DIR = .
 NAME = $(BIN_DIR)/$(BIN)
 PRINTF = LC_NUMERIC="en_US.UTF-8" printf
 TEST_DIR = ./test
-T = 1
+t = 1
 
 BIN = a.out
 
@@ -60,13 +60,15 @@ fclean: clean
 	@$(RM) $(OBJ)
 	@$(RM) $(BIN)
 
+run :
+	@${BIN_DIR}/${BIN}
+
 re: fclean
 	@make all
 
 test:
 	make re
-#	@make clean
-	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$T.txt
+	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$t.txt
 
 git:
 	git add .

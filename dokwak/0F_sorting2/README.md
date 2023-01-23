@@ -16,4 +16,4 @@ for (int i = 0; i < n - 1 ; i++)
 a^n = pa[n]
 	
 ```
-| ? | [11652](https://www.acmicpc.net/problem/11652) | [11652.cpp](./11652/11652.cpp) |  |
+| easy | [11652](https://www.acmicpc.net/problem/11652) | [11652.cpp](./11652/11652.cpp) | be caution for overflow |
