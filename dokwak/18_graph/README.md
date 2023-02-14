@@ -61,3 +61,5 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 # 18_graph
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
+| easy | [11742](https://www.acmicpc.net/problem/11742) | [11742.cpp](./11742/11742.cpp) | if pop the queue, size will be mutated too. get size var as const not by size() dynamically. |
+| easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
