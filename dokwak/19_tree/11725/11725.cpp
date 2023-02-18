@@ -5,12 +5,14 @@
 #include <climits>
 #include <map>
 #include <string>
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <queue>
 
 using namespace std;
 int n;
-vector <int> adj_list[100000];
+vector <int> adj_list[100001];
 queue <int> q;
+int p[100001];
 
 int	main(int argc, char **argv)
 {
@@ -28,8 +30,20 @@ int	main(int argc, char **argv)
 	q.push(start);
 	while (!q.empty())
 	{
-
+		int current = q.front();
+		q.pop();
+//		cout << "visiting : " << current << "\n";
+		for (int i = 0; i < adj_list[current].size(); ++i)
+		{
+			int child = adj_list[current][i];
+			if (p[child])
+				continue ;
+			p[child] = current;
+			q.push(adj_list[current][i]);	
+		}
+	}
+	for (int i = 2; i <= n; ++i) {
+		cout << p[i] << "\n";
 	}
 	return (0);
 }
-
