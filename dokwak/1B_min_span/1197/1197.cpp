@@ -10,15 +10,22 @@ using namespace std;
 
 int v, e;
 int v1, v2, cost;
+int total_edge, total_cost;
 vector <tuple <int, int, int> > edge;
 int group[100005];
-int smae_group(int v1, int v2)
+int same_group(int v1, int v2)
 {
 	if (group[v1] == group[v2])
 		return (1);
-	int temp_v1 = min(v1, v2);
-	int temp_v2 = max(v1, v2);
-	group[temp_v2] = temp_v1;
+	int merge_group = min(group[v1], group[v2]);
+	int temp_g1 = group[v1];
+	int temp_g2 = group[v2];
+	for (int i = 1; i <= v; i++)
+	{
+		if (group[i] == temp_g1 || group[i] == temp_g2)
+			group[i] = merge_group;
+	}
+//	cout << v1 << ", " << v2 << " is now same group as " << merge_group << "\n";
 	return (0);
 }
 
@@ -37,10 +44,29 @@ int	main(int argc, char **argv)
 		edge.push_back(make_tuple(v1, v2, cost));
 	}
 	//sort
-	sort(edge.begin(), edge.begin() + e);	
+	sort(edge.begin(), edge.begin() + e, comp_tup);	
+	//group init
+	for (int i = 1; i <= v; i++) {
+		group[i] = i;
+	}
 	for (int i = 0; i < e; ++i) {
 		tie(v1, v2, cost) = edge[i];
+		if (same_group(v1, v2))
+			continue ;
+		else
+		{
+			total_cost += cost;
+			total_edge++;
+//			cout << "grouping v1, v2 :" << v1 << ", " << v2 << "\n";
+//			cout << "total_cost : " << total_cost << "\n";
+		}
+		if (total_edge == v - 1)
+			break; 
+
 	}
+//	for (int i = 1; i <= v; ++i) {
+//		cout << i <<"'s group is " << group[i] << "\n";
+//	}
+	cout << total_cost;
 	return (0);
 }
-
