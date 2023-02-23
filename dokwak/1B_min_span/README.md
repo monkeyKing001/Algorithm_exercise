@@ -14,15 +14,38 @@ The time complexity of the Union-Find algorithm is O(m α(m, n)), where m is the
 In summary, the Union-Find algorithm is a data structure and algorithm used to manage disjoint sets efficiently. It provides two main operations: union and find. The algorithm maintains a forest of trees where each node represents a set, and the roots of the trees represent the distinct sets. The time complexity of the Union-Find algorithm is O(m α(m, n)), where α is the inverse Ackermann function.
 
 # Kruskal Algorithm
+Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a connected, weighted graph. The MST is a subgraph that includes all vertices of the original graph and has the minimum possible total edge weight. The algorithm was named after its inventor Joseph Kruskal.
+
+Kruskal's algorithm works by initially sorting all the edges of the graph in increasing order of weight. It then starts with the edge with the smallest weight and adds it to the MST if it does not create a cycle. If the edge creates a cycle, it is discarded, and the next smallest edge is considered. This process continues until all vertices are in the MST.
+
+The algorithm uses a disjoint-set data structure to keep track of the connected components of the graph and to determine whether adding an edge to the MST creates a cycle. Initially, each vertex is a separate set, and when an edge is added to the MST, the disjoint sets of the two vertices connected by the edge are merged.
+
+Kruskal's algorithm has a time complexity of O(E log E), where E is the number of edges in the graph. This is because the algorithm sorts the edges in O(E log E) time and performs at most E find and union operations on the disjoint sets.
+
+Kruskal's algorithm is widely used in various applications such as network design, image segmentation, and clustering. It is one of the simplest and most efficient algorithms for finding the MST of a graph.
+
+In summary, Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree of a weighted, connected graph. It works by sorting the edges in increasing order of weight, adding the smallest edge that does not create a cycle to the MST, and repeating until all vertices are in the MST. The algorithm uses a disjoint-set data structure to keep track of the connected components of the graph and has a time complexity of O(E log E).
 
 # Prims Algorithm
+Prim's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a weighted, connected graph. The MST is a subgraph that includes all vertices of the original graph and has the minimum possible total edge weight. The algorithm was named after its inventor Robert Prim.
+
+Prim's algorithm works by starting with an arbitrary vertex and adding the minimum-weight edge that connects it to an unvisited vertex. It then adds the vertex to the MST and repeats the process until all vertices are in the MST. At each step, the algorithm chooses the minimum-weight edge that connects a vertex in the MST to an unvisited vertex.
+
+The algorithm uses a priority queue to keep track of the minimum-weight edges that connect vertices in the MST to unvisited vertices. Initially, all vertices are unvisited, and their weights are set to infinity. As the algorithm progresses, the weights of the edges are updated, and the priority queue is updated accordingly.
+
+Prim's algorithm has a time complexity of O(E log V), where E is the number of edges in the graph and V is the number of vertices. This is because the algorithm performs at most E iterations, and each iteration takes O(log V) time to update the priority queue.
+
+Prim's algorithm is widely used in various applications such as network design, image segmentation, and clustering. It is one of the simplest and most efficient algorithms for finding the MST of a graph.
+
+In summary, Prim's algorithm is a greedy algorithm used to find the minimum spanning tree of a weighted, connected graph. It works by starting with an arbitrary vertex, adding the minimum-weight edge that connects it to an unvisited vertex, and repeating until all vertices are in the MST. The algorithm uses a priority queue to keep track of the minimum-weight edges and has a time complexity of O(E log V).
+
 
 # 1B_min_span
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
 | ? | [1197](https://www.acmicpc.net/problem/1197) | [1197.cpp](./1197/1197.cpp) | be caution for merging group |
 
-## merging group counter example (not using union algo)
+## merging group counter example (Kruskal not using union algo)
 * counter example : merging v1, v5 groups
 ```c++
 ---
@@ -34,3 +57,4 @@ fori 1 ~ 10 if (g[i] == g[v1] || g[i] == g[v5]) -> g[i] = min(g[v1], g[v5])
 ---
 result = v1~v7 = g1, v8~v10 = still g2
 ```
+| ? | [1368](https://www.acmicpc.net/problem/1368) | [1368.cpp](./1368/1368.cpp) |  |
