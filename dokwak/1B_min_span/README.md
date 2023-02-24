@@ -39,12 +39,6 @@ Prim's algorithm is widely used in various applications such as network design, 
 
 In summary, Prim's algorithm is a greedy algorithm used to find the minimum spanning tree of a weighted, connected graph. It works by starting with an arbitrary vertex, adding the minimum-weight edge that connects it to an unvisited vertex, and repeating until all vertices are in the MST. The algorithm uses a priority queue to keep track of the minimum-weight edges and has a time complexity of O(E log V).
 
-
-# 1B_min_span
-| level | problem | my_ans | hint |
-| :--: | :--: | :--: | :--: |
-| ? | [1197](https://www.acmicpc.net/problem/1197) | [1197.cpp](./1197/1197.cpp) | be caution for merging group |
-
 ## merging group counter example (Kruskal not using union algo)
 * counter example : merging v1, v5 groups
 ```c++
@@ -57,4 +51,9 @@ fori 1 ~ 10 if (g[i] == g[v1] || g[i] == g[v5]) -> g[i] = min(g[v1], g[v5])
 ---
 result = v1~v7 = g1, v8~v10 = still g2
 ```
-| ? | [1368](https://www.acmicpc.net/problem/1368) | [1368.cpp](./1368/1368.cpp) |  |
+
+# 1B_min_span
+| level | problem | my_ans | hint |
+| :--: | :--: | :--: | :--: |
+| mid | [1197](https://www.acmicpc.net/problem/1197) | [1197.cpp](./1197/1197.cpp) | be caution for merging group |
+| hard | [1368](https://www.acmicpc.net/problem/1368) | [1368.cpp](./1368/1368.cpp) | need to be familiar with Kruskal, Prim, welling smallest, welling also in pq |
