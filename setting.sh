@@ -113,7 +113,8 @@ then
 	printf "\033[1;37m"
 	printf "updated gogo alias!\n"
 	printf "\033[0m"
-	echo "alias gogo=\"cd ${cur_dir} && source ${cur_dir}/start_problem.sh\"" >> ${HOME}/${rc}
+	echo "alias gogo=\"\""
+	echo "alias gogo=\"cd ${cur_dir} && sh ${cur_dir}/start_problem.sh\"" >> ${HOME}/${rc}
 fi
 source ~/${rc}
 printf "\033[1;37m"

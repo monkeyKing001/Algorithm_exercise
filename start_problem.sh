@@ -53,6 +53,7 @@ dir_arr=()
 ########################################
 #########    print function    #########
 ########################################
+
 print_user_fuc() {
 	for var in "${user_arr[@]}"
 	do
@@ -65,6 +66,16 @@ print_user_fuc() {
 
 print_dir_fuc() {
 	for var in "${dir_arr[@]}"
+	do
+		printf "\033[1;32m"
+		printf "%s\t\t" ${var}
+		printf "\033[0m"
+	done
+	printf "\n"
+}
+
+print_pro_fuc() {
+	for var in "${pro_arr[@]}"
 	do
 		printf "\033[1;32m"
 		printf "%s\t\t" ${var}
@@ -86,9 +97,8 @@ do
 done
 
 print_user_fuc
-
 printf "Input your user name : "
-read user
+read -e user
 while :
 do
 	if [ ! -d ${user} ];
@@ -106,7 +116,7 @@ do
 		fi
 		print_user_fuc
 		printf "Input your user name : "
-		read user
+		read -e user
 	else
 		printf "\e[32m%s\033[0m\n" "${user}"
 		break ;
@@ -117,6 +127,9 @@ done
 #########    input dir_name    #########
 ########################################
 # make project dir list
+
+cd ${barking_dir}/${user}
+
 for i in ${barking_dir}/${user}/*/
 do
 	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
@@ -126,10 +139,10 @@ done
 print_dir_fuc
 dir=
 printf "Input dir name : "
-read dir
+read -e dir
 while :
 do
-	if [ ! -d ${user}/${dir} ];
+	if [ ! -d ${dir} ];
 	then
 		printf "\e[31mError : no such directory name -- %s\n\e[1;0m" ${dir}
 		printf "do you want to make directory name of \e[31m%s\e[1;0m? [y/n] : " ${dir}
@@ -147,47 +160,64 @@ do
 		fi
 		print_dir_fuc
 		printf "Input dir name : "
-		read dir
+		read -e dir
 	else
 		printf "\e[32m%s\033[0m\n" "$dir"
 		break ;
 	fi
 done
 
-
 cd ${barking_dir}/${user}/${dir}/
+
 ########################################
 #######    input problem_num    ########
 ########################################
-problem_num=
-printf "Input problem num : "				#both
-read problem_num
-
-readme="README.md"
-if [ ! -e README.md ];then
-	echo "# ${dir}" > README.md
-	echo "| level | problem | my_ans | hint |" >> README.md
-	echo "| :--: | :--: | :--: | :--: |" >> README.md
-fi
-echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
-
-########################################
-#######    problem initalize    ########
-########################################
-# echo ${PWD}
-number=1
-mkdir ${barking_dir}/${user}/${dir}/${problem_num}
-mkdir ${barking_dir}/${user}/${dir}/${problem_num}/test/
-
-while [ $number -lt 5 ]
+for i in ${barking_dir}/${user}/${dir}/*/
 do
-	touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
- 	((number++))
+	var=`echo "$i" | rev | cut -d '/' -f2 | rev`
+	pro_arr+=("$var")
 done
 
-#cpp and Makefile
+print_pro_fuc
+problem_num=
+printf "Input problem num : "
+read -e problem_num
+
+## new pro
+if [ ! -d ${problem_num} ];
+	then
+	readme="README.md"
+	if [ ! -e README.md ];then
+		echo "# ${dir}" > README.md
+		echo "| level | problem | my_ans | hint |" >> README.md
+		echo "| :--: | :--: | :--: | :--: |" >> README.md
+	fi
+	echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
+
+	########################################
+	#######    problem initalize    ########
+	########################################
+	# echo ${PWD}
+	number=1
+	mkdir ${barking_dir}/${user}/${dir}/${problem_num}
+	mkdir ${barking_dir}/${user}/${dir}/${problem_num}/test/
+
+	while [ $number -lt 5 ]
+	do
+		touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
+		((number++))
+	done
+
+	#cpp and Makefile
+fi
+
+if echo "$problem_num" | grep -q "/"; then
+  problem_num=$(echo "$problem_num" | sed 's/\/$//')
+fi
+
+## make template
 cd ${barking_dir}/${user}/${dir}/${problem_num}
 cp ~/.vim/templates/skeleton_makefile ./Makefile
 echo "SRC = ${problem_num}.cpp" | cat - Makefile > temp && mv temp Makefile
-vim ./${problem_num}.cpp
 open https://www.acmicpc.net/problem/${problem_num}
+vim * ./test/*
