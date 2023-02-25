@@ -64,10 +64,24 @@ do
 	exist=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
 	if [ "${exist}" = "" ];
 	then
+		# if not exist make new one
+		cmd=""
 		printf "\033[1;37m"
-		printf "updated vimrc; :autocmd BufNewFile Makefile 0r ~/.vim/templates/${temp_file}\n"
+		if [ "${temp_file}" = "skeleton.c" ];
+		then
+			cmd="*.c"
+		fi
+		if [ "${temp_file}" = "skeleton.cpp" ];
+		then
+			cmd="*.cpp"
+		fi
+		if [ "${temp_file}" = "skeleton_makefile" ];
+		then
+			cmd="Makefile"
+		fi
+		printf "updated vimrc; :autocmd BufNewFile ${cmd} 0r ~/.vim/templates/${temp_file}\n"
 		printf "\033[0m"
-		echo ":autocmd BufNewFile Makefile 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
+		echo ":autocmd BufNewFile ${cmd} 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
 	fi
 done
 #temp_file="skeleton.c"
