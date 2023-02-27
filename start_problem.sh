@@ -99,6 +99,10 @@ done
 print_user_fuc
 printf "Input your user name : "
 read -e user
+if echo "$user" | grep -q "/"; then
+  user=$(echo "$user" | sed 's/\/$//')
+fi
+
 while :
 do
 	if [ ! -d ${user} ];
@@ -117,6 +121,9 @@ do
 		print_user_fuc
 		printf "Input your user name : "
 		read -e user
+		if echo "$user" | grep -q "/"; then
+		  user=$(echo "$user" | sed 's/\/$//')
+		fi
 	else
 		printf "\e[32m%s\033[0m\n" "${user}"
 		break ;
@@ -140,6 +147,9 @@ print_dir_fuc
 dir=
 printf "Input dir name : "
 read -e dir
+if echo "$dir" | grep -q "/"; then
+  dir=$(echo "$dir" | sed 's/\/$//')
+fi
 while :
 do
 	if [ ! -d ${dir} ];
@@ -149,8 +159,8 @@ do
 		read ans
 		if [ "$ans" = y ];
 		then
-			mkdir ${user}/${dir}
-			cd ${user}/${dir}
+			mkdir ${dir}
+			cd ${dir}
 			touch README.md
 			echo "# ${dir}" > README.md
 			echo "| level | problem | my_ans | hint |" >> README.md
@@ -161,6 +171,9 @@ do
 		print_dir_fuc
 		printf "Input dir name : "
 		read -e dir
+		if echo "$dir" | grep -q "/"; then
+		  dir=$(echo "$dir" | sed 's/\/$//')
+		fi
 	else
 		printf "\e[32m%s\033[0m\n" "$dir"
 		break ;
@@ -182,6 +195,9 @@ print_pro_fuc
 problem_num=
 printf "Input problem num : "
 read -e problem_num
+if echo "$problem_num" | grep -q "/"; then
+  problem_num=$(echo "$problem_num" | sed 's/\/$//')
+fi
 
 ## new pro
 if [ ! -d ${problem_num} ];
@@ -220,4 +236,9 @@ cd ${barking_dir}/${user}/${dir}/${problem_num}
 cp ~/.vim/templates/skeleton_makefile ./Makefile
 echo "SRC = ${problem_num}.cpp" | cat - Makefile > temp && mv temp Makefile
 open https://www.acmicpc.net/problem/${problem_num}
-vim * ./test/*
+editor="vim"
+if echo `which nvim` | grep -q "nvim"; then
+	editor="nvim"
+fi
+$editor ${problem_num}.cpp ./test/*
+# nvim ${problem_num}.cpp ./test/*
