@@ -1,4 +1,3 @@
-SRC = 11780.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =
