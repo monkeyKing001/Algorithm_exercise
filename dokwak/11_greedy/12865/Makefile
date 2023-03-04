@@ -11,7 +11,7 @@ BIN_DIR = .
 NAME = $(BIN_DIR)/$(BIN)
 PRINTF = LC_NUMERIC="en_US.UTF-8" printf
 TEST_DIR = ./test
-t =
+t = 1
 
 BIN = a.out
 
@@ -40,7 +40,6 @@ SRC_PCT = $(shell expr 100 \* $(SRC_COUNT) / $(SRC_COUNT_TOT))
 
 #compile and test!
 all: $(NAME)
-	@make test
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(CDEBUG) $(OBJ) -o $@
@@ -61,15 +60,14 @@ fclean: clean
 	@$(RM) $(OBJ)
 	@$(RM) $(BIN)
 
+run :
+	@${BIN_DIR}/${BIN}
+
 re: fclean
 	@make all
 
-run:
-	@${BIN_DIR}/${BIN}
-
 test:
-#	make re
-#	@make clean
+	make re
 	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$t.txt
 
 git:

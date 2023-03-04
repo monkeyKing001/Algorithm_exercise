@@ -1,6 +1,5 @@
-SRC = 2217.cpp
 #input manual cpp
-#SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = 2217.cpp
 CFLAGS =
 CDEBUG = -g -fsanitize=address -std=c++11
 RM = rm -f
@@ -11,7 +10,7 @@ BIN_DIR = .
 NAME = $(BIN_DIR)/$(BIN)
 PRINTF = LC_NUMERIC="en_US.UTF-8" printf
 TEST_DIR = ./test
-T = 1
+t = 1
 
 BIN = a.out
 
@@ -40,7 +39,6 @@ SRC_PCT = $(shell expr 100 \* $(SRC_COUNT) / $(SRC_COUNT_TOT))
 
 #compile and test!
 all: $(NAME)
-	@make test
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(CDEBUG) $(OBJ) -o $@
@@ -61,13 +59,15 @@ fclean: clean
 	@$(RM) $(OBJ)
 	@$(RM) $(BIN)
 
+run :
+	@${BIN_DIR}/${BIN}
+
 re: fclean
 	@make all
 
 test:
-#	make re
-#	@make clean
-	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$T.txt
+	make re
+	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$t.txt
 
 git:
 	git add .
@@ -75,3 +75,4 @@ git:
 	git push
 
 .PHONY: make clean fclean re test
+
