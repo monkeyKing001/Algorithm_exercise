@@ -34,9 +34,7 @@ int	main(int argc, char **argv)
 	sort(B.begin(), B.end(), comp);
 	int sol = 0;
 	for (int i = 0 ; i < n; i++)
-	{
 		sol += A[i] * B[i];
-	}
 	cout << sol;
 
 	return (0);
