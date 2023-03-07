@@ -18,6 +18,7 @@ int j_step = INT_MAX;
 int f_step = INT_MIN;
 pair <int, int> j_start;
 pair <int, int> f_start;
+tuple <int, int, int> j_end;
 int r, c;
 int dr[4] = {1, 0, -1, 0};
 int dc[4] = {0, 1, 0, -1};
@@ -40,6 +41,9 @@ int	main(int argc, char **argv)
 			{
 				j_start.first = i;
 				j_start.second = j;
+				get<0>(j_end) = j_start.first;
+				get<1>(j_end) = j_start.second;
+				get<2>(j_end) = INT_MAX;
 			}
 			else if (input[j] == 'F')
 			{
@@ -86,9 +90,36 @@ int	main(int argc, char **argv)
 			cout << (int)f_visited[i][j];
 		cout << "\n";
 	}
-	
 	//dfs stack jun
-
+//	q.push(make_tuple(j_start.first, j_start.second, 1));
+//	while (!q.empty())
+//	{
+//		int current_r, current_c, current_step;
+//		current_r = get<0>(q.front());
+//		current_c = get<1>(q.front());
+//		current_step = get<2>(q.front());
+//		q.pop();
+//		j_visited[current_r][current_c] = current_step;
+//		if ((current_r == r || current_c == c) && (j_step > current_step))
+//		for (int i = 0; i < 4; ++i)
+//		{
+//			int next_r = current_r + dr[i];
+//			int next_c = current_c + dc[i];
+//			if (next_r > -1 && next_r < r && next_c > -1 && next_c < c)
+//			{
+//				if ((maps[next_r][next_c] == '.') 
+//						&& !j_visited[next_r][next_c])
+//					q.push(make_tuple(next_r, next_c, current_step + 1));
+//			}
+//		}
+//	}
+//	for (int i = 0; i < r; ++i)
+//	{
+//		for (int j = 0; j < c; ++j)
+//			cout << (int)f_visited[i][j];
+//		cout << "\n";
+//	}
+//
 	return (0);
 }
 
