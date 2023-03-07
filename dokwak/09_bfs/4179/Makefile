@@ -1,5 +1,6 @@
+SRC = 4179.cpp
 #input manual cpp
-SRC = 2217.cpp
+#SRC = main.cpp
 CFLAGS =
 CDEBUG = -g -fsanitize=address -std=c++11
 RM = rm -f
@@ -75,4 +76,3 @@ git:
 	git push
 
 .PHONY: make clean fclean re test
-
