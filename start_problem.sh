@@ -99,6 +99,7 @@ done
 print_user_fuc
 printf "Input your user name : "
 read -e user
+# remove directory char "\"
 if echo "$user" | grep -q "/"; then
   user=$(echo "$user" | sed 's/\/$//')
 fi
@@ -147,6 +148,7 @@ print_dir_fuc
 dir=
 printf "Input dir name : "
 read -e dir
+# remove directory char "\"
 if echo "$dir" | grep -q "/"; then
   dir=$(echo "$dir" | sed 's/\/$//')
 fi
@@ -194,6 +196,7 @@ done
 print_pro_fuc
 problem_num=
 printf "Input problem num : "
+# remove directory char "\"
 read -e problem_num
 if echo "$problem_num" | grep -q "/"; then
   problem_num=$(echo "$problem_num" | sed 's/\/$//')
@@ -203,11 +206,13 @@ fi
 if [ ! -d ${problem_num} ];
 	then
 	readme="README.md"
+	# if no README, make new one
 	if [ ! -e README.md ];then
 		echo "# ${dir}" > README.md
 		echo "| level | problem | my_ans | hint |" >> README.md
 		echo "| :--: | :--: | :--: | :--: |" >> README.md
 	fi
+	# append problem num
 	echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
 
 	########################################
