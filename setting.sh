@@ -50,6 +50,7 @@ printf ".\n.\n.\n"
 printf "\033[0m"
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.java -o ~/.vim/${temp_dir}/skeleton.java
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
 printf "\033[1;34m"
 printf ".\n.\n.\n"
@@ -58,7 +59,7 @@ printf "\033[0m"
 
 # update vimrc
 # c_template
-temp_list=(skeleton.c skeleton.cpp skeleton_makefile) 
+temp_list=(skeleton.c skeleton.cpp skeleton.java skeleton_makefile) 
 for temp_file in "${temp_list[@]}"
 do
 	exist=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
@@ -75,6 +76,10 @@ do
 		then
 			cmd="*.cpp"
 		fi
+		if [ "${temp_file}" = "skeleton.java" ];
+		then
+			cmd="*.java"
+		fi
 		if [ "${temp_file}" = "skeleton_makefile" ];
 		then
 			cmd="Makefile"
@@ -84,36 +89,6 @@ do
 		echo ":autocmd BufNewFile ${cmd} 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
 	fi
 done
-#temp_file="skeleton.c"
-#exist_c_temp=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
-#if [ "${temp_file}" = "" ];
-#then
-#	printf "\033[1;37m"
-#	printf "updated vimrc; :autocmd BufNewFile *.c 0r ~/.vim/templates/${temp_file}\n"
-#	printf "\033[0m"
-#	echo ":autocmd BufNewFile *.c 0r ~/.vim/templates/${temp_file}" >> ~/.vimrc
-#fi
-#
-## cpp_template
-#temp_file="skeleton.cpp"
-#exist_cpp_temp=`cat ~/.vimrc | grep "~/.vim/templates/${cpp_temp}"`
-#if [ "${exist_cpp_temp}" = "" ];
-#then
-#	printf "\033[1;37m"
-#	printf "updated vimrc; :autocmd BufNewFile *.cpp 0r ~/.vim/templates/${cpp_temp}\n"
-#	printf "\033[0m"
-#	echo ":autocmd BufNewFile *.cpp 0r ~/.vim/templates/${cpp_temp}" >> ~/.vimrc
-#fi
-#
-## make_template
-#exist_makefile_temp=`cat ~/.vimrc | grep "~/.vim/templates/skeleton_makefile"`
-#if [ "${exist_makefile_temp}" = "" ];
-#then
-#	printf "\033[1;37m"
-#	printf "updated vimrc; :autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton_makefile\n"
-#	printf "\033[0m"
-#	echo ":autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton_makefile" >> ~/.vimrc
-#fi
 
 vim -c "source %" -c "PluginInstall" -c "q" -c "q"
 

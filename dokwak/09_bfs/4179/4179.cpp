@@ -41,70 +41,43 @@ int	main(int argc, char **argv)
 				j_start.second = j;
 			}
 			else if (input[j] == 'F')
-				f_start.push_back(make_pair(i, j));
-		}
-	}
-	//test out
-//	for (int i = 0; i < r; ++i)
-//	{
-//		string input;
-//		cin >> input;
-//		for (int j = 0; j < c; ++j)
-//			cout << maps[i][j];
-//		cout << "\n";
-//	}
-	//bfs queue fire
-	for (int i = 0; i < f_start.size(); i++)
-	{
-		int f_start_r = f_start[i].first;
-		int f_start_c = f_start[i].second;
-		f_visited[f_start_r][f_start_c] = 1;
-	//	q.push(make_tuple(f_start.first, f_start.second, f_step));
-		q.push(make_pair(f_start_r, f_start_c));
-		while (!q.empty())
-		{
-			int current_r, current_c, current_step;
-	//		current_r = get<0>(q.front());
-	//		current_c = get<1>(q.front());
-	//		current_step = get<2>(q.front());
-			current_r = q.front().first;
-			current_c = q.front().second;
-			current_step = f_visited[current_r][current_c];
-			q.pop();
-			for (int i = 0; i < 4; ++i)
 			{
-				int next_r = current_r + dr[i];
-				int next_c = current_c + dc[i];
-				int next_step = current_step + 1;
-				if (next_r > -1 && next_r < r && next_c > -1 && next_c < c)
-				{
-					if ((maps[next_r][next_c] == '.' || maps[next_r][next_c] == 'J') 
-							&& (!f_visited[next_r][next_c] || f_visited[next_r][next_c] > next_step))
-	//					q.push(make_tuple(next_r, next_c, current_step + 1));
-						{
-							f_visited[next_r][next_c] = next_step;
-							q.push(make_pair(next_r, next_c));
-						}
-
-				}
+				q.push(make_pair(i, j));
+				f_visited[i][j] = 1;
 			}
 		}
 	}
-//	for (int i = 0; i < r; ++i)
-//	{
-//		for (int j = 0; j < c; ++j)
-//			cout << (int)f_visited[i][j];
-//		cout << "\n";
-//	}
-	//dfs stack jun
+	//bfs queue fire
+	while (!q.empty())
+	{
+		int current_r, current_c, current_step;
+		current_r = q.front().first;
+		current_c = q.front().second;
+		current_step = f_visited[current_r][current_c];
+		q.pop();
+		for (int i = 0; i < 4; ++i)
+		{
+			int next_r = current_r + dr[i];
+			int next_c = current_c + dc[i];
+			int next_step = current_step + 1;
+			if (next_r > -1 && next_r < r && next_c > -1 && next_c < c)
+			{
+				if ((maps[next_r][next_c] == '.' || maps[next_r][next_c] == 'J') 
+						&& (!f_visited[next_r][next_c]))
+					{
+						f_visited[next_r][next_c] = next_step;
+						q.push(make_pair(next_r, next_c));
+					}
+
+			}
+		}
+	}
+	//bfs stack jun
 	j_visited[j_start.first][j_start.second] = 1;
 	q.push(make_pair(j_start.first, j_start.second));
 	while (!q.empty())
 	{
 		int current_r, current_c, current_step;
-//		current_r = get<0>(q.front());
-//		current_c = get<1>(q.front());
-//		current_step = get<2>(q.front());
 		current_r = q.front().first;
 		current_c = q.front().second;
 		current_step = j_visited[current_r][current_c];
@@ -119,7 +92,6 @@ int	main(int argc, char **argv)
 			if (next_r > -1 && next_r < r && next_c > -1 && next_c < c)
 			{
 				if ((maps[next_r][next_c] == '.') 
-						//&& !j_visited[next_r][next_c])
 						&& !j_visited[next_r][next_c] && (!f_visited[next_r][next_c] || f_visited[next_r][next_c] > next_step))
 				{
 					q.push(make_pair(next_r, next_c));
@@ -128,12 +100,6 @@ int	main(int argc, char **argv)
 			}
 		}
 	}
-//	for (int i = 0; i < r; ++i)
-//	{
-//		for (int j = 0; j < c; ++j)
-//			cout << (int)j_visited[i][j];
-//		cout << "\n";
-//	}
 	if (j_step != INT_MAX)
 		cout << j_step;
 	else

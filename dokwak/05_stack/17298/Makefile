@@ -1,4 +1,4 @@
-SRC = 4179.cpp
+SRC = 17298.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =
@@ -12,18 +12,10 @@ NAME = $(BIN_DIR)/$(BIN)
 PRINTF = LC_NUMERIC="en_US.UTF-8" printf
 TEST_DIR = ./test
 t = 1
+
 BIN = a.out
 
-#################################################
-##########    JAVA COMPILE OPTION      ##########
-#################################################
-JFLAGS = -g
-JAVA_SRC = Main.java
-JAVAC  = javac
-JAVA_CLASS = Main.class
-JAVA_BIN = Main
-
-
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 # Color Aliases
 DEFAULT = \033[0;39m
 GRAY = \033[0;90m
@@ -39,7 +31,6 @@ SHELL=/bin/bash
 UNAME = $(shell uname -s)
 
 # Progress vars
-OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 SRC_COUNT_TOT := $(shell expr $(shell echo -n $(SRC) | grep ".cpp" | wc -w) - $(shell ls -l $(OBJ_DIR) 2>&1 | grep ".o" | wc -l) + 1)
 ifeq ($(shell test $(SRC_COUNT_TOT) -le 0; echo $$?),0)
 	SRC_COUNT_TOT := $(shell echo -n $(SRC) | wc -w)
@@ -62,13 +53,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 clean:
 	@$(PRINTF) "$(CYAN)Cleaning up object files in $(BIN)...$(DEFAULT)\n"
-	@$(RM) $(OBJ) $(JAVA_CLASS)
+	@$(RM) $(OBJ)
 
 fclean: clean
 	@$(PRINTF) "$(CYAN)Removed $(NAME)$(DEFAULT)\n"
 	@$(RM) $(OBJ)
 	@$(RM) $(BIN)
-	@$(RM) $(JAVA_CLASS)
 
 run :
 	@${BIN_DIR}/${BIN}
@@ -79,18 +69,6 @@ re: fclean
 test:
 	make re
 	@${BIN_DIR}/${BIN} < ${TEST_DIR}/$t.txt
-
-java : ${JAVA_SRC}
-	$(JAVAC) $(JFLAGS) ${JAVA_SRC}
-	@$(PRINTF) "\r%100s\r$(GREEN)${JAVA_CLASS} has been made!$(DEFAULT)\n"
-
-javarun :
-	@make java
-	@java ${JAVA_BIN}
-
-javatest :
-	@make java
-	@java ${JAVA_BIN} < ${TEST_DIR}/$t.txt
 
 git:
 	git add .

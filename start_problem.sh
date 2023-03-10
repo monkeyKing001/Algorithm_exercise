@@ -245,5 +245,5 @@ editor="vim"
 if echo `which nvim` | grep -q "nvim"; then
 	editor="nvim"
 fi
-$editor ${barking_dir}/${user}/${dir}/README.md ${problem_num}.cpp ./test/*
+$editor ${barking_dir}/${user}/${dir}/README.md ${problem_num}.cpp Main.java ./test/*
 # nvim ${problem_num}.cpp ./test/*
