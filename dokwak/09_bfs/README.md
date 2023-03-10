@@ -15,3 +15,4 @@
 | easy | [10026](https://www.acmicpc.net/problem/10026) | [10026.cpp](./10026/10026.cpp) | 1. change color(RED or GREEN) at the first bfs. 2. be caution for counting sol. |
 | mid | [7569](https://www.acmicpc.net/problem/7569) | [7569.cpp](./7569/7569.cpp) | 1. coordinates precision 2. pushing queue start point |
 | easy | [7569](https://www.acmicpc.net/problem/7576) | [7569.cpp](./7569/7569.cpp) | |
+| easy | [7562](https://www.acmicpc.net/problem/7562) | [7562.cpp](./7562/7562.cpp) | global or main local var need to be cleaned.(board, queue) |
