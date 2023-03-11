@@ -1,4 +1,4 @@
-SRC = 17298.cpp
+SRC = 2493.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =

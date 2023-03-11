@@ -21,13 +21,30 @@ int	main(int argc, char **argv)
 	cin >> n;
 	for (int i = 0; i < n; i++)
 		cin >> arr[i];
-	for (int i = 0; i + 1 < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		int num, r_num;
-		if (r_num > num)
+		num = arr[i];
+		okun[i] = -1;
+		if (i != n - 1)
+			r_num = arr[i + 1];
+		if (num < r_num)
 			okun[i] = r_num;
-		else 
-			s.push(i);
+		while (s.size() && arr[s.top()] < num)
+		{
+			int find_okun = s.top();
+			s.pop();
+			okun[find_okun] = num;
+		}
+		s.push(i);
+	}
+	okun[n-1] = -1;
+	int i = -1;
+	while (++i < n)
+	{
+		cout << okun[i];
+		if (i != n - 1)
+			cout << " ";
 	}
 	return (0);
 }
