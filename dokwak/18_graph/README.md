@@ -63,3 +63,4 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | :--: | :--: | :--: | :--: |
 | easy | [11742](https://www.acmicpc.net/problem/11742) | [11742.cpp](./11742/11742.cpp) | if pop the queue, size will be mutated too. get size var as const not by size() dynamically. |
 | easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
+| hard | [pro_132266](https://school.programmers.co.kr/learn/courses/30/lessons/132266) | [pro_132266.cpp](./pro_132266/pro_132266.cpp) | bfs, given_path, min_cost |

@@ -1,8 +1,8 @@
-SRC = 1874.cpp
+SRC = pro_132266.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =
-CDEBUG = -g -fsanitize=address -std=c++11
+CDEBUG = -std=c++11
 RM = rm -f
 CC = g++
 SRC_DIR = .
