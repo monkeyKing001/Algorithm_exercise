@@ -57,3 +57,4 @@ result = v1~v7 = g1, v8~v10 = still g2
 | :--: | :--: | :--: | :--: |
 | mid | [1197](https://www.acmicpc.net/problem/1197) | [1197.cpp](./1197/1197.cpp) | be caution for merging group |
 | hard | [1368](https://www.acmicpc.net/problem/1368) | [1368.cpp](./1368/1368.cpp) | need to be familiar with Kruskal, Prim, welling smallest, welling also in pq |
+| hard | [1043](https://www.acmicpc.net/problem/1043) | [1043.cpp](./1043/1043.cpp) | practice for find_parent, union. finding parent can cause stack overflow. |

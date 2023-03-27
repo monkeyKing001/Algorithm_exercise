@@ -4,3 +4,5 @@
 | mid | [1927](https://www.acmicpc.net/problem/1927) | [1927.cpp](./1927/1927.cpp) | be catuion for index |
 | mid | [11286](https://www.acmicpc.net/problem/11286) | [11286.cpp](./11286/11286.cpp) | be caution for index (`* 2` can out of boundary) |
 | easy | [1715](https://www.acmicpc.net/problem/1715) | [1715.cpp](./1715/1715.cpp) | local var int in main() is not 0 especially in grading server. |
+| easy | [11279](https://www.acmicpc.net/problem/11279) | [11279.cpp](./11279/11279.cpp) | use std library(c++), java utils(Java) |
+| easy | [11399](https://www.acmicpc.net/problem/11399) | [11399.cpp](./11399/11399.cpp) | `priority_queue<int, vector<int>, greater<int>>` |
