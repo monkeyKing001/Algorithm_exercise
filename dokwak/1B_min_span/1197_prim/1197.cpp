@@ -9,7 +9,6 @@
 #include <queue>
 using namespace std;
 
-bool comp_tup(tuple<int, int, int> t1, tuple <int, int, int>t2);
 int v, e;
 int v1, v2, cost;
 int total_edge, total_cost;
@@ -21,11 +20,6 @@ priority_queue
 	vector<tuple <int, int, int>>, //implement type
 	greater<tuple <int, int ,int>> //sorting
 	> pq;
-
-bool comp_tup(tuple<int, int, int> t1, tuple <int, int, int>t2)
-{
-	return (get<2>(t1) < get<2>(t2));
-}
 
 int	main(int argc, char **argv)
 {

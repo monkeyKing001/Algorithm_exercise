@@ -30,6 +30,8 @@ void union_parent(int v1, int v2)
 //		<< "\n";
 	v1 = find_parent(v1);
 	v2 = find_parent(v2);
+	if (v1 == v2)
+		return ;
 	if (v1 > v2)
 		swap(v1, v2);
 	parent[v2] = v1;
@@ -73,8 +75,7 @@ int	main(int argc, char **argv)
 				party_host = temp_people;
 			else
 			{
-				if (find_parent(party_host) != find_parent(temp_people))
-					union_parent(party_host, temp_people);
+				union_parent(party_host, temp_people);
 			};
 		}
 	}

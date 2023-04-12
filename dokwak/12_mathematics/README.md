@@ -6,3 +6,4 @@
 | easy | [1929](https://www.acmicpc.net/problem/1929) | [1929.cpp](./1929/1929.cpp) | optimization with prime number definition |
 | easy | [11653](https://www.acmicpc.net/problem/11653) | [11653.cpp](./11653/11653.cpp) |  |
 | ? | [6064](https://www.acmicpc.net/problem/6064) | [6064.cpp](./6064/6064.cpp) |  |
+| mid | [11660](https://www.acmicpc.net/problem/11660) | [11660.cpp](./11660/11660.cpp) | use stringBuilder |

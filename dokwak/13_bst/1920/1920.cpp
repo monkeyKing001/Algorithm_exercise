@@ -5,6 +5,7 @@
 #include <climits>
 #include <map>
 #include <string>
+#include <set>
 
 using namespace std;
 int n, m;
@@ -64,20 +65,27 @@ int	main(int argc, char **argv)
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cin >> n;
+	set <int> s;
 	for (int i = 0; i < n; i++)
 	{
 		int temp;
 		cin >> temp;
 		arr.push_back(temp);
+		s.insert(temp);
 	}
-	sort(arr.begin(), arr.end());
+//	sort(arr.begin(), arr.end());
 	cin >> m;
 	for (int i = 0; i < m; i++)
 	{
 		int target;
 		cin >> target;
 		//Binary Search Tree start!
-		cout << BST(target) << "\n";
+//		cout << BST(target) << "\n";
+		if (s.find(target) == s.end())
+			cout << "0\n";
+		else
+			cout << "1\n";
+		;
 	}
 	return (0);
 }

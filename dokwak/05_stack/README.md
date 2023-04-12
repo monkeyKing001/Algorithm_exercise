@@ -7,3 +7,4 @@
 | easy | [3986](https://www.acmicpc.net/problem/3986) | [3986.cpp](./3986/3986.cpp) |  |
 | easy | [2493](https://www.acmicpc.net/problem/2493) | [2493.cpp](./2493/2493.cpp) | owenkunsu |
 | hard and tricky | [6549](https://www.acmicpc.net/problem/6549) | [6549.cpp](./6549/6549.cpp) | be careful when calculating and memoing area not to overflow |
+| tricky | [1918](https://www.acmicpc.net/problem/1918) | [1918.cpp](./1918/1918.cpp) |  |

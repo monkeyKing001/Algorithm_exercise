@@ -19,6 +19,7 @@ There are many algorithms and techniques for working with graphs, including sear
 
 ## expression
 Each of these representations has its own advantages and disadvantages, and the choice of representation depends on the specific use case and the requirements of the graph algorithm. In general, adjacency matrices are better for dense graphs, while adjacency lists and edge lists are better for sparse graphs.
+
 ### Adjacency Matrix
 Adjacency Matrix: An adjacency matrix is a two-dimensional matrix that represents a graph, where each row and column represents a vertex, and the entries in the matrix represent the edges between vertices. If there is an edge between vertices i and j, then the entry in row i and column j is set to 1, and 0 otherwise. For weighted graphs, the matrix entries can be set to the edge weight instead of 1.
 > space complextity 
@@ -65,3 +66,5 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
 | hard | [pro_132266](https://school.programmers.co.kr/learn/courses/30/lessons/132266) | [pro_132266.cpp](./pro_132266/pro_132266.cpp) | bfs, given_path, min_cost |
 | easy | [2606](https://www.acmicpc.net/problem/2606) | [2606.cpp](./2606/2606.cpp) |  |
+| hard | [1753](https://www.acmicpc.net/problem/1753) | [1753.cpp](./1753/1753.cpp) | Floyd Algorithm and 2d array is memory limit exceed. use Djikstra. becare for the multiple edge |
+| ? | [1504](https://www.acmicpc.net/problem/1504) | [1504.cpp](./1504/1504.cpp) |  |

@@ -13,7 +13,37 @@ The time complexity of the Union-Find algorithm is O(m α(m, n)), where m is the
 
 In summary, the Union-Find algorithm is a data structure and algorithm used to manage disjoint sets efficiently. It provides two main operations: union and find. The algorithm maintains a forest of trees where each node represents a set, and the roots of the trees represent the distinct sets. The time complexity of the Union-Find algorithm is O(m α(m, n)), where α is the inverse Ackermann function.
 
+## `Union find` implement Rule.
+
+### Need 3 functions.
+
+#### 1. `find_parent(v1)`
+```c++
+parent[v] == find_parent(parent[v]) //recursive bottom up.
+	return parent[v];
+```
+
+#### 2. `is_same_group(v1, v2)`
+```c++
+find_parent(v1) == find_parent(v2);
+```
+
+#### 3. `merge_group(v1, v2)`
+```c++
+	if (same_group(v1, v2))
+		return;
+	if (find_parent(v1) > find_parent(v2))
+		swap(v1, v2);
+	parent[find_parent(v2)] = find_parent(v1);
+	//v1 = 4, v2 = 7
+	//find_parent(v1) = 1, find_parent(v2) = 5 일 때, 
+	//parent[find_parent(7)] -> parent[5] = 1.이 되면.
+	//parent[5] == 1, parent[7] == 5 일텐데 union이 잘 된걸까?
+	//parent[7] == 5라도, find_parent(7)을 통해 부모를 찾으면, 재귀적으로 5 -> 1을 찾게 되므로 옳은 로직!.
+```
+
 # Kruskal Algorithm
+### sort
 Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a connected, weighted graph. The MST is a subgraph that includes all vertices of the original graph and has the minimum possible total edge weight. The algorithm was named after its inventor Joseph Kruskal.
 
 Kruskal's algorithm works by initially sorting all the edges of the graph in increasing order of weight. It then starts with the edge with the smallest weight and adds it to the MST if it does not create a cycle. If the edge creates a cycle, it is discarded, and the next smallest edge is considered. This process continues until all vertices are in the MST.
@@ -25,6 +55,12 @@ Kruskal's algorithm has a time complexity of O(E log E), where E is the number o
 Kruskal's algorithm is widely used in various applications such as network design, image segmentation, and clustering. It is one of the simplest and most efficient algorithms for finding the MST of a graph.
 
 In summary, Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree of a weighted, connected graph. It works by sorting the edges in increasing order of weight, adding the smallest edge that does not create a cycle to the MST, and repeating until all vertices are in the MST. The algorithm uses a disjoint-set data structure to keep track of the connected components of the graph and has a time complexity of O(E log E).
+
+## Kruskal Implement Rule
+### Need 3 functions
+#### 1. union find(to detect same group)
+#### 2. sorted edges.
+#### 3. from minimum cost edges, check if two nodes are same group, if not, union them. iterate until connected edges counts = n(v) -1 
 
 # Prims Algorithm
 Prim's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a weighted, connected graph. The MST is a subgraph that includes all vertices of the original graph and has the minimum possible total edge weight. The algorithm was named after its inventor Robert Prim.
@@ -38,6 +74,14 @@ Prim's algorithm has a time complexity of O(E log V), where E is the number of e
 Prim's algorithm is widely used in various applications such as network design, image segmentation, and clustering. It is one of the simplest and most efficient algorithms for finding the MST of a graph.
 
 In summary, Prim's algorithm is a greedy algorithm used to find the minimum spanning tree of a weighted, connected graph. It works by starting with an arbitrary vertex, adding the minimum-weight edge that connects it to an unvisited vertex, and repeating until all vertices are in the MST. The algorithm uses a priority queue to keep track of the minimum-weight edges and has a time complexity of O(E log V).
+## Prims implement Rule
+### Need 3 containers
+#### 1. PriorityQueue
+#### 2. graph adjacent_list(start(optional), end, cost);
+#### 3. Set (mst_nodes)
+
+### 
+
 
 ## merging group counter example (Kruskal not using union algo)
 * counter example : merging v1, v5 groups
@@ -50,6 +94,42 @@ v5~v6, v8~v10 = g2
 fori 1 ~ 10 if (g[i] == g[v1] || g[i] == g[v5]) -> g[i] = min(g[v1], g[v5])
 ---
 result = v1~v7 = g1, v8~v10 = still g2
+```
+
+## JAVA
+### sorting 2d Arrays
+```java
+	arr = new int [n][m];
+		Arrays.sort(arr, new Comparator<int[]>() {
+					@Override
+					public int compare(int[] e1, int[] e2) {
+						return (Integer.compare(e1[2], e2[2]));
+					}
+				});
+```
+### PriorityQueue
+```java
+	PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int []>() {
+			@Override
+			public int compare(int []e1, int []e2)
+			{
+				return (Integer.compare(e1[2], e2[2]));
+			}
+	});
+
+```
+
+## CPP
+### priority_queue
+```c++
+struct my_compare()
+{
+	bool operator()(int *e1, int *e2)
+	{
+		return (e1[1] > e2[1]);
+	}
+};
+priority_queue<int*, vector<int*>, my_compare> pq;
 ```
 
 # 1B_min_span
