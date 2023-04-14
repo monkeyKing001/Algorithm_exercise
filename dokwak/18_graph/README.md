@@ -58,6 +58,13 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 - Removing an edge: O(E)
 - Traversing all the vertices: O(E)
 
+# Djikstra Algorithm
+## Implementation Rule
+### 1. need 3 data structure
+- PriorityQueue
+- adjacent list(graph)
+- cost_to_visit array
+
 
 # 18_graph
 | level | problem | my_ans | hint |
