@@ -32,3 +32,4 @@ long max_h = Arrays.stream(trees).max().getAsInt();
 | mid | [1654](https://www.acmicpc.net/problem/1654) | [1654.cpp](./1654/1654.cpp) | be caution for max_len |
 | easy | [2805](https://www.acmicpc.net/problem/2805) | [2805.cpp](./2805/2805.cpp) | cutting under 0 is impossiple |
 | hard | [16434](https://www.acmicpc.net/problem/16434) | [16434.cpp](./16434/16434.cpp) | binary search without while loop. ceil with long type is incorrect. casting type to double before ceil is needed |
+| ? | [2467](https://www.acmicpc.net/problem/2467) | [2467.cpp](./2467/2467.cpp) |  |

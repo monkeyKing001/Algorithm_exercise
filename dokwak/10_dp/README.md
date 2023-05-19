@@ -14,3 +14,8 @@
 | easy | [9465](https://www.acmicpc.net/problem/9465) | [9465.cpp](./9465/9465.cpp) | n == 1 -> ? |
 | mid | [2206](https://www.acmicpc.net/problem/2206) | [2206.cpp](./2206/2206.cpp) | bfs + dp |
 | easy | [11053](https://www.acmicpc.net/problem/11053) | [11053.cpp](./11053/11053.cpp) | dp or bst. lower_bound returns what? |
+| hard | [11444](https://www.acmicpc.net/problem/11444) | [11444.cpp](./11444/11444.cpp) | dp and matrix fibonacci |
+| easy | [12852](https://www.acmicpc.net/problem/12852) | [12852.cpp](./12852/12852.cpp) | dp + brute + bfs |
+| hard | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) | looks like greedy but it's not. use 2d dp |
+| hard | [7579](https://www.acmicpc.net/problem/7579) | [7579.cpp](./7579/7579.cpp) | 2d dp, think when is the change point(copy past state -----> change point ---->  ignition) |
+| ? | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) |  |

@@ -52,6 +52,7 @@ public class Main{
 				g[v2].add(edge2);
 			}
 		}
+		int m = 3;
 		int start = pq.peek()[2];
 		int mst_cost = pq.peek()[0];
 		mst.add(start);

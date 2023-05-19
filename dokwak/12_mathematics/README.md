@@ -7,3 +7,6 @@
 | easy | [11653](https://www.acmicpc.net/problem/11653) | [11653.cpp](./11653/11653.cpp) |  |
 | ? | [6064](https://www.acmicpc.net/problem/6064) | [6064.cpp](./6064/6064.cpp) |  |
 | mid | [11660](https://www.acmicpc.net/problem/11660) | [11660.cpp](./11660/11660.cpp) | use stringBuilder |
+| mid | [1676](https://www.acmicpc.net/problem/1676) | [1676.cpp](./1676/1676.cpp) | use prime_number |
+| ? | [17626](https://www.acmicpc.net/problem/17626) | [17626.cpp](./17626/17626.cpp) |  |
+| mid | [HackerRank_journey_to_the_moon](https://www.hackerrank.com/challenges/journey-to-the-moon/problem?isFullScreen=true) | [HackerRank_journey_to_the_moon.cpp](./HackerRank_journey_to_the_moon/HackerRank_journey_to_the_moon.cpp) | union_find, start case -> (n * (n - 1)) / 2 |

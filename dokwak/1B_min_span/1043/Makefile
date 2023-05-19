@@ -53,6 +53,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(CDEBUG) $(OBJ) -o $@
 	@$(PRINTF) "\r%100s\r$(GREEN)$(BIN) is up to date!$(DEFAULT)\n"
+	@make clean
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@$(eval SRC_COUNT = $(shell expr $(SRC_COUNT) + 1))

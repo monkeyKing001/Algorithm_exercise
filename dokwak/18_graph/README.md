@@ -58,7 +58,7 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 - Removing an edge: O(E)
 - Traversing all the vertices: O(E)
 
-# Djikstra Algorithm
+# Dijkstra Algorithm
 ## Implementation Rule
 ### 1. need 3 data structure
 - PriorityQueue
@@ -73,5 +73,9 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
 | hard | [pro_132266](https://school.programmers.co.kr/learn/courses/30/lessons/132266) | [pro_132266.cpp](./pro_132266/pro_132266.cpp) | bfs, given_path, min_cost |
 | easy | [2606](https://www.acmicpc.net/problem/2606) | [2606.cpp](./2606/2606.cpp) |  |
-| hard | [1753](https://www.acmicpc.net/problem/1753) | [1753.cpp](./1753/1753.cpp) | Floyd Algorithm and 2d array is memory limit exceed. use Djikstra. becare for the multiple edge |
+| hard | [1753](https://www.acmicpc.net/problem/1753) | [1753.cpp](./1753/1753.cpp) | Floyd Algorithm and 2d array is memory limit exceed. use Dijkstra. becare for the multiple edge |
 | ? | [1504](https://www.acmicpc.net/problem/1504) | [1504.cpp](./1504/1504.cpp) |  |
+| hard | [1967](https://www.acmicpc.net/problem/1967) | [1967.cpp](./1967/1967.cpp) | no floyd, Dijkstra |
+| ? | [1167](https://www.acmicpc.net/problem/1167) | [1167.cpp](./1167/1167.cpp) |  |
+| ? | [2263](https://www.acmicpc.net/problem/2263) | [2263.cpp](./2263/2263.cpp) |  |
+| easy | [20040](https://www.acmicpc.net/problem/20040) | [20040.cpp](./20040/20040.cpp) | union find |
