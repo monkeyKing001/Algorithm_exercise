@@ -18,4 +18,6 @@
 | easy | [12852](https://www.acmicpc.net/problem/12852) | [12852.cpp](./12852/12852.cpp) | dp + brute + bfs |
 | hard | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) | looks like greedy but it's not. use 2d dp |
 | hard | [7579](https://www.acmicpc.net/problem/7579) | [7579.cpp](./7579/7579.cpp) | 2d dp, think when is the change point(copy past state -----> change point ---->  ignition) |
-| ? | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) |  |
+| hard | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) | no path -> max, bits max doesn't mean sol case |
+| hard | [10971](https://www.acmicpc.net/problem/10971) | [10971.cpp](./10971/10971.cpp) | same as TSP |
+| mid | [1987](https://www.acmicpc.net/problem/1987) | [1987.cpp](./1987/1987.cpp) | bit masking, dfs |

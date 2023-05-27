@@ -41,6 +41,9 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
+		String temp = "text";
+		
+
 		parent = new int[100001];
 		for (int i = 0; i < n + 1; i++) {
 			parent[i] = 0;

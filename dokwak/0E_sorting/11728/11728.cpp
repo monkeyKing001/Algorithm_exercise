@@ -5,6 +5,7 @@ vector <long long> arr_b;
 vector <long long> merged_arr;
 int	a_length;
 int	b_length;
+#define day first;
 
 int	main(int argc, char **argv)
 {
