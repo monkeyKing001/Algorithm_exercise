@@ -64,6 +64,7 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 - PriorityQueue
 - adjacent list(graph)
 - cost_to_visit array
+- if don't need updating, do not push in queue
 
 
 # 18_graph
@@ -75,7 +76,9 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | easy | [2606](https://www.acmicpc.net/problem/2606) | [2606.cpp](./2606/2606.cpp) |  |
 | hard | [1753](https://www.acmicpc.net/problem/1753) | [1753.cpp](./1753/1753.cpp) | Floyd Algorithm and 2d array is memory limit exceed. use Dijkstra. becare for the multiple edge |
 | ? | [1504](https://www.acmicpc.net/problem/1504) | [1504.cpp](./1504/1504.cpp) |  |
-| hard | [1967](https://www.acmicpc.net/problem/1967) | [1967.cpp](./1967/1967.cpp) | no floyd, Dijkstra |
+| hard | [1967](https://www.acmicpc.net/problem/1967) | [1967.cpp](./1967/1967.cpp) | no floyd, bfs(Queue) or Dijkstra(PQ). do not use -1 |
 | ? | [1167](https://www.acmicpc.net/problem/1167) | [1167.cpp](./1167/1167.cpp) |  |
 | ? | [2263](https://www.acmicpc.net/problem/2263) | [2263.cpp](./2263/2263.cpp) |  |
 | easy | [20040](https://www.acmicpc.net/problem/20040) | [20040.cpp](./20040/20040.cpp) | union find |
+| hard | [1238](https://www.acmicpc.net/problem/1238) | [1238.cpp](./1238/1238.cpp) | Floyd -> TLEDijkstra |
+| hard | [9466](https://www.acmicpc.net/problem/9466) | [9466.cpp](./9466/9466.cpp) | how to cycle check and duplicated travel check? visited & finished. before rec, after rec |

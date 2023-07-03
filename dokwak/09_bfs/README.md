@@ -17,3 +17,5 @@
 | easy | [7569](https://www.acmicpc.net/problem/7576) | [7569.cpp](./7569/7569.cpp) | |
 | easy | [7562](https://www.acmicpc.net/problem/7562) | [7562.cpp](./7562/7562.cpp) | global or main local var need to be cleaned.(board, queue) |
 | mid | [13549](https://www.acmicpc.net/problem/13549) | [13549.cpp](./13549/13549.cpp) | bfs but count carefully |
+| ? | [16236](https://www.acmicpc.net/problem/16236) | [16236.cpp](./16236/16236.cpp) |  |
+| ? | [14940](https://www.acmicpc.net/problem/14940) | [14940.cpp](./14940/14940.cpp) |  |

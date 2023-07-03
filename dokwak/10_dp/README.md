@@ -21,3 +21,8 @@
 | hard | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) | no path -> max, bits max doesn't mean sol case |
 | hard | [10971](https://www.acmicpc.net/problem/10971) | [10971.cpp](./10971/10971.cpp) | same as TSP |
 | mid | [1987](https://www.acmicpc.net/problem/1987) | [1987.cpp](./1987/1987.cpp) | bit masking, dfs |
+| easy | [11659](https://www.acmicpc.net/problem/11659) | [11659.cpp](./11659/11659.cpp) |  |
+| mid | [12015](https://www.acmicpc.net/problem/12015) | [12015.cpp](./12015/12015.cpp) |  |
+| hard | [1208](https://www.acmicpc.net/problem/1208) | [1208.cpp](./1208/1208.cpp) | 2 ^ n vs 2 ^ (n / 2) + 2 ^ (n / 2) |
+| hard | [14003](https://www.acmicpc.net/problem/14003) | [14003.cpp](./14003/14003.cpp) | memoization the index |
+| ? | [1562](https://www.acmicpc.net/problem/1562) | [1562.cpp](./1562/1562.cpp) |  |

@@ -8,7 +8,7 @@ public class Main{
 		StringBuilder sb_input = new StringBuilder();
 		sb.append("");
 		int n = 0;
-
+		
 		//input
 		//n = Integer.parseInt(st.nextToken());
 		n  = Integer.parseInt(br.readLine());

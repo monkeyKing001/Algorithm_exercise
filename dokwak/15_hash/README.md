@@ -20,6 +20,7 @@ String.format("%.4f", por);
 	s.contains(num); //returns true or false
 	s.clear();
 ``` 
+
 ## treeSet
 * c++
 ```c++
@@ -39,29 +40,53 @@ String.format("%.4f", por);
 * c++
 ```c++
 	//init
-	map<int, int> zip;
-	set<int>::iterator it = coor.begin();
+	map<int, int> m;
+
 	//insert
-	for (; it != coor.end(); it++)
+	m.insert({k, v});//pair
+
+	//iterator
+	map<int, int>::iterator it = m.begin();
+	for (; it != m.end(); it++)
 	{
-		zip.insert(make_pair(*it, count++));
+		int k = m -> first;
+		int v = m -> second;
 	}
+
 	//getter
-	arr[i] = zip[org]; //access with key
+	m[k];
 ```
 * Java
 ```Java
 	//init
 	Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-	Iterator<Integer> it = set.iterator();
-	while (it.hasNext()) //add entry
-	{
-		//map.put(key, value);
-		map.put(it.next(), count++);
+	map.put(k, v);
+	map.containsKey(k) == true
+	map.remove(k);
+	for (Map.Entry<Integer, Integer> e: map.entrySet()){
+		int k = e.getKey();
+		int v = e.getValue();
 	}
-	for (int i = 0; i < n; i++) {
-		arr[i] = map.get(arr[i]);
+```
+
+## TreeMap
+* c++
+```c++
+	//same with map
+```
+
+* java
+```java
+	TreeMap<Integer, Integer> map = new TreeMap<>();
+	map.put(k, v);
+	map.put(k, map.get(k) + 1);
+	map.containsKey(k) == true
+	map.remove(k);
+	for (Map.Entry<Integer, Integer> e: map.entrySet()) {
+		int k = e.getKey();
+		int v = e.getValue();
 	}
+
 ```
 
 | level | problem | my_ans | hint |
@@ -73,3 +98,4 @@ String.format("%.4f", por);
 | easy | [17219](https://www.acmicpc.net/problem/17219) | [17219.cpp](./17219/17219.cpp) | use hashMap |
 | easy | [4358](https://www.acmicpc.net/problem/4358) | [4358.cpp](./4358/4358.cpp) |  |
 | ? | [1316](https://www.acmicpc.net/problem/1316) | [1316.cpp](./1316/1316.cpp) |  |
+| ? | [25192](https://www.acmicpc.net/problem/25192) | [25192.cpp](./25192/25192.cpp) |  |

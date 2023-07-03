@@ -21,3 +21,5 @@ In summary, topology sort is a useful algorithm for determining the order in whi
 | :--: | :--: | :--: | :--: |
 | easy | [2252](https://www.acmicpc.net/problem/2252) | [2252.cpp](./2252/2252.cpp) |  |
 | hard | [pro_118668](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | [pro_118668.cpp](./pro_118668/pro_118668.cpp) |  |
+| mid | [2623](https://www.acmicpc.net/problem/2623) | [2623.cpp](./2623/2623.cpp) | topology |
+| ? | [1005](https://www.acmicpc.net/problem/1005) | [1005.cpp](./1005/1005.cpp) |  |

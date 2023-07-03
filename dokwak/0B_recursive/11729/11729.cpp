@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+static vector<int> dp(50001, INT_MIN);
 
 int	get_count(int disk_num)
 {

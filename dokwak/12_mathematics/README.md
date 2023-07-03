@@ -10,3 +10,5 @@
 | mid | [1676](https://www.acmicpc.net/problem/1676) | [1676.cpp](./1676/1676.cpp) | use prime_number |
 | ? | [17626](https://www.acmicpc.net/problem/17626) | [17626.cpp](./17626/17626.cpp) |  |
 | mid | [HackerRank_journey_to_the_moon](https://www.hackerrank.com/challenges/journey-to-the-moon/problem?isFullScreen=true) | [HackerRank_journey_to_the_moon.cpp](./HackerRank_journey_to_the_moon/HackerRank_journey_to_the_moon.cpp) | union_find, start case -> (n * (n - 1)) / 2 |
+| hard | [2166](https://www.acmicpc.net/problem/2166) | [2166.cpp](./2166/2166.cpp) |  |
+| ? | [17387](https://www.acmicpc.net/problem/17387) | [17387.cpp](./17387/17387.cpp) |  |
