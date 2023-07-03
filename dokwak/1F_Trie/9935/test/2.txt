@@ -1,0 +1,4 @@
+aaabbb
+ba
+
+결과: aaabbb

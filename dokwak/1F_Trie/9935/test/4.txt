@@ -1,0 +1,4 @@
+abaabcdbcdcd
+abcd
+
+정답: FRULA
