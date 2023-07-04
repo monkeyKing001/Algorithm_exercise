@@ -1,3 +1,5 @@
 *.swp
 *.swo
+*.out
+*.txt
 .DS_Store
