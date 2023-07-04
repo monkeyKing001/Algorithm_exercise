@@ -65,6 +65,11 @@
     "variant": "cpp",
     "algorithm": "cpp",
     "concepts": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "set": "cpp",
+    "unordered_set": "cpp",
+    "filesystem": "cpp"
   }
 }
