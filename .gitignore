@@ -1,3 +1,9 @@
 *.swp
 *.swo
 .DS_Store
+*.txt
+*.out
+*.Class
+*.class
+Makefile
+*.o
