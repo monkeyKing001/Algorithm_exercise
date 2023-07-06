@@ -25,4 +25,5 @@
 | mid | [12015](https://www.acmicpc.net/problem/12015) | [12015.cpp](./12015/12015.cpp) |  |
 | hard | [1208](https://www.acmicpc.net/problem/1208) | [1208.cpp](./1208/1208.cpp) | 2 ^ n vs 2 ^ (n / 2) + 2 ^ (n / 2) |
 | hard | [14003](https://www.acmicpc.net/problem/14003) | [14003.cpp](./14003/14003.cpp) | memoization the index |
-| ? | [1562](https://www.acmicpc.net/problem/1562) | [1562.cpp](./1562/1562.cpp) |  |
+| hard | [1562](https://www.acmicpc.net/problem/1562) | [1562.cpp](./1562/1562.cpp) | bits masking |
+| mid | [5582](https://www.acmicpc.net/problem/5582) | [5582.cpp](./5582/5582.cpp) | different with LCS. |

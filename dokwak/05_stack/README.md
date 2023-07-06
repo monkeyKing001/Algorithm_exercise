@@ -10,3 +10,4 @@
 | tricky | [1918](https://www.acmicpc.net/problem/1918) | [1918.cpp](./1918/1918.cpp) |  |
 |  | [3015](https://www.acmicpc.net/problem/3015) | [3015.cpp](./3015/3015.cpp) |  |
 | ? | [9012](https://www.acmicpc.net/problem/9012) | [9012.cpp](./9012/9012.cpp) |  |
+| mid | [12904](https://www.acmicpc.net/problem/12904) | [12904.cpp](./12904/12904.cpp) | erase |
