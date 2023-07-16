@@ -3,80 +3,80 @@ import java.io.*;
 
 public class Main{
 	static int n, m;
-	static ArrayList<Integer> arr_sol = new ArrayList<>();
-	public static int lw_bound_idx(int target)
-	{
-		int l = 0, r = arr_sol.size() - 1;
+	public static int find_lower_bound(ArrayList<Integer> arr, int target){
+		int index = -1;
+		int l = 0;
+		int r = arr.size() - 1;
 		int mid = (l + r) / 2;
-		int sol = -1;
-		while (l <= r)
-		{
-			if (arr_sol.get(mid) < target)
+		while (l <= r){
+			if (arr.get(mid) < target){
 				l = mid + 1;
-			else if(arr_sol.get(mid) >= target){
-				sol = mid;
-				r = mid - 1;
+			}
+			else if (arr.get(mid) >= target){
+				index = mid;
+				r = mid - 1; 
 			}
 			mid = (l + r) / 2;
 		}
-		return (sol);
+		return (index);
 	}
+
 	public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
 		sb.append("");
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		ArrayList<Integer> lis = new ArrayList<>();
+		ArrayList<Integer> input = new ArrayList<>();
 
-		//input
 		n = Integer.parseInt(st.nextToken());
-		int []arr = new int[1000001];
-		int []dp = new int[1000001];
-		st = new StringTokenizer(br.readLine());
+		int []sol = new int [n + 1];
+		int max_index = -1;
+
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+			int num = Integer.parseInt(st.nextToken());
+			input.add(num);
 		}
-//		System.out.println("arr");
-//		for (int i = 0; i < n; i++) {
-//			System.out.print(arr[i] + " ");	
-//		}
-//		System.out.println();
-		int max_i = -1;
+
 		for (int i = 0; i < n; i++) {
-			int num = arr[i];
-//			System.out.println("num : " + num);
-			if (arr_sol.size() == 0 || num > arr_sol.get(arr_sol.size() - 1))
+			int num = input.get(i);
+			int index_for_num = find_lower_bound(lis, num);
+			//max num
+			if (lis.size() == 0 || index_for_num == -1)
 			{
-				arr_sol.add(num);
-				max_i = i;
-				dp[i] = arr_sol.size() - 1;
-//				System.out.println("new biggest : " + num);
+				lis.add(num);
+				sol[i] = lis.size() - 1;
+				max_index = i;
+//				System.out.println("max num : " + num);
 			}
 			else{
-				int idx = lw_bound_idx(num);
-				if (idx == arr_sol.size() - 1)
-					max_i = i;
-				arr_sol.set(idx, num);
-				dp[i] = idx;
-				//max i?
+				lis.set(index_for_num, num);
+				sol[i] = index_for_num;
 			}
 		}
-		ArrayList<Integer> temp = new ArrayList<>();
-		int cnt = arr_sol.size();
-		int cur_i = max_i;
-		System.out.println(cnt);
-		while (cur_i > -1)
-		{
-			if (dp[cur_i] == cnt - 1)
+		int lis_index = lis.size() - 1;
+//		System.out.println("lis_index : "+ lis_index);
+		int index = max_index;
+//		System.out.println("max_index : " + index);
+//		for (int i = 0; i < n; i++) {
+//			System.out.println("sol[" + i + "] : " + sol[i]);
+//		}
+		sb.append(lis.size() + "\n");
+		Stack <Integer> s = new Stack<>();
+		while (index > -1){
+			if (sol[index] == lis_index)
 			{
-//				System.out.println("adding arr[" + cur_i + "] : " + arr[cur_i]);
-				temp.add(arr[cur_i]);
-				cnt--;
+				s.add(input.get(index));
+				lis_index--;
 			}
-			cur_i--;
+			if (lis_index == -1)
+				break;
+			index--;
 		}
-		for (int i = temp.size() - 1; i > - 1; i--) {
-			sb.append(Integer.toString(temp.get(i)) + " ");
+		while (s.empty() != true){
+			sb.append(s.pop() +  " ");
 		}
 		bw.write(sb.toString());
 		bw.flush();

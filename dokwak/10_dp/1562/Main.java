@@ -14,46 +14,45 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		//init
-		long [][][]dp = new long[101][10][(1 << 10)];
-		for (int length = 0; length < 101; length++) {
-			for (int last_num = 0; last_num < 10; last_num++) {
-				for (int bits = 0; bits < (1 << 10); bits++) {
-					dp[length][last_num][bits] = 0;	
+		int [][][]dp = new int[101][10][1 << 10];
+		for (int i = 0; i < 101; i++) {
+			for (int j = 0; j < 10; j++) {
+				for (int k = 0; k < (1 << 10); k++) {
+					dp[i][j][k] = 0;
 				}
 			}
 		}
-		//init 2
-		for (int last_num = 1; last_num < 10; last_num++) {
-			int bits = 1 << last_num;
-			dp[1][last_num][bits] = 1;
+
+		//1 digit num
+		for (int i = 1; i < 10; i++) {
+			dp[1][i][1 << i] = 1;
 		}
-		for (int length = 1; length < n; length++) {
+		
+		//make dp
+		for (int layer = 1; layer < n; layer++) {
 			for (int last_num = 0; last_num < 10; last_num++) {
-				for (int bits = 0; bits < ((1 << 10)); bits++) {
-					int next_bits = -1;
-					if (last_num > 0)
+				for (int bits = 0; bits < (1 << 10); bits++) {
+					int post_num = last_num + 1;
+					int prev_num = last_num - 1;
+					if (prev_num > -1)
 					{
-						next_bits = bits | (1 << (last_num - 1));
-						dp[length + 1][last_num - 1][next_bits] += dp[length][last_num][bits];
-						dp[length + 1][last_num - 1][next_bits] %= mod;
+						dp[layer + 1][prev_num][bits | 1 << prev_num] += dp[layer][last_num][bits];
+						dp[layer + 1][prev_num][bits | 1 << prev_num] %= mod;
 					}
-					if (last_num < 9)
+					if (post_num < 10)
 					{
-						next_bits = bits | (1 << (last_num + 1));
-						dp[length + 1][last_num + 1][next_bits] += dp[length][last_num][bits];
-						dp[length + 1][last_num + 1][next_bits] %= mod;
+						dp[layer + 1][post_num][bits | 1 << post_num] += dp[layer][last_num][bits];
+						dp[layer + 1][post_num][bits | 1 << post_num] %= mod;
 					}
 				}
 			}
 		}
 		long sol = 0;
-		for (int last_num = 0; last_num < 10; last_num++) {
-			sol += dp[n][last_num][1023];
+		for (int i = 0; i < 10; i++) {
+			sol += dp[n][i][(1 << 10) - 1];
 			sol %= mod;
 		}
 		System.out.println(sol);
-		bw.write(sb.toString());
-		bw.flush();
 		return ;
 	}
 }
