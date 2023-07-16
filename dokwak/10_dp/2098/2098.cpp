@@ -63,14 +63,6 @@ int	main(int argc, char **argv)
 	}
 	memset(dp, -1 ,sizeof(dp));
 	cout << TSP(0, 1) << "\n";
-//	for (int i = 0; i < n; i++)
-//	{
-//		for (int j = 0; j < 1 << n; j++)
-//		{
-//			cout << dp[i][j] << "\t";
-//		}
-//		cout << "\n";
-//	}
 	return (0);
 }
 

@@ -13,50 +13,34 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
-		int [][]dp = new int[101][100001];
-		ArrayList<int[]> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
-			int [] entry = new int[2];
-			entry[0] = Integer.parseInt(st.nextToken()); //w
-			entry[1] = Integer.parseInt(st.nextToken()); //v
-			arr.add(entry);
-//			System.out.println("w, v : " + entry[0] +", "+ entry[1]);
-		}
+		int [][] dp = new int [101][100001];
 		for (int i = 0; i < 101; i++) {
 			for (int j = 0; j < 100001; j++) {
 				dp[i][j] = 0;
 			}
 		}
-		for (int i = 1; i <= n; i++) {
-			int w = arr.get(i - 1)[0];
-			int v = arr.get(i - 1)[1];
-			for (int j = 0; j <= m; j++) {
-				if (j < w)
-				{
-					dp[i][j] = dp[i - 1][j];
-				}
+		int max_w = m;
+		int[][] item = new int[n][2];
+		for (int i = 0; i < n; i++) {
+			st = new StringTokenizer(br.readLine()," ");
+			item[i][0] = Integer.parseInt(st.nextToken());
+			item[i][1] = Integer.parseInt(st.nextToken());
+			int cur_weight = item[i][0];
+			int cur_value = item[i][1];
+			for (int w = 0; w < cur_weight; w++) {
+				dp[i + 1][w] = dp[i][w];
+			}
+			for (int w = item[i][0]; w <= max_w; w++) {
+				if (dp[i][w - cur_weight] + cur_value > dp[i][w])
+					dp[i + 1][w] = dp[i][w - cur_weight] + cur_value;
 				else
-				{
-					if (dp[i - 1][j - w] + v > dp[i - 1][j]) //best value in under v[j-w] + cur_v vs best_value under v[j] in past
-						dp[i][j] = dp[i - 1][j - w] + v;
-					else
-						dp[i][j] = dp[i - 1][j];
-				}
+					dp[i + 1][w] = dp[i][w];
 			}
 		}
-//		for (int i = 0; i <= n; i++) {
-//			System.out.print("item " + i + " : ");
-//			for (int j = 0; j <= m; j++) {
-//				System.out.print(dp[i][j] + "\t");
-//			}	
-//			System.out.println("");
+		System.out.println(dp[n][max_w]);
+//		for (int i = 0; i < n; i++) {
+//			System.out.println(item[i][0] + ", " + item[i][1]);
 //		}
-		System.out.println(dp[n][m]);
-		bw.write(sb.toString());
-		bw.flush();
 		return ;
 	}
 }
-
-

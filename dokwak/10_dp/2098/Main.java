@@ -3,16 +3,32 @@ import java.io.*;
 
 public class Main{
 	static int n, m;
-	public static int find_next(int v, int s)
-	{
-		for (int i = 0; i < n; i++) {
-			int temp = s >> i;
-			if (temp % 2 == 1)
-				return (i);
+	static int end;
+	static int max = 987654321;
+	static int cost[][];
+	static int dp[][];
+	//find the optimum(minimum) cost to visit all other not visited nodes when already visited as bits masked.
+	public static int TSP(int cur, int visited){
+		//all visited, now return the cost to back start point(0)
+		if (visited == end)
+		{
+			if (cost[cur][0] == 0)
+				return max;
+			return cost[cur][0];
 		}
-		return (0);
+		if (dp[cur][visited] != 0)//already visited
+			return (dp[cur][visited]);
+		//traverse all the other not visited node;
+		dp[cur][visited] = max;
+		for (int next = 0; next < n; next++) {
+			if ((visited & (1 << next)) != 0) //already visited nodes. pass.
+				continue;
+			if (cost[cur][next] == 0) //no way
+				continue;
+			dp[cur][visited] = Integer.min(dp[cur][visited], TSP(next, visited | (1 << next)) + cost[cur][next]);
+		}
+		return (dp[cur][visited]);
 	}
-
 	public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -20,42 +36,25 @@ public class Main{
 		sb.append("");
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
-		//input
-		PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int []>(){
-			@Override
-			public int compare(int []e1, int []e2)
-			{
-				return (Integer.compare(e1[2], e1[2]));
-			}
-		});
 		n = Integer.parseInt(st.nextToken());
-		int [][]mat = new int[n + 1][(1 << n) + 1];
-		for (int i = 1; i < n + 1; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
-			for (int j = 1; j < n + 1; j++) {
-				int cost = Integer.parseInt(st.nextToken());
-				mat[i][j] = cost;
-				int [] e = new int[3];
-				e[0] = i;
-				e[1] = j;
-				e[2] = cost;
-				if (cost == 0)
-					e[2] = Integer.MAX_VALUE;
-				pq.add(e);
+		end = (1 << n) - 1;
+		cost = new int[n][n];
+		for (int i = 0; i < n; i++) {
+		st = new StringTokenizer(br.readLine(), " ");
+			for (int j = 0; j < n; j++) {
+				cost[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		int start_v = pq.peek()[0];
-		int to_v = pq.peek()[1];
-		int cost = pq.peek()[2];
-		pq.poll();
-		while (pq.size() != 0)
-		{
+		dp = new int[n][(1 << n)];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < (1 << n); j++) {
+				dp[i][j] = 0;
+			}
 		}
-
+		long sol = TSP(0, 1);
+		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
-
-

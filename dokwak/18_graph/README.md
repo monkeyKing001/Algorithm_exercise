@@ -82,3 +82,4 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | easy | [20040](https://www.acmicpc.net/problem/20040) | [20040.cpp](./20040/20040.cpp) | union find |
 | hard | [1238](https://www.acmicpc.net/problem/1238) | [1238.cpp](./1238/1238.cpp) | Floyd -> TLEDijkstra |
 | hard | [9466](https://www.acmicpc.net/problem/9466) | [9466.cpp](./9466/9466.cpp) | how to cycle check and duplicated travel check? visited & finished. before rec, after rec |
+| ? | [samsung_sw_01](https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYkfqUaKLp0DFASe&categoryId=AYkf6zw6MwMDFASe&categoryType=BATTLE&battleMainPageIndex=) | [samsung_sw_01.cpp](./samsung_sw_01/samsung_sw_01.cpp) | cycle doesnt work. why? edge_index wrong coding |
