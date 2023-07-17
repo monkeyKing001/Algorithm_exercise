@@ -19,3 +19,4 @@
 | mid | [13549](https://www.acmicpc.net/problem/13549) | [13549.cpp](./13549/13549.cpp) | bfs but count carefully |
 | ? | [16236](https://www.acmicpc.net/problem/16236) | [16236.cpp](./16236/16236.cpp) |  |
 | ? | [14940](https://www.acmicpc.net/problem/14940) | [14940.cpp](./14940/14940.cpp) |  |
+| mid | [1520](https://www.acmicpc.net/problem/1520) | [1520.cpp](./1520/1520.cpp) | TLE how to solve? visited no need. but path finding need optimization |
