@@ -34,12 +34,12 @@ int	main(int argc, char **argv)
 		app[i].second = cost;
 		total_cost += cost;
 	}
-	for (int i = 0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		for (int j = 0; j <= total_cost; j++)
 		{
-			int app_mem = app[i].first;
-			int app_cost = app[i].second;
+			int app_mem = app[i - 1].first;
+			int app_cost = app[i - 1].second;
 			if (j >= app_cost)
 			{
 				if (app_mem + dp[i - 1][j - app_cost] > dp[i - 1][j])

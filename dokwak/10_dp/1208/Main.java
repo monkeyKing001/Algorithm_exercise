@@ -14,66 +14,51 @@ public class Main{
 
 		//input
 		n = Integer.parseInt(st.nextToken());
-		m = Integer.parseInt(st.nextToken());
-		TreeMap<Integer, Integer> map = new TreeMap<>();
-		int [] arr = new int [n + 1];
-		st = new StringTokenizer(br.readLine(), " ");
-		for (int i = 0; i < n; i++) {
-			arr[i] =  Integer.parseInt(st.nextToken());
-		}
+		int target = Integer.parseInt(st.nextToken());
 		int mid = n / 2;
-		int []left = new int[mid + 1];
-		int []right = new int[n - mid - 1];
-		for (int i = 0; i < mid + 1; i++) {
-			left[i] = arr[i];
+		ArrayList<Integer> left = new ArrayList<>();
+		ArrayList<Integer> right = new ArrayList<>();
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < mid; i++) {
+			int num = Integer.parseInt(st.nextToken());
+			left.add(num);
 		}
-		for (int i = mid + 1; i < n; i++) {
-			right[i - (mid + 1)] = arr[i];
+		for (int i = mid; i < n; i++) {
+			int num = Integer.parseInt(st.nextToken());
+			right.add(num);
 		}
-		//left subsum
-//		System.out.println("left");
-//		for (int i = 0; i < left.length; i++) {
-//			System.out.print(left[i] + " ");
-//		}
-		for (int i = 0; i < (1 << left.length); i++) {
+		TreeMap<Integer, Integer> map = new TreeMap<>();
+		for (int i = 0; i < (1 << left.size()); i++) {
 			int temp_sum = 0;
-			for (int j = 0; j < left.length; j++) {
-				if (((1 << j) & i) != 0){//hit
-					temp_sum += left[j];
-				}
+			for (int j = 0; j < left.size(); j++) {
+				if ((i & (1 << j)) != 0)//hits
+					temp_sum += left.get(j);
 			}
-			if (map.containsKey(temp_sum) == true){
-				int temp_cnt = map.get(temp_sum);
-				map.put(temp_sum, temp_cnt + 1);
-			}
-			else{
-				map.put(temp_sum, 1);
-			}
-		}
-//		System.out.println();
-		//right subsum
-//		System.out.println("right");
-//		for (int i = 0; i < right.length; i++) {
-//			System.out.print(right[i] + " ");
-//		}
-//		System.out.println();
-		for (int i = 0; i < (1 << right.length); i++) {
-			int temp_sum = 0;
-			for (int j = 0; j < right.length; j++) {
-				if (((1 << j) & i) != 0){
-					temp_sum += right[j];
-				}
-			}
-			if (map.containsKey(m - temp_sum) == true)
+			if (map.containsKey(temp_sum))
 			{
-//				System.out.println("temp_right sum : " + temp_sum);
-//				System.out.println("left has subset : " + (m - temp_sum));
-				sol += map.get(m - temp_sum);
+				map.replace(temp_sum, map.get(temp_sum) + 1);
+//				System.out.println("plus key, num : " + temp_sum + map.get(temp_sum));
+			}
+			else
+			{
+				map.put(temp_sum, 1);
+//				System.out.println("adding : "+ temp_sum);
 			}
 		}
-//		System.out.println();
-//		System.out.print("sol : ");
-		if (m == 0)
+		long sol = 0;
+		for (int i = 0; i < (1 << right.size()); i++) {
+			int temp_sum = 0;
+			for (int j = 0; j < right.size(); j++) {
+				if ((i & (1 << j)) != 0)
+					temp_sum += right.get(j);
+			}
+			if (map.containsKey(target - temp_sum) == true)
+			{
+//				System.out.println("found key in map. key : " + (target - temp_sum));
+				sol += map.get(target - temp_sum);
+			}
+		}
+		if (target == 0)
 			sol--;
 		System.out.println(sol);
 		bw.write(sb.toString());

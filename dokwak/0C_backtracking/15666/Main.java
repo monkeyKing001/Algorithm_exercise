@@ -4,28 +4,29 @@ import java.io.*;
 public class Main{
 	static int n;
 	static int m;
-	static int[] buf = new int [10];
-	static ArrayList<Integer> arr = new ArrayList<>();
-
-	static void rec(int cur_i, int cur_n_i, int[] buf)
-	{
-		if (cur_i == m)
-		{
+	static ArrayList<Integer> arr;
+	static TreeSet<Integer> s;
+	public static void rec(int len, int[] buf){
+		if (len == m){
 			for (int i = 0; i < m; i++) {
 				System.out.print(buf[i] + " ");
 			}
-			System.out.print("\n");
+			System.out.println();
+			return ;
 		}
-		else
-		{
-			int prev = -1;
-			for (int i = cur_n_i; i < n; i++) {
-				if (prev == arr.get(i))
-					continue;
-				buf[cur_i] = arr.get(i);
-				prev = arr.get(i);
-				rec(cur_i + 1, i, buf);
-			}
+		int last_num = buf[len - 1];
+		int next_num;
+		int []cp = new int[m];
+		for (int i = 0; i < len; i++) {
+			cp[i] = buf[i];
+		}
+		Iterator <Integer> it = s.iterator();
+		while (it.hasNext()){
+			next_num = it.next();
+			if (next_num < last_num)
+				continue;
+			cp[len] = next_num;
+			rec(len + 1, cp);
 		}
 	}
 
@@ -37,19 +38,19 @@ public class Main{
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine()," ");
+		s = new TreeSet<>();
 		for (int i = 0; i < n; i++) {
-			arr.add(Integer.parseInt(st.nextToken()));
+			s.add(Integer.parseInt(st.nextToken()));
 		}
-		arr.sort(Comparator.naturalOrder());
 
 		//input
 		int prev = -1;
-		for (int i = 0; i < n; i++) {
-			if (arr.get(i) == prev)
-				continue ;
-			buf[0] = arr.get(i);
-			rec(0 + 1, i, buf);
-			prev = arr.get(i);
+		int [] buf = new int[m];
+		Iterator<Integer> it = s.iterator();
+		while (it.hasNext()){
+			int num = it.next();
+			buf[0] = num;
+			rec(1, buf);
 		}
 		//n = Integer.parseInt(st.nextToken());
 		return ;

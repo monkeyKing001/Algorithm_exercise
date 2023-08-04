@@ -19,3 +19,6 @@
 | mid | [13549](https://www.acmicpc.net/problem/13549) | [13549.cpp](./13549/13549.cpp) | bfs but count carefully |
 | ? | [16236](https://www.acmicpc.net/problem/16236) | [16236.cpp](./16236/16236.cpp) |  |
 | ? | [14940](https://www.acmicpc.net/problem/14940) | [14940.cpp](./14940/14940.cpp) |  |
+| mid | [1520](https://www.acmicpc.net/problem/1520) | [1520.cpp](./1520/1520.cpp) | TLE how to solve? visited no need. but path finding need optimization |
+| hard | [samsung_1855](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LnipaDvwDFAXc) | [samsung_1855.cpp](./samsung_1855/samsung_1855.cpp) | LCA2 + bfs. Queue Entry int[] -> be carefule which index value is which. arr index out err. -> if (dp_parent[node1][exp(worng) -> i(correct)] != dp_parent[node2][exp(wrong) -> i(correct)]) |
+| hard | [11438](https://www.acmicpc.net/problem/11438) | [11438.cpp](./11438/11438.cpp) | 1) how to update current's 2 ^ k depth parent? -> half_parent(i - 1). 2) OutIndexErr -> depth diff update. 3) makeing same depth and find anc must be in binary jumpUp. 4) while finding anc exp must be bigger until u, v parents are different. |

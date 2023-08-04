@@ -49,6 +49,7 @@ arg_dir=$1
 barking_dir=`echo $PWD`
 user_arr=()
 dir_arr=()
+pro_arr=()
 
 ########################################
 #########    print function    #########
@@ -228,7 +229,6 @@ if [ ! -d ${problem_num} ];
 		touch ${barking_dir}/${user}/${dir}/${problem_num}/test/${number}.txt
 		((number++))
 	done
-
 	#cpp and Makefile
 fi
 

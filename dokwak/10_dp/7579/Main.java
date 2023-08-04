@@ -13,55 +13,39 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
-		int []mem = new int[n + 1];
-		int []cost = new int[n + 1];
-		int []dp2 = new int[10001];
-		int cost_sum = 0;
-		st = new StringTokenizer(br.readLine(), " ");
+		int []app_mem = new int[n];
+		int []app_cost = new int[n];
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			mem[i] = Integer.parseInt(st.nextToken());
+			app_mem[i] = Integer.parseInt(st.nextToken());
 		}
-		st = new StringTokenizer(br.readLine(), " ");
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			cost[i] = Integer.parseInt(st.nextToken());
-			cost_sum += cost[i];
+			app_cost[i] = Integer.parseInt(st.nextToken());
 		}
-		//init
-		for (int j = 0; j < 10001; j++) {
-			dp2[j] = 0;
-		}
-		int cur_cost_sum = 0;
-		for (int i = 0; i < n; i++) {
-			int app_mem = mem[i];
-			int app_cost = cost[i];
-//			System.out.println("app mem : " + app_mem);
-//			System.out.println("app cost : " + app_cost);
-			int original_mem = dp2[cur_cost_sum];
-			for (int j = cur_cost_sum + app_cost; j <= cost_sum; j++) {
-				dp2[j] = original_mem + app_mem;
-//				System.out.println("dp2[" + j + "] : " + dp2[j]);
-			}
-			int index = app_cost + cur_cost_sum - 1;
-			//index = app_cost  + cur_cosT_sum - 1 = 10
-			//cur_cost_sum = 6
-			//app_cost = 5
-			//c
-			while (index - app_cost > -1 && app_mem + dp2[index - app_cost] > dp2[index])
-			{
-				dp2[index] = app_mem + dp2[index - app_cost];
-//				System.out.println("dp2[" + index + "] : " + dp2[index]);
-				index--;
-			}
-			cur_cost_sum += app_cost;
-//			System.out.println("cur cost sum : " + cur_cost_sum);
-		}
-		for (int i = 0; i < cost_sum; i++) {
-			if (dp2[i] >= m)
-			{
-				System.out.println(i);
-				return ;
+		int [][]dp = new int [101][100001];//app + 1, cost
+		for (int i = 0; i < 101; i++) {
+			for (int j = 0; j < 100001; j++) {
+				dp[i][j] = 0;
 			}
 		}
+		int min_cost = 1000001;
+		for (int i = 0; i < n; i++) {
+			int cur_mem = app_mem[i];
+			int cur_cost = app_cost[i];
+			for (int cost_i = 0; cost_i < cur_cost; cost_i++) {
+				dp[i + 1][cost_i] = dp[i][cost_i];
+			}
+			for (int cost_i = cur_cost; cost_i < 100001; cost_i++) {
+				dp[i + 1][cost_i] = Integer.max(dp[i][cost_i - cur_cost] + cur_mem, dp[i][cost_i]);
+				if (dp[i + 1][cost_i] >= m && cost_i < min_cost)
+				{
+					min_cost = cost_i;
+					break;
+				}
+			}
+		}
+		System.out.print(min_cost);
 		return ;
 	}
 }

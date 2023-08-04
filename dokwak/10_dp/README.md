@@ -17,7 +17,7 @@
 | hard | [11444](https://www.acmicpc.net/problem/11444) | [11444.cpp](./11444/11444.cpp) | dp and matrix fibonacci |
 | easy | [12852](https://www.acmicpc.net/problem/12852) | [12852.cpp](./12852/12852.cpp) | dp + brute + bfs |
 | hard | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) | looks like greedy but it's not. use 2d dp |
-| hard | [7579](https://www.acmicpc.net/problem/7579) | [7579.cpp](./7579/7579.cpp) | 2d dp, think when is the change point(copy past state -----> change point ---->  ignition) |
+| hard | [7579](https://www.acmicpc.net/problem/7579) | [7579.cpp](./7579/7579.cpp) | 2d dp, think when is the change point(copy past state -----> change point ---->  ignition), when solving with 1d dp, be careful for overlapping update.(update from end to starc) |
 | hard | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) | no path -> max, bits max doesn't mean sol case |
 | hard | [10971](https://www.acmicpc.net/problem/10971) | [10971.cpp](./10971/10971.cpp) | same as TSP |
 | mid | [1987](https://www.acmicpc.net/problem/1987) | [1987.cpp](./1987/1987.cpp) | bit masking, dfs |
@@ -27,3 +27,6 @@
 | hard | [14003](https://www.acmicpc.net/problem/14003) | [14003.cpp](./14003/14003.cpp) | memoization the index |
 | hard | [1562](https://www.acmicpc.net/problem/1562) | [1562.cpp](./1562/1562.cpp) | bits masking |
 | mid | [5582](https://www.acmicpc.net/problem/5582) | [5582.cpp](./5582/5582.cpp) | different with LCS. |
+| mid | [samsung_sw_02](https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYkfkR6KLT4DFASe&categoryId=AYkf6zw6MwMDFASe&categoryType=BATTLE&battleMainPageIndex=1) | [samsung_sw_02.cpp](./samsung_sw_02/samsung_sw_02.cpp) |  |
+| hard | [1039](https://www.acmicpc.net/problem/1039) | [1039.cpp](./1039/1039.cpp) | bfs, exhaust searching |
+| hard | [samsung_3316](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBnFuhqxE8DFAWr) | [samsung_3316.cpp](./samsung_3316/samsung_3316.cpp) | today_bits & tomorrow_bits != 0 -> there is at least one person who had attended yesterday attended today too, tomorrow_bits & (1 << charge_tomorrow) != 0 -> in charge person will attend tomorrow too! |
