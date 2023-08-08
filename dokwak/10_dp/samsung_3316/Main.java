@@ -14,42 +14,36 @@ public class Main{
 		//input
 		int T = Integer.parseInt(st.nextToken());
 		for (int t_i = 0; t_i < T; t_i++) {
-			String str = br.readLine();
-			int days = str.length();
-			int key = 0;
-			int charge = 0;
-			int case_num = 0;
-			long sol = 0l;
-			long [][]dp = new long[days + 1][(1 << 4)];
-			for (int i = 0; i < 16; i++) {
-				dp[0][i] = 0;
-			}
-//			System.out.println("test_i, str, str_len : " + t_i + ", " + str + ", " + days);
-			dp[0][1 << 0] = 1;
-			for (int i = 0; i < days; i++) {
-//				System.out.println("day : " + (i + 1));
-				int charge_tomorrow = str.charAt(i) - 'A';
-//				System.out.println("tomorrow charge : " + (char)(charge_tomorrow + 'A'));
-				for (int bits = 0; bits < 16; bits++) {
-					int today_bits = bits;
-					for (int tomorrow_bits = 0; tomorrow_bits < 16; tomorrow_bits++) {
-						if ((tomorrow_bits & (1 << charge_tomorrow)) != 0 && (today_bits & tomorrow_bits) != 0)
-						{
-							dp[i + 1][tomorrow_bits] += dp[i][today_bits];
-							dp[i + 1][tomorrow_bits] %= mod;
-//							System.out.println("adding tomorrow_bits : " + tomorrow_bits);
-						}
-					}
-					
+			long [][]dp = new long[10001][1 << 4];
+			String info = br.readLine();
+			//init
+			for (int i = 0; i < 10001; i++) {
+				for (int j = 0; j < 1 << 4; j++) {
+					dp[i][j] = 0;
 				}
 			}
-			for (int i = 0; i < 16; i++) {
-//				System.out.println("bits, val : " + i + ", " +dp[days][i] );
-				sol += dp[days][i];
+
+			//day 0
+			dp[0][1] = 1;
+			for (int i = 0; i < info.length(); i++) {
+				int charge = info.charAt(i) - 'A';
+				for (int cur_mem_bits = 0; cur_mem_bits < 1 << 4; cur_mem_bits++) {
+					for (int tomorrow_mem_bits = 0; tomorrow_mem_bits < 1 << 4; tomorrow_mem_bits++) {
+						if ((tomorrow_mem_bits & (1 << charge)) != 0 &&
+								(cur_mem_bits & tomorrow_mem_bits) != 0)
+						{
+							dp[i + 1][tomorrow_mem_bits] += dp[i][cur_mem_bits]; 
+							dp[i + 1][tomorrow_mem_bits] %= mod;
+						}
+					}
+				}
+			}
+			long sol = 0;
+			for (int i = 0; i < (1 << 4); i++) {
+				sol += (dp[info.length()][i] % mod);
 				sol %= mod;
 			}
 			sb.append("#" + (t_i + 1) + " " + sol + "\n");
-			
 		}
 		bw.write(sb.toString());
 		bw.flush();
