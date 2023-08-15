@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-#include <climits>
+#include <string>
 
 using namespace std;
 int n, m;
@@ -9,12 +9,12 @@ int arr[10];
 
 void recur(int dep) {
 	if (dep == m) {
-		for (int i = 1; i <= m; ++i) cout << arr[i] << ' ';
+		for (int i = 0; i < m; ++i) cout << arr[i] << ' ';
 		cout << '\n';
-		return;
+		return ;
 	}
-	for (int i = arr[dep]+1; i <= n; ++i) {
-		arr[dep+1] = i;
+	for (int i = 1; i <= n; ++i) {
+		arr[dep] = i;
 		recur(dep+1);
 	}
 }

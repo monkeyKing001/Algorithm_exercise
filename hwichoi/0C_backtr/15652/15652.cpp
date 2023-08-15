@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-#include <climits>
+#include <string>
 
 using namespace std;
 int n, m;
@@ -13,7 +13,7 @@ void recur(int dep) {
 		cout << '\n';
 		return;
 	}
-	for (int i = arr[dep]+1; i <= n; ++i) {
+	for (int i = arr[dep]; i <= n; ++i) {
 		arr[dep+1] = i;
 		recur(dep+1);
 	}
@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
+	arr[0] = 1;
 	cin >> n >> m;
 	recur(0);
 	return (0);
