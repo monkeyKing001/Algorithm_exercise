@@ -8,19 +8,17 @@
 
 using namespace std;
 int n, m;
-int input[10];
 int arr[10];
-int idx[10];
+int buf[10];
 
 void recur(int dep) {
 	if (dep == m) {
-		for (int i = 0; i < m; ++i) cout << arr[i] << ' ';
+		for (int i = 0; i < m; ++i) cout << buf[i] << ' ';
 		cout << '\n';
-		return ;
+		return;
 	}
-	for (int i = idx[dep]+1; i <= n; ++i) {
-		arr[dep] = input[i];
-		idx[dep+1] = i;
+	for (int i = 0; i < n; ++i) {
+		buf[dep] = arr[i];
 		recur(dep+1);
 	}
 }
@@ -31,8 +29,8 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	cout.tie(0);
 	cin >> n >> m;
-	for (int i = 1; i <= n; ++i) cin >> input[i];
-	sort(input+1, input+n+1);
+	for (int i = 0; i < n; ++i) cin >> arr[i];
+	sort(arr, arr+n);
 	recur(0);
 	return (0);
 }

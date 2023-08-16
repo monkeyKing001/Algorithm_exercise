@@ -16,10 +16,13 @@ void recur(int dep) {
 	if (dep == m) {
 		for (int i = 0; i < m; ++i) cout << arr[i] << ' ';
 		cout << '\n';
-		return ;
+		return;
 	}
+	int tmp = 0;
 	for (int i = idx[dep]+1; i <= n; ++i) {
+		if (tmp == input[i]) continue;
 		arr[dep] = input[i];
+		tmp = input[i];
 		idx[dep+1] = i;
 		recur(dep+1);
 	}
