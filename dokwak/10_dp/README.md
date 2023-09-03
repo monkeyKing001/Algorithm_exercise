@@ -29,3 +29,4 @@
 | mid | [5582](https://www.acmicpc.net/problem/5582) | [5582.cpp](./5582/5582.cpp) | different with LCS. |
 | mid | [samsung_sw_02](https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYkfkR6KLT4DFASe&categoryId=AYkf6zw6MwMDFASe&categoryType=BATTLE&battleMainPageIndex=1) | [samsung_sw_02.cpp](./samsung_sw_02/samsung_sw_02.cpp) |  |
 | hard | [1039](https://www.acmicpc.net/problem/1039) | [1039.cpp](./1039/1039.cpp) | bfs, exhaust searching |
+| hard | [samsung_3316](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBnFuhqxE8DFAWr) | [samsung_3316.cpp](./samsung_3316/samsung_3316.cpp) | today_bits & tomorrow_bits != 0 -> there is at least one person who had attended yesterday attended today too, tomorrow_bits & (1 << charge_tomorrow) != 0 -> in charge person will attend tomorrow too! |
