@@ -10,7 +10,7 @@ using namespace std;
 int n, c;
 pair<long long, int> arr[1002];
 
-bool cmp(pair<long long, int> &a, pair<long long, int> &b) {
+bool cmp(const pair<long long, int> &a, const pair<long long, int> &b) {
 	return a.second > b.second;
 }
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 		}
 		if (!flag) arr[idx++] = {a, 1};
 	}
-	sort(arr, arr+idx, cmp);
+	stable_sort(arr, arr+idx, cmp);
 	for (int i = 0; i < idx; ++i) {
 		while (arr[i].second--) cout << arr[i].first << ' ';
 	}
