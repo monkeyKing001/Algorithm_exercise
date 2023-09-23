@@ -12,3 +12,7 @@
 | ? | [1003](https://www.acmicpc.net/problem/1003) | [1003.cpp](./1003/1003.cpp) |  |
 | ? | [1932](https://www.acmicpc.net/problem/1932) | [1932.cpp](./1932/1932.cpp) |  |
 | ? | [11727](https://www.acmicpc.net/problem/11727) | [11727.cpp](./11727/11727.cpp) |  |
+| ? | [1912](https://www.acmicpc.net/problem/1912) | [1912.cpp](./1912/1912.cpp) |  |
+| ? | [11055](https://www.acmicpc.net/problem/11055) | [11055.cpp](./11055/11055.cpp) |  |
+| ? | [11053](https://www.acmicpc.net/problem/11053) | [11053.cpp](./11053/11053.cpp) |  |
+| ? | [9461](https://www.acmicpc.net/problem/9461) | [9461.cpp](./9461/9461.cpp) |  |
