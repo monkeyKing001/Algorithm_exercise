@@ -16,3 +16,4 @@
 | ? | [9466](https://www.acmicpc.net/problem/9466) | [9466.cpp](./9466/9466.cpp) |  |
 | ? | [2573](https://www.acmicpc.net/problem/2573) | [2573.cpp](./2573/2573.cpp) |  |
 | ? | [13549](https://www.acmicpc.net/problem/13549) | [13549.cpp](./13549/13549.cpp) |  |
+| ? | [20166](https://www.acmicpc.net/problem/20166) | [20166.cpp](./20166/20166.cpp) |  |

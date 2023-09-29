@@ -11,3 +11,13 @@
 | ? | [003](https://www.acmicpc.net/problem/003) | [003.cpp](./003/003.cpp) |  |
 | ? | [1003](https://www.acmicpc.net/problem/1003) | [1003.cpp](./1003/1003.cpp) |  |
 | ? | [1932](https://www.acmicpc.net/problem/1932) | [1932.cpp](./1932/1932.cpp) |  |
+| ? | [11727](https://www.acmicpc.net/problem/11727) | [11727.cpp](./11727/11727.cpp) |  |
+| ? | [2193](https://www.acmicpc.net/problem/2193) | [2193.cpp](./2193/2193.cpp) |  |
+| ? | [1912](https://www.acmicpc.net/problem/1912) | [1912.cpp](./1912/1912.cpp) |  |
+| ? | [11055](https://www.acmicpc.net/problem/11055) | [11055.cpp](./11055/11055.cpp) |  |
+| ? | [11053](https://www.acmicpc.net/problem/11053) | [11053.cpp](./11053/11053.cpp) |  |
+| ? | [9461](https://www.acmicpc.net/problem/9461) | [9461.cpp](./9461/9461.cpp) |  |
+| ? | [14501](https://www.acmicpc.net/problem/14501) | [14501.cpp](./14501/14501.cpp) |  |
+| ? | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) |  |
+| ? | [10844](https://www.acmicpc.net/problem/10844) | [10844.cpp](./10844/10844.cpp) |  |
+| ? | [9251](https://www.acmicpc.net/problem/9251) | [9251.cpp](./9251/9251.cpp) |  |
