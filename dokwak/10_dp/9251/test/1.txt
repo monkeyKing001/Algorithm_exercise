@@ -1,2 +1,6 @@
 ACAYKP
 CAPCAK
+
+sol
+4
+ACAK

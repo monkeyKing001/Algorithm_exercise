@@ -8,3 +8,4 @@
 | F Hard | [23026](https://www.acmicpc.net/problem/23026) | [23026.cpp](./23026/23026.cpp) |  |
 | hard | [2342](https://www.acmicpc.net/problem/2342) | [2342.cpp](./2342/2342.cpp) | 3d dp array |
 | ? | [2012](https://www.acmicpc.net/problem/2012) | [2012.cpp](./2012/2012.cpp) |  |
+| ? | [7830](https://www.acmicpc.net/problem/7830) | [7830.cpp](./7830/7830.cpp) |  |

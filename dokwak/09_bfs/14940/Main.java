@@ -15,54 +15,58 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
-		int [][]map = new int [1001][1001];
-		int [][]visited = new int [1001][1001];
-		int []start = new int[2];
-		Queue <int[]> q = new LinkedList<>();
+		int map[][] = new int [n][m];
+		int visited[][] = new int [n][m];
+		int start_r = -1;
+		int start_c = -1;
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
+			st = new StringTokenizer(br.readLine()," ");
 			for (int j = 0; j < m; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
 				visited[i][j] = 0;
-				if (map[i][j] == 2){
-					start[0] = i;
-					start[1] = j;
+				if (map[i][j] == 2)
+				{
+					start_r = i;
+					start_c = j;
 				}
 			}
 		}
-		visited[start[0]][start[1]] = 0;
+		Queue<int[]> q = new LinkedList();
+		int [] start = new int [3];
+		start[0] = start_r;
+		start[1] = start_c;
+		start[2] = 0;
 		q.add(start);
-		while (q.size() != 0 )
-		{
-			int []cur = q.poll();
+		while (q.size() != 0){
+			int cur[] = q.poll();
 			int cur_r = cur[0];
 			int cur_c = cur[1];
-			int cur_step = visited[cur_r][cur_c];
+			int cur_cost = cur[2];
 			for (int i = 0; i < 4; i++) {
 				int next_r = cur_r + dr[i];
 				int next_c = cur_c + dc[i];
-				if (next_r > -1 && next_r < n && next_c > -1 && next_c < m && (visited[next_r][next_c] == 0 || visited[next_r][next_c] != 0 && visited[next_r][next_c] > cur_step + 1) && map[next_r][next_c] == 1)
-				{
-					visited[next_r][next_c] = cur_step + 1;
-					int []next = new int [2];
-					next[0] = next_r;
-					next[1] = next_c;
-					q.add(next);
+				int next_cost = cur_cost + 1;
+				if (next_r >= 0 && next_r < n && next_c >= 0 && next_c < m && map[next_r][next_c] == 1 && visited[next_r][next_c] == 0){
+					visited[next_r][next_c] = next_cost;
+					int []next_info = new int[3];
+					next_info[0] = next_r;
+					next_info[1] = next_c;
+					next_info[2] = next_cost;
+					q.add(next_info);
 				}
 			}
 		}
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				if (map[i][j] == 1 && visited[i][j] == 0)
-					sb.append("-1 ");
+				if (visited[i][j] == 0 && map[i][j] == 1)
+					System.out.print("-1 ");
 				else
-					sb.append(visited[i][j] + " ");
+					System.out.print(visited[i][j] + " ");
 			}
-			sb.append("\n");
+			System.out.println();
 		}
 		bw.write(sb.toString());
 		bw.flush();
-		return ;
 	}
 }
 

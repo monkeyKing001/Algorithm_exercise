@@ -6,3 +6,4 @@
 | easy | [pro_161989](https://www.acmicpc.net/problem/pro_161989) | [pro_161989.cpp](./pro_161989/pro_161989.cpp) | no need array. |
 | easy | [10942](https://www.acmicpc.net/problem/10942) | [10942.cpp](./10942/10942.cpp) | java O(NM) passes, c++ not. (twopointer) |
 | ? | [2473](https://www.acmicpc.net/problem/2473) | [2473.cpp](./2473/2473.cpp) |  |
+| hard | [20922](https://www.acmicpc.net/problem/20922) | [20922.cpp](./20922/20922.cpp) | updating length is super tricky |

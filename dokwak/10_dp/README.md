@@ -2,10 +2,10 @@
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
 | easy | [1463](https://www.acmicpc.net/problem/1463) | [1463.cpp](./1463/1463.cpp) | if? else if? |
-| normal | [9095](https://www.acmicpc.net/problem/9095) | [9095.cpp](./9095/9095.cpp) | postfix |
-| normal | [2579](https://www.acmicpc.net/problem/2579) | [2579.cpp](./2579/2579.cpp) | 2d matrix or case classify |
-| normal | [1149](https://www.acmicpc.net/problem/1149) | [1149.cpp](./1149/1149.cpp) | |
-| hard | [17404](https://www.acmicpc.net/problem/17404) | [17404.cpp](./17404/17404.cpp) | dp need at least one held point. 3 cases of start rgb |
+| mid | [9095](https://www.acmicpc.net/problem/9095) | [9095.cpp](./9095/9095.cpp) | postfix |
+| mid | [2579](https://www.acmicpc.net/problem/2579) | [2579.cpp](./2579/2579.cpp) | 2d matrix or case classify |
+| mid | [1149](https://www.acmicpc.net/problem/1149) | [1149.cpp](./1149/1149.cpp) | |
+| hard | [17404](https://www.acmicpc.net/problem/17404) | [17404.cpp](./17404/17404.cpp) | dp need at least one held point. 3 cases of start rgb. last house cannot choose first_house_color |
 | hard | [9251](https://www.acmicpc.net/problem/9251) | [9251.cpp](./9251/9251.cpp) | 2d array |
 | hard | [9252](https://www.acmicpc.net/problem/9252) | [9252.cpp](./9252/9252.cpp) | concat input1, 2. trace the reason dp[i][j] = num. (same char? or why?) |
 | easy | [2407](https://www.acmicpc.net/problem/2407) | [2407.cpp](./2407/2407.cpp) | use BigInteger, Pascal triangle |
@@ -30,3 +30,5 @@
 | mid | [samsung_sw_02](https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYkfkR6KLT4DFASe&categoryId=AYkf6zw6MwMDFASe&categoryType=BATTLE&battleMainPageIndex=1) | [samsung_sw_02.cpp](./samsung_sw_02/samsung_sw_02.cpp) |  |
 | hard | [1039](https://www.acmicpc.net/problem/1039) | [1039.cpp](./1039/1039.cpp) | bfs, exhaust searching |
 | hard | [samsung_3316](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBnFuhqxE8DFAWr) | [samsung_3316.cpp](./samsung_3316/samsung_3316.cpp) | today_bits & tomorrow_bits != 0 -> there is at least one person who had attended yesterday attended today too, tomorrow_bits & (1 << charge_tomorrow) != 0 -> in charge person will attend tomorrow too! |
+| ? | [2156](https://www.acmicpc.net/problem/2156) | [2156.cpp](./2156/2156.cpp) |  |
+| mid | [11660](https://www.acmicpc.net/problem/11660) | [11660.cpp](./11660/11660.cpp) |  |
