@@ -32,3 +32,4 @@
 | hard | [samsung_3316](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBnFuhqxE8DFAWr) | [samsung_3316.cpp](./samsung_3316/samsung_3316.cpp) | today_bits & tomorrow_bits != 0 -> there is at least one person who had attended yesterday attended today too, tomorrow_bits & (1 << charge_tomorrow) != 0 -> in charge person will attend tomorrow too! |
 | ? | [2156](https://www.acmicpc.net/problem/2156) | [2156.cpp](./2156/2156.cpp) |  |
 | mid | [11660](https://www.acmicpc.net/problem/11660) | [11660.cpp](./11660/11660.cpp) |  |
+| ? | [1756](https://www.acmicpc.net/problem/1756) | [1756.cpp](./1756/1756.cpp) |  |

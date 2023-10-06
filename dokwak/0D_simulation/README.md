@@ -19,3 +19,4 @@
 | ? | [18039](https://www.acmicpc.net/problem/18039) | [18039.cpp](./18039/18039.cpp) |  |
 | ? | [2618](https://www.acmicpc.net/problem/2618) | [2618.cpp](./2618/2618.cpp) |  |
 | ? | [15686](https://www.acmicpc.net/problem/15686) | [15686.cpp](./15686/15686.cpp) |  |
+| mid | [17070](https://www.acmicpc.net/problem/17070) | [17070.cpp](./17070/17070.cpp) | deciding diagonal move is tricky |
