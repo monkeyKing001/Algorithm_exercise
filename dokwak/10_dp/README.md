@@ -33,3 +33,4 @@
 | ? | [2156](https://www.acmicpc.net/problem/2156) | [2156.cpp](./2156/2156.cpp) |  |
 | mid | [11660](https://www.acmicpc.net/problem/11660) | [11660.cpp](./11660/11660.cpp) |  |
 | ? | [1756](https://www.acmicpc.net/problem/1756) | [1756.cpp](./1756/1756.cpp) |  |
+| easy | [11054](https://www.acmicpc.net/problem/11054) | [11054.cpp](./11054/11054.cpp) | inc, rev |

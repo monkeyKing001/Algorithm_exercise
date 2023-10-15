@@ -20,3 +20,6 @@
 | ? | [2618](https://www.acmicpc.net/problem/2618) | [2618.cpp](./2618/2618.cpp) |  |
 | ? | [15686](https://www.acmicpc.net/problem/15686) | [15686.cpp](./15686/15686.cpp) |  |
 | mid | [17070](https://www.acmicpc.net/problem/17070) | [17070.cpp](./17070/17070.cpp) | deciding diagonal move is tricky |
+| hard | [3190](https://www.acmicpc.net/problem/3190) | [3190.cpp](./3190/3190.cpp) | updating tail information is tricky, when head, tail is same, tail moving can occur OBO(Off by One). |
+| ? | [14891](https://www.acmicpc.net/problem/14891) | [14891.cpp](./14891/14891.cpp) |  |
+| hard | [23291](https://www.acmicpc.net/problem/23291) | [23291.cpp](./23291/23291.cpp) |  |
