@@ -21,3 +21,8 @@
 | ? | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) |  |
 | ? | [10844](https://www.acmicpc.net/problem/10844) | [10844.cpp](./10844/10844.cpp) |  |
 | ? | [9251](https://www.acmicpc.net/problem/9251) | [9251.cpp](./9251/9251.cpp) |  |
+| ? | [1699](https://www.acmicpc.net/problem/1699) | [1699.cpp](./1699/1699.cpp) |  |
+| ? | [9084](https://www.acmicpc.net/problem/9084) | [9084.cpp](./9084/9084.cpp) |  |
+| ? | [11047](https://www.acmicpc.net/problem/11047) | [11047.cpp](./11047/11047.cpp) |  |
+| ? | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) |  |
+| ? | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) |  |
