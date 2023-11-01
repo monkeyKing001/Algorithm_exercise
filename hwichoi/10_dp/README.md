@@ -26,3 +26,4 @@
 | ? | [11047](https://www.acmicpc.net/problem/11047) | [11047.cpp](./11047/11047.cpp) |  |
 | ? | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) |  |
 | ? | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) |  |
+| ? | [legend_match](https://www.acmicpc.net/problem/legend_match) | [legend_match.cpp](./legend_match/legend_match.cpp) |  |
