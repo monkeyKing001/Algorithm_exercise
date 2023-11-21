@@ -203,6 +203,17 @@ if echo "$problem_num" | grep -q "/"; then
   problem_num=$(echo "$problem_num" | sed 's/\/$//')
 fi
 
+# Hyundai
+hyndai="https://softeer.ai/practice"
+
+# goorm
+goorm="https://level.goorm.io/exam"
+
+#Baekjoon
+boj="https://www.acmicpc.net/problem"
+
+url=${boj}
+
 ## new pro
 if [ ! -d ${problem_num} ];
 	then
@@ -214,7 +225,7 @@ if [ ! -d ${problem_num} ];
 		echo "| :--: | :--: | :--: | :--: |" >> README.md
 	fi
 	# append problem num
-	echo "| ? | [${problem_num}](https://www.acmicpc.net/problem/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
+	echo "| ? | [${problem_num}](${url}/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
 
 	########################################
 	#######    problem initalize    ########
@@ -240,7 +251,7 @@ fi
 cd ${barking_dir}/${user}/${dir}/${problem_num}
 cp ~/.vim/templates/skeleton_makefile ./Makefile
 echo "SRC = ${problem_num}.cpp" | cat - Makefile > temp && mv temp Makefile
-open https://www.acmicpc.net/problem/${problem_num}
+open ${url}/${problem_num}
 editor="vim"
 if echo `which nvim` | grep -q "nvim"; then
 	editor="nvim"

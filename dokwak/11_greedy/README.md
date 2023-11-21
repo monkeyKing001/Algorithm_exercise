@@ -9,3 +9,5 @@
 | hard | [2342](https://www.acmicpc.net/problem/2342) | [2342.cpp](./2342/2342.cpp) | 3d dp array |
 | ? | [2012](https://www.acmicpc.net/problem/2012) | [2012.cpp](./2012/2012.cpp) |  |
 | ? | [7830](https://www.acmicpc.net/problem/7830) | [7830.cpp](./7830/7830.cpp) |  |
+| ? | [1715](https://www.acmicpc.net/problem/1715) | [1715.cpp](./1715/1715.cpp) |  |
+| mid | [1041](https://www.acmicpc.net/problem/1041) | [1041.cpp](./1041/1041.cpp) | 1d, 2d, 3d case |

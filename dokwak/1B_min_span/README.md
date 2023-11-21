@@ -142,3 +142,5 @@ priority_queue<int*, vector<int*>, my_compare> pq;
 | ? | [HackerRank_Road_n_Library](https://www.hackerrank.com/challenges/torque-and-development/problem?isFullScreen=true) | [HackerRank_Road_n_Library.cpp](./HackerRank_Road_n_Library/HackerRank_Road_n_Library.cpp) |  |
 | ? | [1833](https://www.acmicpc.net/problem/1833) | [1833.cpp](./1833/1833.cpp) |  |
 | ? | [15481](https://www.acmicpc.net/problem/15481) | [15481.cpp](./15481/15481.cpp) |  |
+| ? | [1976](https://www.acmicpc.net/problem/1976) | [1976.cpp](./1976/1976.cpp) |  |
+| ? | [1717](https://www.acmicpc.net/problem/1717) | [1717.cpp](./1717/1717.cpp) |  |

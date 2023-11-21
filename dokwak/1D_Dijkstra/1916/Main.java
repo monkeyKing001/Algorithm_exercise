@@ -3,6 +3,7 @@ import java.io.*;
 
 public class Main{
 	static int n, m;
+	static int max = 1000000000;
 	public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -14,56 +15,79 @@ public class Main{
 		n = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine()," ");
 		m = Integer.parseInt(st.nextToken());
-		ArrayList<int[]>[] g = new ArrayList[n + 1];
-		long []cost  = new long[n + 1];
+		int cost[][] = new int[n + 1][n + 1];
+		ArrayList<int[]> g[] = new ArrayList[n + 1];
 		for (int i = 0; i < n + 1; i++) {
 			g[i] = new ArrayList<>();
-			cost[i] = Integer.MAX_VALUE;
+			for (int j = 0; j < n + 1; j++) {
+				cost[i][j] = max;
+				if (i == j)
+					cost[i][j] = 0;
+			}
 		}
-		for (int i = 0; i < m; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			int u = Integer.parseInt(st.nextToken());
-			int v = Integer.parseInt(st.nextToken());
-			int cost_to = Integer.parseInt(st.nextToken());
-			int []edge = new int[2];
-			edge[0] = v;
-			edge[1] = cost_to;
-			g[u].add(edge);
-		}
-		st = new StringTokenizer(br.readLine()," ");
+		//from, to, cost
 		PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>(){
-			@Override
-			public int compare(int []e1, int []e2){
-				return (Integer.compare(e1[1], e2[1]));
+			public int compare(int []e1, int[] e2){
+				return (Integer.compare(e1[2], e2[2]));
 			}
 		});
-		int start = Integer.parseInt(st.nextToken());
-		int end = Integer.parseInt(st.nextToken());
-		for (int i = 0; i < g[start].size(); i++) {
-			int []edge = g[start].get(i);
-			pq.add(edge);
+		for (int i = 0; i < m; i++) {
+			st = new StringTokenizer(br.readLine()," ");
+			int start = Integer.parseInt(st.nextToken());
+			int dest = Integer.parseInt(st.nextToken());
+			int to_cost = Integer.parseInt(st.nextToken());
+			int info[] = new int[2];
+			info[0] = dest;
+			info[1] = to_cost;
+			g[start].add(info);
 		}
-		while (pq.size() != 0){
-			int []edge = pq.poll();
-			int to_v = edge[0];
+		st = new StringTokenizer(br.readLine()," ");
+		int from = Integer.parseInt(st.nextToken());
+		int to = Integer.parseInt(st.nextToken());
+		int total_connected = 1;//from
+		//Dijkstra start!
+		for (int i = 0; i < g[from].size(); i++) {
+			int edge[] = g[from].get(i);
+			int start = from;
+			int dest = edge[0];
 			int to_cost = edge[1];
-			if (cost[to_v] > to_cost)
-				cost[to_v] = to_cost;
-			else
+			int pq_edge[] = new int[3];
+			pq_edge[0] = start;
+			pq_edge[1] = dest;
+			pq_edge[2] = to_cost;
+			pq.add(pq_edge);
+		}
+		while(pq.size() != 0){
+			int []edge = pq.poll();
+			int cur_from = edge[0];
+			int cur_to = edge[1];
+			int cur_cost = edge[2];
+			//already got min cost
+			//if (cost[from][cur_to] < cost[from][cur_from] + cost[cur_from][cur_to]){
+			if (cost[from][cur_to] < cur_cost){
 				continue;
-			for (int i = 0; i < g[to_v].size(); i++) {
-				int []next_edge = g[to_v].get(i);
-				int next_v = next_edge[0];
-				int next_cost = next_edge[1];
-				if (cost[next_v] > to_cost + next_cost){
-					int []next = new int[2];
-					next[0] = next_v;
-					next[1] = to_cost + next_cost;
-					pq.add(next);
+			}
+			//cost[from][cur_to] = cost[from][cur_from] + cost[cur_from][cur_to];
+			cost[from][cur_to] = cur_cost;
+			for (int i = 0; i < g[cur_to].size(); i++) {
+				int next_edge[] = g[cur_to].get(i);
+				int next_from = cur_to;
+				int next_to = next_edge[0];
+				int next_cost = next_edge[1] + cost[from][cur_to];
+				if (cost[from][next_to] > next_cost){
+					int next_pq_edge[] = new int[3];
+					next_pq_edge[0] = next_from;
+					next_pq_edge[1] = next_to;
+					next_pq_edge[2] = next_cost;
+					pq.add(next_pq_edge);
 				}
 			}
 		}
-		System.out.println(cost[end]);
+//		for (int i = 1; i < n + 1; i++) {
+//			System.out.print(cost[from][i] + " ");
+//		}
+//		System.out.println();
+		System.out.println(cost[from][to]);
 		return ;
 	}
 }

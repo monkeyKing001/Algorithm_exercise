@@ -58,6 +58,13 @@ public class Main{
 			edges[i][1] = v2;
 			edges[i][2] = cost;
 		}
+		PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>(){
+			@Override
+			public int compare(int [] e1, int [] e2){
+				return (Integer.compare(e1[2], e2[2]));
+			}
+		});
+		
 		Arrays.sort(edges, new Comparator<int[]>()
 				{
 					@Override

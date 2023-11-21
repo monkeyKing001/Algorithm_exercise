@@ -99,3 +99,4 @@ String.format("%.4f", por);
 | easy | [4358](https://www.acmicpc.net/problem/4358) | [4358.cpp](./4358/4358.cpp) |  |
 | ? | [1316](https://www.acmicpc.net/problem/1316) | [1316.cpp](./1316/1316.cpp) |  |
 | ? | [25192](https://www.acmicpc.net/problem/25192) | [25192.cpp](./25192/25192.cpp) |  |
+| ? | [1339](https://www.acmicpc.net/problem/1339) | [1339.cpp](./1339/1339.cpp) |  |

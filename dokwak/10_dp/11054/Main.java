@@ -6,6 +6,10 @@ public class Main{
 	static ArrayList<Integer> inc = new ArrayList<>();
 	static ArrayList<Integer> dec = new ArrayList<>();
 	public static int find_min_bigger_dec(int num){
+    int test = 'a';
+    int test = 'v';
+    Map<String, Integer> m = new HashMap<>();
+    m.containsKey(key);
 		int idx = -1;
 		int l = 0;
 		int r = dec.size() - 1;

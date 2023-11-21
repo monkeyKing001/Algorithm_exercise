@@ -3,6 +3,7 @@ import java.io.*;
 
 public class Main{
 	static int n, m, target;
+	static int max = 100001;
 	public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -14,77 +15,65 @@ public class Main{
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		target = Integer.parseInt(st.nextToken());
-		int [][]dp_cost = new int [n + 1][n + 1];
-		ArrayList<int[]>[] arr = new ArrayList[n + 1];
+		int dp[][] = new int[n + 1][n + 1];
+		ArrayList<int[]> g[] = new ArrayList[n + 1];
 		for (int i = 0; i < n + 1; i++) {
-			arr[i] = new ArrayList<>();
 			for (int j = 0; j < n + 1; j++) {
-				dp_cost[i][j] = 10000001;
+				dp[i][j] = max;
+				g[i] = new ArrayList<>();
 				if (i == j)
-					dp_cost[i][j] = 0;
+				{
+					dp[i][j] = 0;
+				}
 			}
 		}
-		PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
-			@Override
-			public int compare(int []e1, int []e2){return (Integer.compare(e1[2], e2[2]));}
-		});
 		for (int i = 0; i < m; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
-			int from, to, temp_cost;
-			from = Integer.parseInt(st.nextToken());
-			to = Integer.parseInt(st.nextToken());
-			temp_cost = Integer.parseInt(st.nextToken());
-			int []cost_to = new int[2];
-			cost_to[0] = to;
-			cost_to[1] = temp_cost;
-			arr[from].add(cost_to);
-//			dp_cost[from][to] = temp_cost;
+			st = new StringTokenizer(br.readLine()," ");
+			int u = Integer.parseInt(st.nextToken());
+			int v = Integer.parseInt(st.nextToken());
+			int cur_cost = Integer.parseInt(st.nextToken());
+			dp[u][v] = cur_cost;
+				int []edge = new int[2];
+				edge[0] = v;
+				edge[1] = cur_cost;
+				g[u].add(edge);
 		}
-		for (int start = 1; start < n + 1; start++) {
-			pq.clear();
-			for (int e_i = 0; e_i < arr[start].size(); e_i++) {
-				int []pq_edge = new int [3];
-				pq_edge[0] = start;//start
-				pq_edge[1] = arr[start].get(e_i)[0];//to v
-				pq_edge[2] = arr[start].get(e_i)[1];//cur_cost
-				dp_cost[start][pq_edge[1]] = pq_edge[2];
-				pq.add(pq_edge);
+		for (int i = 1; i < n + 1; i++) {
+			int start = i;
+			PriorityQueue<int[]> pq = new PriorityQueue<int[]>(new Comparator<int[]>(){
+				@Override
+				public int compare(int e1[], int e2[]){
+					return (Integer.compare(e1[2], e2[2]));
+				}
+			});
+			for (int start_e = 0; start_e < g[start].size(); start_e++) {
+				int []info = new int[3];
+				info[0] = start;
+				info[1] = g[start].get(start_e)[0];
+				info[2] = g[start].get(start_e)[1];
+				pq.add(info);
 			}
-			while(pq.size() != 0)
-			{
-				int [] p_edge = pq.poll();
-				int from_v = p_edge[0];
-				int to_v = p_edge[1];
-				int to_cost = p_edge[2];
-				for (int e_i = 0; e_i < arr[to_v].size(); e_i++) {
-					int next_v;
-					int cost_to_next_v;
-					next_v = arr[to_v].get(e_i)[0];
-					cost_to_next_v = to_cost + arr[to_v].get(e_i)[1];
-					if (dp_cost[start][next_v] > cost_to_next_v)
+			while (pq.size() != 0){
+				int cur_info[] = pq.poll();
+				int bridge = cur_info[1];
+				int cur_cost = cur_info[2];
+				for (int b_e = 0; b_e < g[bridge].size(); b_e++) {
+					int next_v = g[bridge].get(b_e)[0];
+					if (dp[start][next_v] > dp[bridge][next_v] + cur_cost)
 					{
-//						System.out.println("found way to, cost : " + next_v + ", " + cost_to_next_v);
-//						System.out.println("bridge : " + to_v);
-						dp_cost[start][next_v] = cost_to_next_v;
-						int [] next_edge = new int[3];
-						next_edge[0] = to_v;
-						next_edge[1] = next_v;
-						next_edge[2] = cost_to_next_v;
-						pq.add(next_edge);
+						int next_info[] = new int[3];
+						next_info[0] = start;
+						next_info[1] = next_v;
+						next_info[2] = dp[bridge][next_v] + cur_cost;
+						dp[start][next_v] = dp[bridge][next_v] + cur_cost;
+						pq.add(next_info);
 					}
 				}
 			}
 		}
-//		for (int i = 1; i < n + 1; i++) {
-//			for (int j = 1; j < n + 1; j++) {
-//				System.out.print(dp_cost[i][j] + " ");
-//			}
-//			System.out.println();
-//		}
 		int sol = -1;
 		for (int i = 1; i < n + 1; i++) {
-			if (sol < dp_cost[i][target] + dp_cost[target][i])
-				sol = dp_cost[i][target] + dp_cost[target][i];
+			sol = Integer.max(sol, dp[i][target] + dp[target][i]);
 		}
 		System.out.println(sol);
 		bw.write(sb.toString());
