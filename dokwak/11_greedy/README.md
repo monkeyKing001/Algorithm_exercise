@@ -11,3 +11,12 @@
 | ? | [7830](https://www.acmicpc.net/problem/7830) | [7830.cpp](./7830/7830.cpp) |  |
 | ? | [1715](https://www.acmicpc.net/problem/1715) | [1715.cpp](./1715/1715.cpp) |  |
 | mid | [1041](https://www.acmicpc.net/problem/1041) | [1041.cpp](./1041/1041.cpp) | 1d, 2d, 3d case |
+| mid | [11000](https://www.acmicpc.net/problem/11000) | [11000.cpp](./11000/11000.cpp) | sort, pq |
+| mid | [1744](https://www.acmicpc.net/problem/1744) | [1744.cpp](./1744/1744.cpp) | many case or pq for + - 0 1 |
+| mid | [2036](https://www.acmicpc.net/problem/2036) | [2036.cpp](./2036/2036.cpp) | same with 1744. only not for long |
+| mid | [2812](https://www.acmicpc.net/problem/2812) | [2812.cpp](./2812/2812.cpp) | deque |
+| mid | [2457](https://www.acmicpc.net/problem/2457) | [2457.cpp](./2457/2457.cpp) | select candidates, and selecte best among candidates |
+| mid | [12931](https://www.acmicpc.net/problem/12931) | [12931.cpp](./12931/12931.cpp) | 1. down solv : make all odd even, div 2. 2. up solv : count total odd cal + count the max div 2 cal.  |
+| easy | [15553](https://www.acmicpc.net/problem/15553) | [15553.cpp](./15553/15553.cpp) | total - BiggestTimeGap. upsolve : memo start, end and timeGap. timeGap in pq. |
+| mid | [2212](https://www.acmicpc.net/problem/2212) | [2212.cpp](./2212/2212.cpp) | density first? -> total distance - longest interval |
+| mid | [1092](https://www.acmicpc.net/problem/1092) | [1092.cpp](./1092/1092.cpp) | need pruning!! |

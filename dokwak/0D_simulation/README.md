@@ -23,3 +23,4 @@
 | hard | [3190](https://www.acmicpc.net/problem/3190) | [3190.cpp](./3190/3190.cpp) | updating tail information is tricky, when head, tail is same, tail moving can occur OBO(Off by One). |
 | ? | [14891](https://www.acmicpc.net/problem/14891) | [14891.cpp](./14891/14891.cpp) |  |
 | hard | [23291](https://www.acmicpc.net/problem/23291) | [23291.cpp](./23291/23291.cpp) |  |
+| mid | [17144](https://www.acmicpc.net/problem/17144) | [17144.cpp](./17144/17144.cpp) |  |
