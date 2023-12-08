@@ -35,4 +35,6 @@
 | ? | [1756](https://www.acmicpc.net/problem/1756) | [1756.cpp](./1756/1756.cpp) |  |
 | easy | [11054](https://www.acmicpc.net/problem/11054) | [11054.cpp](./11054/11054.cpp) | inc, rev |
 | hard | [2473](https://www.acmicpc.net/problem/2473) | [2473.cpp](./2473/2473.cpp) |  |
-| ? | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) |  |
+| hard | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) | from to day, update last day |
+| hard | [12970](https://www.acmicpc.net/problem/12970) | [12970.cpp](./12970/12970.cpp) |  |
+| ? | [1018](https://www.acmicpc.net/problem/1018) | [1018.cpp](./1018/1018.cpp) |  |

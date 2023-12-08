@@ -20,3 +20,8 @@
 | easy | [15553](https://www.acmicpc.net/problem/15553) | [15553.cpp](./15553/15553.cpp) | total - BiggestTimeGap. upsolve : memo start, end and timeGap. timeGap in pq. |
 | mid | [2212](https://www.acmicpc.net/problem/2212) | [2212.cpp](./2212/2212.cpp) | density first? -> total distance - longest interval |
 | mid | [1092](https://www.acmicpc.net/problem/1092) | [1092.cpp](./1092/1092.cpp) | need pruning!! |
+| mid | [1461](https://www.acmicpc.net/problem/1461) | [1461.cpp](./1461/1461.cpp) |  |
+| mid | [14002](https://www.acmicpc.net/problem/14002) | [14002.cpp](./14002/14002.cpp) | dp + bst. be caution that lis is made from tail(biggest) |
+| easy | [13975](https://www.acmicpc.net/problem/13975) | [13975.cpp](./13975/13975.cpp) | same with card piling problem |
+| hard | [2141](https://www.acmicpc.net/problem/2141) | [2141.cpp](./2141/2141.cpp) | need position offset. x -> long long cannot cover the solution |
+| hard | [11066](https://www.acmicpc.net/problem/11066) | [11066.cpp](./11066/11066.cpp) | `dp[i][j]` is for minimum calculation for i ~ j among all the combination case  |

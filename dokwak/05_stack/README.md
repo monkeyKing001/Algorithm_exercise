@@ -12,3 +12,4 @@
 | ? | [9012](https://www.acmicpc.net/problem/9012) | [9012.cpp](./9012/9012.cpp) |  |
 | mid | [12904](https://www.acmicpc.net/problem/12904) | [12904.cpp](./12904/12904.cpp) | erase |
 | ? | [3954](https://www.acmicpc.net/problem/3954) | [3954.cpp](./3954/3954.cpp) |  |
+| ? | [10828](https://www.acmicpc.net/problem/10828) | [10828.cpp](./10828/10828.cpp) |  |

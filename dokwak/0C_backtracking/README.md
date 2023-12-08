@@ -9,3 +9,4 @@
 | ? | [15666](https://www.acmicpc.net/problem/15666) | [15666.cpp](./15666/15666.cpp) |  |
 | mid | [2239](https://www.acmicpc.net/problem/2239) | [2239.cpp](./2239/2239.cpp) | sudoku. backtracking needs data copy and dfs with it. |
 | ? | [10974](https://www.acmicpc.net/problem/10974) | [10974.cpp](./10974/10974.cpp) |  |
+| mid | [2580](https://www.acmicpc.net/problem/2580) | [2580.cpp](./2580/2580.cpp) |  |

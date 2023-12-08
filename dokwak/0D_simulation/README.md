@@ -24,3 +24,9 @@
 | ? | [14891](https://www.acmicpc.net/problem/14891) | [14891.cpp](./14891/14891.cpp) |  |
 | hard | [23291](https://www.acmicpc.net/problem/23291) | [23291.cpp](./23291/23291.cpp) |  |
 | mid | [17144](https://www.acmicpc.net/problem/17144) | [17144.cpp](./17144/17144.cpp) |  |
+| easy | [1000](https://www.acmicpc.net/problem/1000) | [1000.cpp](./1000/1000.cpp) |  |
+| easy | [1001](https://www.acmicpc.net/problem/1001) | [1001.cpp](./1001/1001.cpp) |  |
+| easy | [1002](https://www.acmicpc.net/problem/1002) | [1002.cpp](./1002/1002.cpp) |  |
+| easy | [1152](https://www.acmicpc.net/problem/1152) | [1152.cpp](./1152/1152.cpp) |  |
+| easy | [10818](https://www.acmicpc.net/problem/10818) | [10818.cpp](./10818/10818.cpp) |  |
+| easy | [11720](https://www.acmicpc.net/problem/11720) | [11720.cpp](./11720/11720.cpp) |  |

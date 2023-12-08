@@ -6,3 +6,4 @@
 | easy | [samsung_1230](https://swexpertacademy.com/main/solvingProblem/solvingProblem.do) | [samsung_1230.cpp](./samsung_1230/Main.java) | add(index, entry), remove(index) |
 | easy | [samsung_5122](https://swexpertacademy.com/main/solvingProblem/solvingProblem.do) | [samsung_5122.cpp](./samsung_5122/Main.java) | set(index, entrt) |
 | ? | [1000](https://www.acmicpc.net/problem/1000) | [1000.cpp](./1000/1000.cpp) |  |
+| easy | [10845](https://www.acmicpc.net/problem/10845) | [10845.cpp](./10845/10845.cpp) | Deque |
