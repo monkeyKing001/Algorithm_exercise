@@ -13,3 +13,5 @@
 | mid | [12904](https://www.acmicpc.net/problem/12904) | [12904.cpp](./12904/12904.cpp) | erase |
 | ? | [3954](https://www.acmicpc.net/problem/3954) | [3954.cpp](./3954/3954.cpp) |  |
 | ? | [10828](https://www.acmicpc.net/problem/10828) | [10828.cpp](./10828/10828.cpp) |  |
+| easy | [4949](https://www.acmicpc.net/problem/4949) | [4949.cpp](./4949/4949.cpp) |  |
+| mid | [1541](https://www.acmicpc.net/problem/1541) | [1541.cpp](./1541/1541.cpp) | 1) all plus first, after minus. 2) use two stack(plus, minus) |

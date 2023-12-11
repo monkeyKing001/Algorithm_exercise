@@ -6,3 +6,5 @@
 | ? | [pro_147354](https://www.acmicpc.net/problem/pro_147354) | [pro_147354.cpp](./pro_147354/pro_147354.cpp) |  |
 | easy | [1764](https://www.acmicpc.net/problem/1764) | [1764.cpp](./1764/1764.cpp) | can be solve with map. sorting problem |
 | ? | [1181](https://www.acmicpc.net/problem/1181) | [1181.cpp](./1181/1181.cpp) |  |
+| easy | [7568](https://www.acmicpc.net/problem/7568) | [7568.cpp](./7568/7568.cpp) | brute force |
+| easy | [11651](https://www.acmicpc.net/problem/11651) | [11651.cpp](./11651/11651.cpp) |  |

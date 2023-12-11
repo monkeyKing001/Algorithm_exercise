@@ -30,3 +30,4 @@
 | easy | [1152](https://www.acmicpc.net/problem/1152) | [1152.cpp](./1152/1152.cpp) |  |
 | easy | [10818](https://www.acmicpc.net/problem/10818) | [10818.cpp](./10818/10818.cpp) |  |
 | easy | [11720](https://www.acmicpc.net/problem/11720) | [11720.cpp](./11720/11720.cpp) |  |
+| easy | [2741](https://www.acmicpc.net/problem/2741) | [2741.cpp](./2741/2741.cpp) |  |

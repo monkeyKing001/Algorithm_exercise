@@ -25,3 +25,6 @@
 | easy | [13975](https://www.acmicpc.net/problem/13975) | [13975.cpp](./13975/13975.cpp) | same with card piling problem |
 | hard | [2141](https://www.acmicpc.net/problem/2141) | [2141.cpp](./2141/2141.cpp) | need position offset. x -> long long cannot cover the solution |
 | hard | [11066](https://www.acmicpc.net/problem/11066) | [11066.cpp](./11066/11066.cpp) | `dp[i][j]` is for minimum calculation for i ~ j among all the combination case  |
+| easy | [2839](https://www.acmicpc.net/problem/2839) | [2839.cpp](./2839/2839.cpp) |  |
+| easy | [1213](https://www.acmicpc.net/problem/1213) | [1213.cpp](./1213/1213.cpp) |  |
+| easy | [1246](https://www.acmicpc.net/problem/1246) | [1246.cpp](./1246/1246.cpp) |  |

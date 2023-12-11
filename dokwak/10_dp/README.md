@@ -38,3 +38,11 @@
 | hard | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) | from to day, update last day |
 | hard | [12970](https://www.acmicpc.net/problem/12970) | [12970.cpp](./12970/12970.cpp) |  |
 | ? | [1018](https://www.acmicpc.net/problem/1018) | [1018.cpp](./1018/1018.cpp) |  |
+| easy | [1436](https://www.acmicpc.net/problem/1436) | [1436.cpp](./1436/1436.cpp) |  |
+| easy | [1003](https://www.acmicpc.net/problem/1003) | [1003.cpp](./1003/1003.cpp) |  |
+| easy | [1904](https://www.acmicpc.net/problem/1904) | [1904.cpp](./1904/1904.cpp) |  |
+| easy | [2293](https://www.acmicpc.net/problem/2293) | [2293.cpp](./2293/2293.cpp) |  |
+| mid | [2294](https://www.acmicpc.net/problem/2294) | [2294.cpp](./2294/2294.cpp) | 1) coin range be caution. 2) 2D array dp 3) 128MB -> 30000000 3) n vs m vs max |
+| easy | [1010](https://www.acmicpc.net/problem/1010) | [1010.cpp](./1010/1010.cpp) | all case mCn |
+| hard | [2225](https://www.acmicpc.net/problem/2225) | [2225.cpp](./2225/2225.cpp) | 2d dp[selectedNums][sum] = dp[selectedNums -1][0 ~ sum] |
+| hard | [2565](https://www.acmicpc.net/problem/2565) | [2565.cpp](./2565/2565.cpp) | LIS |

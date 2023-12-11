@@ -13,3 +13,5 @@
 | hard | [2166](https://www.acmicpc.net/problem/2166) | [2166.cpp](./2166/2166.cpp) |  |
 | ? | [17387](https://www.acmicpc.net/problem/17387) | [17387.cpp](./17387/17387.cpp) |  |
 | ? | [14888](https://www.acmicpc.net/problem/14888) | [14888.cpp](./14888/14888.cpp) |  |
+| easy | [2108](https://www.acmicpc.net/problem/2108) | [2108.cpp](./2108/2108.cpp) |  |
+| easy | [18110](https://www.acmicpc.net/problem/18110) | [18110.cpp](./18110/18110.cpp) |  |

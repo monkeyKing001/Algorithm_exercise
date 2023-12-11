@@ -5,5 +5,5 @@
 | hard | [9935](https://www.acmicpc.net/problem/9935) | [9935.cpp](./9935/9935.cpp) | not split, but stack |
 | ? | [5052](https://www.acmicpc.net/problem/5052) | [5052.cpp](./5052/5052.cpp) |  |
 | easy | [20920](https://www.acmicpc.net/problem/20920) | [20920.cpp](./20920/20920.cpp) |  |
-| ? | [1969](https://www.acmicpc.net/problem/1969) | [1969.cpp](./1969/1969.cpp) |  |
+| easy | [1969](https://www.acmicpc.net/problem/1969) | [1969.cpp](./1969/1969.cpp) |  |
 | ? | [1013](https://www.acmicpc.net/problem/1013) | [1013.cpp](./1013/1013.cpp) |  |
