@@ -28,3 +28,4 @@
 | easy | [2839](https://www.acmicpc.net/problem/2839) | [2839.cpp](./2839/2839.cpp) |  |
 | easy | [1213](https://www.acmicpc.net/problem/1213) | [1213.cpp](./1213/1213.cpp) |  |
 | easy | [1246](https://www.acmicpc.net/problem/1246) | [1246.cpp](./1246/1246.cpp) |  |
+| hard | [1789](https://www.acmicpc.net/problem/1789) | [1789.cpp](./1789/1789.cpp) |  |

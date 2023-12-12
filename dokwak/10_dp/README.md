@@ -46,3 +46,9 @@
 | easy | [1010](https://www.acmicpc.net/problem/1010) | [1010.cpp](./1010/1010.cpp) | all case mCn |
 | hard | [2225](https://www.acmicpc.net/problem/2225) | [2225.cpp](./2225/2225.cpp) | 2d dp[selectedNums][sum] = dp[selectedNums -1][0 ~ sum] |
 | hard | [2565](https://www.acmicpc.net/problem/2565) | [2565.cpp](./2565/2565.cpp) | LIS |
+| mid | [2096](https://www.acmicpc.net/problem/2096) | [2096.cpp](./2096/2096.cpp) | same like RGB |
+| easy | [1912](https://www.acmicpc.net/problem/1912) | [1912.cpp](./1912/1912.cpp) | solely vs dp + me |
+| easy | [10844](https://www.acmicpc.net/problem/10844) | [10844.cpp](./10844/10844.cpp) | easy step number |
+| mid | [2193](https://www.acmicpc.net/problem/2193) | [2193.cpp](./2193/2193.cpp) | same with stepping order (1, 2 steps) |
+| mid | [14501](https://www.acmicpc.net/problem/14501) | [14501.cpp](./14501/14501.cpp) | look at all the series of exit. |
+| mid | [1027](https://www.acmicpc.net/problem/1027) | [1027.cpp](./1027/1027.cpp) | if left can see right, right also can see left. No Such Element |
