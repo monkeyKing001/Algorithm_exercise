@@ -12,23 +12,11 @@ public class Main{
 
 		//input
 		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
-		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
-			}
-		}
-		sb.append(set.size());
+		m = Integer.parseInt(st.nextToken());
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

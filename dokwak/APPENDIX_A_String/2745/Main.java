@@ -11,24 +11,25 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
+		int num = 0;
+		String str = st.nextToken();
 		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
-		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
+		for (int i = 0; i < str.length(); i++) {
+			char chr = str.charAt(i);
+			int chrToInt = 0;
+			if (!Character.isDigit(chr)) {
+				chrToInt = chr + 10 - 'A';
 			}
+			else{
+				chrToInt = chr - '0';
+			}
+			num += chrToInt * Math.pow((double)n, str.length() - i - 1);
 		}
-		sb.append(set.size());
+		sb.append(num);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

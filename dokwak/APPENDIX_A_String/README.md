@@ -1,0 +1,13 @@
+# APPENDIX_A_String
+| level | problem | my_ans | hint |
+| :--: | :--: | :--: | :--: |
+| easy | [2745](https://www.acmicpc.net/problem/2745) | [2745.cpp](./2745/2745.cpp) |  |
+| mid | [10610](https://www.acmicpc.net/problem/10610) | [10610.cpp](./10610/10610.cpp) |  |
+| easy | [11478](https://www.acmicpc.net/problem/11478) | [11478.cpp](./11478/11478.cpp) |  |
+| easy | [1120](https://www.acmicpc.net/problem/1120) | [1120.cpp](./1120/1120.cpp) |  |
+| easy | [1141](https://www.acmicpc.net/problem/1141) | [1141.cpp](./1141/1141.cpp) |  |
+| hard | [1148](https://www.acmicpc.net/problem/1148) | [1148.cpp](./1148/1148.cpp) | 1) dict, puzzleBase arr 2) statistic arr |
+| mid | [1235](https://www.acmicpc.net/problem/1235) | [1235.cpp](./1235/1235.cpp) |  |
+| mid | [1254](https://www.acmicpc.net/problem/1254) | [1254.cpp](./1254/1254.cpp) | find longest felindrome from input last |
+| mid | [1283](https://www.acmicpc.net/problem/1283) | [1283.cpp](./1283/1283.cpp) |  |
+| mid | [1334](https://www.acmicpc.net/problem/1334) | [1334.cpp](./1334/1334.cpp) |  |

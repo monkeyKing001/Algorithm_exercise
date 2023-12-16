@@ -29,3 +29,6 @@
 | easy | [1213](https://www.acmicpc.net/problem/1213) | [1213.cpp](./1213/1213.cpp) |  |
 | easy | [1246](https://www.acmicpc.net/problem/1246) | [1246.cpp](./1246/1246.cpp) |  |
 | hard | [1789](https://www.acmicpc.net/problem/1789) | [1789.cpp](./1789/1789.cpp) |  |
+| hard | [1082](https://www.acmicpc.net/problem/1082) | [1082.cpp](./1082/1082.cpp) | purchase as many as possible. 1)buy one in notZeroGroup, 2)buy as many as possible from Allgroup. |
+| hard | [1132](https://www.acmicpc.net/problem/1132) | [1132.cpp](./1132/1132.cpp) | weight + zero problem fix |
+| mid | [1083](https://www.acmicpc.net/problem/1083) | [1083.cpp](./1083/1083.cpp) |  |

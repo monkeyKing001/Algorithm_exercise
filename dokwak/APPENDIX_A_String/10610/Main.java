@@ -11,24 +11,28 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
+		int radixSum = 0;
+		String str = st.nextToken();
+		ArrayList<Integer> arr = new ArrayList<>();
+		for (int i = 0; i < str.length(); i++) {
+			int num = str.charAt(i) - '0';
+			radixSum += num;
+			arr.add(num);
 		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
+		if (radixSum % 3 != 0 || !arr.contains(Integer.valueOf(0))){
+			sb.append(-1);
+			bw.write(sb.toString());
+			bw.flush();
+			return ;
+		}
+		arr.sort(Comparator.reverseOrder());
 		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
-			}
+			sb.append(arr.get(i));
 		}
-		sb.append(set.size());
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

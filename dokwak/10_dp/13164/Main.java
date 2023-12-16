@@ -12,23 +12,29 @@ public class Main{
 
 		//input
 		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
+		m = Integer.parseInt(st.nextToken());
+		PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
+		int prv = 0;
+		int totalDiff = 0;
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
+			int num = Integer.parseInt(st.nextToken());
+			if (i != 0)
+				totalDiff += num - prv;
+			pq.add(num - prv);
+			prv = num;
 		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
-			}
+		while (--m > 0){
+			int sub = pq.poll();
+//			sb.append("sub : "  + sub);
+//			sb.append("\n");
+			totalDiff -= sub;
 		}
-		sb.append(set.size());
+		sb.append(totalDiff);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

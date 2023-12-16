@@ -13,22 +13,30 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		ArrayList<String> arr = new ArrayList<>();
+		Set<String> set = new HashSet<>();
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
+			String id = br.readLine();
+			arr.add(id);
 		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
+		int len = arr.get(0).length();
+		for (int lastK = 1; lastK <= len; lastK++) {
+			set.clear();
+			for (int i = 0; i < n; i++) {
+				String id = arr.get(i);
+				String substr = id.substring(len - lastK, len);
+				if (set.contains(substr))
+					break;
+				set.add(substr);
+			}
+			if (set.size() == arr.size()) {
+				sb.append(lastK);
+				break;
 			}
 		}
-		sb.append(set.size());
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

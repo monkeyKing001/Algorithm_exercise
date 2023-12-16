@@ -12,21 +12,24 @@ public class Main{
 
 		//input
 		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
+		m = Integer.parseInt(st.nextToken());
+		int T = n;
+		long dp[] = new long [140];
+		dp[0] = 0;
+		dp[1] = 1;
+		dp[2] = 1;
+		dp[3] = 1;
+		dp[4] = 2;
+		dp[5] = 2;
+		for (int i = 5; i < 101; i++) {
+			dp[i] = dp[i - 1] + dp[i - 5];
+		}
+		for (int t_i = 0; t_i < T; t_i++) {
 			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
+			m = Integer.parseInt(st.nextToken());
+			sb.append(dp[m]);
+			sb.append("\n");
 		}
-		arr.sort(null);
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
-			}
-		}
-		sb.append(set.size());
 		bw.write(sb.toString());
 		bw.flush();
 		return ;

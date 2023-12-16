@@ -52,3 +52,5 @@
 | mid | [2193](https://www.acmicpc.net/problem/2193) | [2193.cpp](./2193/2193.cpp) | same with stepping order (1, 2 steps) |
 | mid | [14501](https://www.acmicpc.net/problem/14501) | [14501.cpp](./14501/14501.cpp) | look at all the series of exit. |
 | mid | [1027](https://www.acmicpc.net/problem/1027) | [1027.cpp](./1027/1027.cpp) | if left can see right, right also can see left. No Such Element |
+| mid | [13164](https://www.acmicpc.net/problem/13164) | [13164.cpp](./13164/13164.cpp) | total length - (biggest diff) |
+| mid | [9461](https://www.acmicpc.net/problem/9461) | [9461.cpp](./9461/9461.cpp) | find the frequency |

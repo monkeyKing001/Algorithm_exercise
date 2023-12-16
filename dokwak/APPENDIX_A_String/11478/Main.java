@@ -11,19 +11,13 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		n = Integer.parseInt(st.nextToken());
-		ArrayList<String> arr = new ArrayList<>();
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			String str = st.nextToken();
-			arr.add(str);
-		}
-		arr.sort(null);
 		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < arr.size(); i++) {
-			String str = arr.get(i);
-			if (i == arr.size() - 1 || !arr.get(i + 1).startsWith(str)) {
-				set.add(str);
+		String str = st.nextToken();
+		for (int size = 1; size <= str.length(); size++) {
+			for (int start = 0; start + size <= str.length(); start++) {
+				int end = start + size;
+				String substr = str.substring(start, end);
+				set.add(substr);
 			}
 		}
 		sb.append(set.size());
@@ -32,3 +26,5 @@ public class Main{
 		return ;
 	}
 }
+
+
