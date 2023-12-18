@@ -11,3 +11,10 @@
 | mid | [1254](https://www.acmicpc.net/problem/1254) | [1254.cpp](./1254/1254.cpp) | find longest felindrome from input last |
 | mid | [1283](https://www.acmicpc.net/problem/1283) | [1283.cpp](./1283/1283.cpp) |  |
 | mid | [1334](https://www.acmicpc.net/problem/1334) | [1334.cpp](./1334/1334.cpp) |  |
+| mid | [1340](https://www.acmicpc.net/problem/1340) | [1340.cpp](./1340/1340.cpp) |  |
+| easy | [1380](https://www.acmicpc.net/problem/1380) | [1380.cpp](./1380/1380.cpp) |  |
+| easy | [1411](https://www.acmicpc.net/problem/1411) | [1411.cpp](./1411/1411.cpp) |  |
+| mid | [1394](https://www.acmicpc.net/problem/1394) | [1394.cpp](./1394/1394.cpp) | think about how decimal expression works. |
+| hard | [5525](https://www.acmicpc.net/problem/5525) | [5525.cpp](./5525/5525.cpp) | 1) rabin kalf?, 2) chr - 'A' or chr |
+| ? | [5635](https://www.acmicpc.net/problem/5635) | [5635.cpp](./5635/5635.cpp) |  |
+| easy | [1652](https://www.acmicpc.net/problem/1652) | [1652.cpp](./1652/1652.cpp) |  |

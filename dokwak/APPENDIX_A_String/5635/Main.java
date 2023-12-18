@@ -11,25 +11,36 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
+		int early = Integer.MAX_VALUE;
+		String oldest = "";
+		int late = Integer.MIN_VALUE;
+		String youngest  = "";
 		n = Integer.parseInt(st.nextToken());
-		int []steps = new int [n + 1];
-		int []dp = new int [n + 1];
-		dp[0] = 0;
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine()," ");
-			steps[i + 1] = Integer.parseInt(st.nextToken());;
-		}
-		for (int i = 1; i <= n; i++) {
-			if (i <= 2){
-				dp[i] = dp[i - 1];
+			String name = st.nextToken();
+			int day = Integer.parseInt(st.nextToken()) + 100;
+			int month = (Integer.parseInt(st.nextToken()) + 100)  * 1000;
+			int year = Integer.parseInt(st.nextToken());
+			int hash = year * 1000000;
+			hash += month;
+			hash += day;
+//			sb.append(name +"\n");
+//			sb.append(hash +"\n");
+			if (hash < early){
+				early = hash;
+				oldest = name;
 			}
-			else
-				dp[i] = Integer.max(dp[i - 3] + steps[i - 1], dp[i - 2]);
-			dp[i] += steps[i];
+			if (hash > late){
+				late = hash;
+				youngest = name;
+			}
 		}
-		sb.append(dp[n]);
+		sb.append(youngest + "\n" + oldest);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

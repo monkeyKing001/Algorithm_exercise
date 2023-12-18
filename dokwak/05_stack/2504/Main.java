@@ -11,25 +11,37 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		n = Integer.parseInt(st.nextToken());
-		int []steps = new int [n + 1];
-		int []dp = new int [n + 1];
-		dp[0] = 0;
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			steps[i + 1] = Integer.parseInt(st.nextToken());;
-		}
-		for (int i = 1; i <= n; i++) {
-			if (i <= 2){
-				dp[i] = dp[i - 1];
+		String str = st.nextToken();
+		Stack<Character> s = new Stack<>();
+		Stack<Integer> num = new Stack<>();
+		int pc = 1;
+		int sol = 0;
+		for (int i = 0; i < str.length(); i++) {
+			char chr = str.charAt(i);
+			//open
+			if (chr == '(' || chr == '['){
+				if (chr == '('){
+					num.push(2);
+				}
+				else{
+				}
 			}
-			else
-				dp[i] = Integer.max(dp[i - 3] + steps[i - 1], dp[i - 2]);
-			dp[i] += steps[i];
+			//close
+			else{
+				//unmatch
+				if (s.empty() || Math.abs(chr - s.peek()) > 2){
+					sol = 0;
+					break;
+				}
+				//match
+				s.pop();
+			}
 		}
-		sb.append(dp[n]);
+		sb.append(sol);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
+
+

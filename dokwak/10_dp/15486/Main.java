@@ -15,9 +15,6 @@ public class Main{
 		int day[] = new int [n + 1];
 		int pay[] = new int [n + 1];
 		int dp[] = new int [n + 2];
-		day[0] = 0;
-		pay[0] = 0;
-		dp[0] = 0;
 		for (int i = 1; i < n + 1; i++) {
 			st = new StringTokenizer(br.readLine()," ");
 			int dayNeed = Integer.parseInt(st.nextToken());
@@ -25,21 +22,21 @@ public class Main{
 			day[i] = dayNeed;
 			pay[i] = payGet;
 		}
-		int max_pay = 0;
 		for (int i = 1; i < n + 1; i++) {
-			int cur_day = i;
-			dp[cur_day] = Integer.max(dp[cur_day], dp[cur_day - 1]);
-			int next_day = cur_day + day[i];
-			if (next_day <= n + 1){
-				dp[next_day] = Integer.max(dp[next_day], dp[cur_day] + pay[cur_day]);
-				max_pay = Integer.max(max_pay, dp[next_day]);
-			}
+			int curDay = i;
+			int curPay = pay[i];
+			int costDay = day[i];
+			dp[curDay] = Integer.max(dp[curDay - 1], dp[curDay]);
+			if (curDay + costDay <= n + 1)
+				dp[curDay + costDay] = Integer.max(dp[curDay + costDay], dp[curDay] + curPay);
+//			System.out.print("day : " + curDay + " ");
+//			for (int j = 1; j < n + 2; j++) {
+//				System.out.print(dp[j] + " ");
+//			}
+//			System.out.println();
 		}
-//		for (int i = 1; i < n + 1; i++) {
-//			System.out.print(dp[i] +  " ");
-//		}
-//		System.out.println();
-		System.out.println(max_pay);
+		dp[n + 1] = Integer.max(dp[n], dp[n + 1]);
+		System.out.println(dp[n + 1]);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;

@@ -37,7 +37,7 @@
 | hard | [2473](https://www.acmicpc.net/problem/2473) | [2473.cpp](./2473/2473.cpp) |  |
 | hard | [15486](https://www.acmicpc.net/problem/15486) | [15486.cpp](./15486/15486.cpp) | from to day, update last day |
 | hard | [12970](https://www.acmicpc.net/problem/12970) | [12970.cpp](./12970/12970.cpp) |  |
-| ? | [1018](https://www.acmicpc.net/problem/1018) | [1018.cpp](./1018/1018.cpp) |  |
+| mid | [1018](https://www.acmicpc.net/problem/1018) | [1018.cpp](./1018/1018.cpp) | bruteForce |
 | easy | [1436](https://www.acmicpc.net/problem/1436) | [1436.cpp](./1436/1436.cpp) |  |
 | easy | [1003](https://www.acmicpc.net/problem/1003) | [1003.cpp](./1003/1003.cpp) |  |
 | easy | [1904](https://www.acmicpc.net/problem/1904) | [1904.cpp](./1904/1904.cpp) |  |
