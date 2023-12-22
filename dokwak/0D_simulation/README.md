@@ -18,7 +18,7 @@
 | mid | [1270](https://www.acmicpc.net/problem/1270) | [1270.cpp](./1270/1270.cpp) | be careful for number format. how to compare Long type? |
 | ? | [18039](https://www.acmicpc.net/problem/18039) | [18039.cpp](./18039/18039.cpp) |  |
 | ? | [2618](https://www.acmicpc.net/problem/2618) | [2618.cpp](./2618/2618.cpp) |  |
-| ? | [15686](https://www.acmicpc.net/problem/15686) | [15686.cpp](./15686/15686.cpp) |  |
+| easy | [15686](https://www.acmicpc.net/problem/15686) | [15686.cpp](./15686/15686.cpp) | bit masking |
 | mid | [17070](https://www.acmicpc.net/problem/17070) | [17070.cpp](./17070/17070.cpp) | deciding diagonal move is tricky |
 | hard | [3190](https://www.acmicpc.net/problem/3190) | [3190.cpp](./3190/3190.cpp) | updating tail information is tricky, when head, tail is same, tail moving can occur OBO(Off by One). |
 | ? | [14891](https://www.acmicpc.net/problem/14891) | [14891.cpp](./14891/14891.cpp) |  |

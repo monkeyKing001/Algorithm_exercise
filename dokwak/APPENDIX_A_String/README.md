@@ -18,3 +18,7 @@
 | hard | [5525](https://www.acmicpc.net/problem/5525) | [5525.cpp](./5525/5525.cpp) | 1) rabin kalf?, 2) chr - 'A' or chr |
 | ? | [5635](https://www.acmicpc.net/problem/5635) | [5635.cpp](./5635/5635.cpp) |  |
 | easy | [1652](https://www.acmicpc.net/problem/1652) | [1652.cpp](./1652/1652.cpp) |  |
+| easy | [1439](https://www.acmicpc.net/problem/1439) | [1439.cpp](./1439/1439.cpp) |  |
+| easy | [12891](https://www.acmicpc.net/problem/12891) | [12891.cpp](./12891/12891.cpp) | rabin kalf + judging condition order is important |
+| easy | [1543](https://www.acmicpc.net/problem/1543) | [1543.cpp](./1543/1543.cpp) |  |
+| ? | [1769](https://www.acmicpc.net/problem/1769) | [1769.cpp](./1769/1769.cpp) |  |

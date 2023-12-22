@@ -32,3 +32,7 @@
 | hard | [1082](https://www.acmicpc.net/problem/1082) | [1082.cpp](./1082/1082.cpp) | purchase as many as possible. 1)buy one in notZeroGroup, 2)buy as many as possible from Allgroup. |
 | hard | [1132](https://www.acmicpc.net/problem/1132) | [1132.cpp](./1132/1132.cpp) | weight + zero problem fix |
 | mid | [1083](https://www.acmicpc.net/problem/1083) | [1083.cpp](./1083/1083.cpp) |  |
+| easy | [11399](https://www.acmicpc.net/problem/11399) | [11399.cpp](./11399/11399.cpp) |  |
+| mid | [1541](https://www.acmicpc.net/problem/1541) | [1541.cpp](./1541/1541.cpp) |  |
+| mid | [13904](https://www.acmicpc.net/problem/13904) | [13904.cpp](./13904/13904.cpp) | my sol : biggest score among possible (from end day to day 1) |
+| mid | [2109](https://www.acmicpc.net/problem/2109) | [2109.cpp](./2109/2109.cpp) | memo max pay for each day |

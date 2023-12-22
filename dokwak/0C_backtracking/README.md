@@ -10,3 +10,4 @@
 | mid | [2239](https://www.acmicpc.net/problem/2239) | [2239.cpp](./2239/2239.cpp) | sudoku. backtracking needs data copy and dfs with it. |
 | ? | [10974](https://www.acmicpc.net/problem/10974) | [10974.cpp](./10974/10974.cpp) |  |
 | mid | [2580](https://www.acmicpc.net/problem/2580) | [2580.cpp](./2580/2580.cpp) |  |
+| mid | [1062](https://www.acmicpc.net/problem/1062) | [1062.cpp](./1062/1062.cpp) | all alphabet combinations.-> bits masking. bug 1) char hit expression doesn't work -> fix : shift left vs shift right |
