@@ -11,24 +11,19 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
+		m = Integer.parseInt(st.nextToken());
+		int dp[] = new int[10001];
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+			dp[i + 1] = Integer.parseInt(st.nextToken()) + dp[i];
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
+		int sol = 0;
+		for (int i = 0; i <= n - 1; i++) {
+			for (int j = i + 1; j <= n ; j++){
+				if (dp[j] - dp[i] == m)
+					sol++;
 			}
-			sol += num;
-			pq.add(num);
 		}
 		System.out.println(sol);
 		bw.write(sb.toString());

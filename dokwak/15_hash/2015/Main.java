@@ -11,24 +11,24 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		n = Integer.parseInt(st.nextToken());
+		m = Integer.parseInt(st.nextToken());
+		int k = m;
+		int dp[] = new int [n + 1];
 		long sol = 0;
+		Map<Integer, Integer> map = new HashMap<>();
+		map.put(0, 1);
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
 			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
-		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
-			}
-			sol += num;
-			pq.add(num);
+			dp[i + 1] = dp[i] + num;
+			int target = dp[i + 1] - k;
+//			System.out.println("target : " + target);
+//			System.out.println("sol : " + sol);
+			sol+= map.getOrDefault(target, 0);
+//			System.out.println("found : " + map.getOrDefault(target, 0));
+//			System.out.println("sol : " + sol);
+			map.put(dp[i + 1], map.getOrDefault(dp[i + 1], 0) + 1);
 		}
 		System.out.println(sol);
 		bw.write(sb.toString());
@@ -36,5 +36,3 @@ public class Main{
 		return ;
 	}
 }
-
-

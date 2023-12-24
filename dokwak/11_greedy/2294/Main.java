@@ -11,25 +11,32 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		int [] dp = new int[10001];
+		for (int i = 0; i < 10001; i++) {
+			dp[i] = 10001;
+		}
+		dp[0] = 0;
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
+		m = Integer.parseInt(st.nextToken());
+		ArrayList<Integer> coins = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine()," ");
-			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+			int coinValue = Integer.parseInt(st.nextToken());
+			coins.add(coinValue);
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
+		coins.sort(null);
+		for (int i = 0; i < coins.size(); i++) {
+			int coinValue = coins.get(i);
+			if (coinValue > 10000)
+				continue;
+			dp[coinValue] = 1;
+			for (int updateValue = coinValue; updateValue < 10001; updateValue++) {
+				dp[updateValue] = Integer.min(dp[updateValue], dp[updateValue - coinValue] + 1);
 			}
-			sol += num;
-			pq.add(num);
 		}
+		int sol = -1;
+		if (dp[m] != 10001)
+			sol = dp[m];
 		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();

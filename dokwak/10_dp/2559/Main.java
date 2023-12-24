@@ -11,24 +11,16 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
-		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+		m = Integer.parseInt(st.nextToken());
+		int dp[] = new int [n + 1];
+		st = new StringTokenizer(br.readLine()," ");
+		for (int i = 1; i < n + 1; i++) {
+			dp[i] = Integer.parseInt(st.nextToken()) + dp[i - 1];
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
-			}
-			sol += num;
-			pq.add(num);
+		int sol = Integer.MIN_VALUE;
+		for (int i = 0; i + m <= n; i++) {
+			sol = Integer.max(sol, dp[i + m] - dp[i]);
 		}
 		System.out.println(sol);
 		bw.write(sb.toString());

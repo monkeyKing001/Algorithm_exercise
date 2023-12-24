@@ -54,3 +54,6 @@
 | mid | [1027](https://www.acmicpc.net/problem/1027) | [1027.cpp](./1027/1027.cpp) | if left can see right, right also can see left. No Such Element |
 | mid | [13164](https://www.acmicpc.net/problem/13164) | [13164.cpp](./13164/13164.cpp) | total length - (biggest diff) |
 | mid | [9461](https://www.acmicpc.net/problem/9461) | [9461.cpp](./9461/9461.cpp) | find the frequency |
+| easy | [2003](https://www.acmicpc.net/problem/2003) | [2003.cpp](./2003/2003.cpp) |  |
+| easy | [2559](https://www.acmicpc.net/problem/2559) | [2559.cpp](./2559/2559.cpp) |  |
+| hard | [10986](https://www.acmicpc.net/problem/10986) | [10986.cpp](./10986/10986.cpp) | 1) long, 2) case branching |

@@ -11,12 +11,7 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<int[]>distance = new PriorityQueue<>(new Comparator<int[]>(){
-			@Override
-			public int compare(int [] d1, int d2[]){
-				return (Integer.compare(d2[1] - d2[0] , d1[1] - d1[0]));
-			}
-		});
+		PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
 		n = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine()," ");
 		m = Integer.parseInt(st.nextToken());
@@ -27,20 +22,12 @@ public class Main{
 		}
 		Arrays.sort(arr);
 		for (int i = 0; i < n - 1; i++) {
-			int p1 = arr[i];
-			int p2 = arr[i + 1];
-			int []d  = new int[2];
-			d[0] = p1;
-			d[1] = p2;
-			distance.add(d);
+			int dis = arr[i + 1] - arr[i];
+			pq.add(dis);
 		}
 		int sol = arr[n - 1] - arr[0];
-		while(distance.size() > 0 && m > 1){
-			int [] d = distance.poll();
-//			System.out.println("minus : " +d[0]+" ~ "+d[1]);
-			sol -= (d[1] - d[0]);
-			m--;
-		}
+		while (pq.size() != 0 && --m > 0)
+			sol -= pq.poll();
 		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();

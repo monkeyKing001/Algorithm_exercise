@@ -21,4 +21,7 @@
 | easy | [1439](https://www.acmicpc.net/problem/1439) | [1439.cpp](./1439/1439.cpp) |  |
 | easy | [12891](https://www.acmicpc.net/problem/12891) | [12891.cpp](./12891/12891.cpp) | rabin kalf + judging condition order is important |
 | easy | [1543](https://www.acmicpc.net/problem/1543) | [1543.cpp](./1543/1543.cpp) |  |
-| ? | [1769](https://www.acmicpc.net/problem/1769) | [1769.cpp](./1769/1769.cpp) |  |
+| easy | [1769](https://www.acmicpc.net/problem/1769) | [1769.cpp](./1769/1769.cpp) |  |
+| easy | [20291](https://www.acmicpc.net/problem/20291) | [20291.cpp](./20291/20291.cpp) |  |
+| easy | [2607](https://www.acmicpc.net/problem/2607) | [2607.cpp](./2607/2607.cpp) | ??) bug -> same diff 2(impossible) vs two char diff 2 (possible) |
+| mid | [12919](https://www.acmicpc.net/problem/12919) | [12919.cpp](./12919/12919.cpp) |  |

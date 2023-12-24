@@ -11,24 +11,26 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		Map<String, Integer> in = new HashMap<String, Integer>();
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
+		int [] rank = new int[n];
+		int sol = 0;
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+			String car = br.readLine();
+			in.put(car, in.size());
+			int carNum = in.get(car);
+			rank[carNum] = i;
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
+		for (int i = 0; i < n; i++) {
+			String car = br.readLine();
+			int carNum = in.get(car);
+			int carRank = rank[carNum];
+			if (carRank > i){
+				sol++;
+				for (int j = 0; j < carNum; j++) {
+					rank[j]++;
+				}
 			}
-			sol += num;
-			pq.add(num);
 		}
 		System.out.println(sol);
 		bw.write(sb.toString());

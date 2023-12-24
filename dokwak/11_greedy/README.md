@@ -36,3 +36,4 @@
 | mid | [1541](https://www.acmicpc.net/problem/1541) | [1541.cpp](./1541/1541.cpp) |  |
 | mid | [13904](https://www.acmicpc.net/problem/13904) | [13904.cpp](./13904/13904.cpp) | my sol : biggest score among possible (from end day to day 1) |
 | mid | [2109](https://www.acmicpc.net/problem/2109) | [2109.cpp](./2109/2109.cpp) | memo max pay for each day |
+| mid | [2294](https://www.acmicpc.net/problem/2294) | [2294.cpp](./2294/2294.cpp) |  |

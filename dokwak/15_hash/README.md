@@ -101,3 +101,13 @@ String.format("%.4f", por);
 | ? | [25192](https://www.acmicpc.net/problem/25192) | [25192.cpp](./25192/25192.cpp) |  |
 | ? | [1339](https://www.acmicpc.net/problem/1339) | [1339.cpp](./1339/1339.cpp) |  |
 | ? | [9375](https://www.acmicpc.net/problem/9375) | [9375.cpp](./9375/9375.cpp) |  |
+| ? | [10815](https://www.acmicpc.net/problem/10815) | [10815.cpp](./10815/10815.cpp) |  |
+| hard | [4195](https://www.acmicpc.net/problem/4195) | [4195.cpp](./4195/4195.cpp) | union find(parent, size) + numbering |
+| ? | [1525](https://www.acmicpc.net/problem/1525) | [1525.cpp](./1525/1525.cpp) |  |
+| hard | [2295](https://www.acmicpc.net/problem/2295) | [2295.cpp](./2295/2295.cpp) | mem exceed? why? -> set index err : mem exceed. wrong ans? -> long?  |
+| ? | [2910](https://www.acmicpc.net/problem/2910) | [2910.cpp](./2910/2910.cpp) |  |
+| hard | [2015](https://www.acmicpc.net/problem/2015) | [2015.cpp](./2015/2015.cpp) | find cur prefix sum - target and memo every prefix sum and |
+| easy | [2002](https://www.acmicpc.net/problem/2002) | [2002.cpp](./2002/2002.cpp) |  |
+| easy | [16165](https://www.acmicpc.net/problem/16165) | [16165.cpp](./16165/16165.cpp) |  |
+| easy | [19583](https://www.acmicpc.net/problem/19583) | [19583.cpp](./19583/19583.cpp) |  |
+| hard | [1327](https://www.acmicpc.net/problem/1327) | [1327.cpp](./1327/1327.cpp) | 1) brute force 2) visit mark with string key set |

@@ -16,3 +16,5 @@
 | easy | [4949](https://www.acmicpc.net/problem/4949) | [4949.cpp](./4949/4949.cpp) |  |
 | mid | [1541](https://www.acmicpc.net/problem/1541) | [1541.cpp](./1541/1541.cpp) | 1) all plus first, after minus. 2) use two stack(plus, minus) |
 | mid | [2504](https://www.acmicpc.net/problem/2504) | [2504.cpp](./2504/2504.cpp) |  |
+| mid | [10799](https://www.acmicpc.net/problem/10799) | [10799.cpp](./10799/10799.cpp) |  |
+| hard | [1756](https://www.acmicpc.net/problem/1756) | [1756.cpp](./1756/1756.cpp) | remake oven,and find the hole with bst |

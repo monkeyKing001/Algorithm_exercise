@@ -11,26 +11,23 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
+		Set<Integer> set = new HashSet<Integer>();
+		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
 			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+			set.add(num);
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
-			}
-			sol += num;
-			pq.add(num);
+		st = new StringTokenizer(br.readLine()," ");
+		m = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(br.readLine()," ");
+		for (int i = 0; i < m; i++) {
+			int num = Integer.parseInt(st.nextToken());
+			if (set.contains(num))
+				System.out.print("1 ");
+			else
+				System.out.print("0 ");
 		}
-		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;

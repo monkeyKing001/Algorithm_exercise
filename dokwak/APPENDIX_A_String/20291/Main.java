@@ -11,26 +11,18 @@ public class Main{
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
 		//input
-		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		n = Integer.parseInt(st.nextToken());
-		long sol = 0;
+		Map<String, Integer> map = new TreeMap<String, Integer>();	
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			int num = Integer.parseInt(st.nextToken());
-			pq.add(num);
+			String file = br.readLine();
+			st = new StringTokenizer(file,".");
+			String name = st.nextToken();
+			String ext = st.nextToken();
+			map.put(ext, map.getOrDefault(ext, 0) + 1);
 		}
-		while (pq.size() != 1){
-			int num = pq.poll();
-//			System.out.println("num : " + num);
-			if (pq.size() >= 1){
-				int add = pq.poll();
-				num += add;
-//				System.out.println("adding : " + add);
-			}
-			sol += num;
-			pq.add(num);
+		for (String ext : map.keySet()){
+			System.out.println(ext + " " + map.get(ext));
 		}
-		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
