@@ -34,3 +34,4 @@ long max_h = Arrays.stream(trees).max().getAsInt();
 | hard | [16434](https://www.acmicpc.net/problem/16434) | [16434.cpp](./16434/16434.cpp) | binary search without while loop. ceil with long type is incorrect. casting type to double before ceil is needed |
 | ? | [2467](https://www.acmicpc.net/problem/2467) | [2467.cpp](./2467/2467.cpp) |  |
 | mid | [1253](https://www.acmicpc.net/problem/1253) | [1253.cpp](./1253/1253.cpp) | two Pointer or bst. if l == i l++, r == i r++ |
+| mid | [2110](https://www.acmicpc.net/problem/2110) | [2110.cpp](./2110/2110.cpp) | binary search tree, minimum distance. |

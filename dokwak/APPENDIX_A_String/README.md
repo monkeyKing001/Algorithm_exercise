@@ -25,3 +25,6 @@
 | easy | [20291](https://www.acmicpc.net/problem/20291) | [20291.cpp](./20291/20291.cpp) |  |
 | easy | [2607](https://www.acmicpc.net/problem/2607) | [2607.cpp](./2607/2607.cpp) | ??) bug -> same diff 2(impossible) vs two char diff 2 (possible) |
 | mid | [12919](https://www.acmicpc.net/problem/12919) | [12919.cpp](./12919/12919.cpp) |  |
+| ? | [15353](https://www.acmicpc.net/problem/15353) | [15353.cpp](./15353/15353.cpp) |  |
+| easy | [1427](https://www.acmicpc.net/problem/1427) | [1427.cpp](./1427/1427.cpp) |  |
+| easy | [1622](https://www.acmicpc.net/problem/1622) | [1622.cpp](./1622/1622.cpp) |  |

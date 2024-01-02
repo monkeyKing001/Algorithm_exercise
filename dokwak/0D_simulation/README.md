@@ -31,3 +31,5 @@
 | easy | [10818](https://www.acmicpc.net/problem/10818) | [10818.cpp](./10818/10818.cpp) |  |
 | easy | [11720](https://www.acmicpc.net/problem/11720) | [11720.cpp](./11720/11720.cpp) |  |
 | easy | [2741](https://www.acmicpc.net/problem/2741) | [2741.cpp](./2741/2741.cpp) |  |
+| easy | [1051](https://www.acmicpc.net/problem/1051) | [1051.cpp](./1051/1051.cpp) |  |
+| mid | [14502](https://www.acmicpc.net/problem/14502) | [14502.cpp](./14502/14502.cpp) | Java 2d array clone() does not work |
