@@ -15,3 +15,4 @@
 | ? | [14888](https://www.acmicpc.net/problem/14888) | [14888.cpp](./14888/14888.cpp) |  |
 | easy | [2108](https://www.acmicpc.net/problem/2108) | [2108.cpp](./2108/2108.cpp) |  |
 | easy | [18110](https://www.acmicpc.net/problem/18110) | [18110.cpp](./18110/18110.cpp) |  |
+| mid | [1145](https://www.acmicpc.net/problem/1145) | [1145.cpp](./1145/1145.cpp) |  |

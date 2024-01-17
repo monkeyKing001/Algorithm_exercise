@@ -58,3 +58,4 @@
 | easy | [2559](https://www.acmicpc.net/problem/2559) | [2559.cpp](./2559/2559.cpp) |  |
 | hard | [10986](https://www.acmicpc.net/problem/10986) | [10986.cpp](./10986/10986.cpp) | 1) long, 2) case branching |
 | ? | [1915](https://www.acmicpc.net/problem/1915) | [1915.cpp](./1915/1915.cpp) |  |
+| easy | [1343](https://www.acmicpc.net/problem/1343) | [1343.cpp](./1343/1343.cpp) | 2 ~ 50 dp |

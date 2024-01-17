@@ -13,51 +13,46 @@ public class Main{
 		//input
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
-		int [] use = new int[4];//A C G T
-		int [] curUse = new int[4];
+		int [] need = new int[4];//A C G T
+		int [] curUse = new int[4];//A C G T
 		int sol = 0;
-		String str = br.readLine();
+		String strDNA = br.readLine();
 		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < 4; i++) {
-			int num = Integer.parseInt(st.nextToken());
-			use[i] = num;
+			int needChar = Integer.parseInt(st.nextToken());
+			need[i] = needChar;
 		}
-		for (int i = 0; i < str.length(); i++) {
-			char next = str.charAt(i);
-			if (next == 'A'){
+//		for (int i = 0; i < 4; i++) {
+//			System.out.print(need[i] + " ");
+//		}
+//		System.out.println();
+		for (int i = 0; i < strDNA.length(); i++) {
+			char curChar = strDNA.charAt(i);
+			if (curChar == 'A')
 				curUse[0]++;
-			}
-			else if (next == 'C'){
+			if (curChar == 'C')
 				curUse[1]++;
-			}
-			else if (next == 'G'){
+			if (curChar == 'G')
 				curUse[2]++;
-			}
-			else if (next == 'T'){
+			if (curChar == 'T')
 				curUse[3]++;
-			}
-			//prev minus
-			if (i - m >= 0) {
-				char prev = str.charAt(i - m);
-				if (prev == 'A'){
+			if (i >= m){
+				char lastChar = strDNA.charAt(i - m);
+				if (lastChar == 'A')
 					curUse[0]--;
-				}
-				else if (prev == 'C'){
+				if (lastChar == 'C')
 					curUse[1]--;
-				}
-				else if (prev == 'G'){
+				if (lastChar == 'G')
 					curUse[2]--;
-				}
-				else if (prev == 'T'){
+				if (lastChar == 'T')
 					curUse[3]--;
-				}
 			}
-			for (int check = 0; check < 4; check++) {
-				if (i < m - 1 || use[check] > curUse[check]){
+			for (int charIdx = 0; charIdx < 4 && i >= m - 1; charIdx++) {
+				if (need[charIdx] > curUse[charIdx])
 					break;
-				}
-				if (check == 3){
+				if (charIdx == 3){
 					sol++;
+//					System.out.println(strDNA.substring(Integer.max(i - m + 1, 0), i + 1));
 				}
 			}
 		}
@@ -67,5 +62,3 @@ public class Main{
 		return ;
 	}
 }
-
-

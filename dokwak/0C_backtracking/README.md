@@ -11,3 +11,4 @@
 | ? | [10974](https://www.acmicpc.net/problem/10974) | [10974.cpp](./10974/10974.cpp) |  |
 | mid | [2580](https://www.acmicpc.net/problem/2580) | [2580.cpp](./2580/2580.cpp) |  |
 | mid | [1062](https://www.acmicpc.net/problem/1062) | [1062.cpp](./1062/1062.cpp) | all alphabet combinations.-> bits masking. bug 1) char hit expression doesn't work -> fix : shift left vs shift right |
+| mid | [9663](https://www.acmicpc.net/problem/9663) | [9663.cpp](./10974/10974.cpp) | be careful with row, col iteration. |

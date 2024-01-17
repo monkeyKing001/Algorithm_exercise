@@ -33,3 +33,12 @@
 | easy | [2741](https://www.acmicpc.net/problem/2741) | [2741.cpp](./2741/2741.cpp) |  |
 | easy | [1051](https://www.acmicpc.net/problem/1051) | [1051.cpp](./1051/1051.cpp) |  |
 | mid | [14502](https://www.acmicpc.net/problem/14502) | [14502.cpp](./14502/14502.cpp) | Java 2d array clone() does not work |
+| mid | [14499](https://www.acmicpc.net/problem/14499) | [14499.cpp](./14499/14499.cpp) | bug where? =>floor copy vs dice copy. curR curC initialization |
+| mid | [16234](https://www.acmicpc.net/problem/16234) | [16234.cpp](./16234/16234.cpp) | bfs not working..why? -> i (x) -> d_i |
+| ? | [3085](https://www.acmicpc.net/problem/3085) | [3085.cpp](./3085/3085.cpp) |  |
+| mid | [1063](https://www.acmicpc.net/problem/1063) | [1063.cpp](./1063/1063.cpp) | row, col can be change. be flexible |
+| hard | [14500](https://www.acmicpc.net/problem/14500) | [14500.cpp](./14500/14500.cpp) | most left, up masking. make every tetrominos |
+| easy | [1244](https://www.acmicpc.net/problem/1244) | [1244.cpp](./1244/1244.cpp) | be catuion for index bug  |
+| easy | [15312](https://www.acmicpc.net/problem/15312) | [15312.cpp](./15312/15312.cpp) |  |
+| mid | [1347](https://www.acmicpc.net/problem/1347) | [1347.cpp](./1347/1347.cpp) |  |
+| mid | [2636](https://www.acmicpc.net/problem/2636) | [2636.cpp](./2636/2636.cpp) | how to find first air? from the wall. edge case? =>  |

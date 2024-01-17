@@ -1,3 +1,13 @@
+### C++ String
+## replace()
+```c++
+	replace(src.find(target), target.length(), repl_str)
+```
+## getline(cin, buf)
+```c++
+	getline(cin, input);
+	n = stoi(input);
+```
 # APPENDIX_A_String
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
@@ -19,7 +29,7 @@
 | ? | [5635](https://www.acmicpc.net/problem/5635) | [5635.cpp](./5635/5635.cpp) |  |
 | easy | [1652](https://www.acmicpc.net/problem/1652) | [1652.cpp](./1652/1652.cpp) |  |
 | easy | [1439](https://www.acmicpc.net/problem/1439) | [1439.cpp](./1439/1439.cpp) |  |
-| easy | [12891](https://www.acmicpc.net/problem/12891) | [12891.cpp](./12891/12891.cpp) | rabin kalf + judging condition order is important |
+| easy | [12891](https://www.acmicpc.net/problem/12891) | [12891.cpp](./12891/12891.cpp) | (1) rabin kalf + judging condition order is important. (2) check minimum length |
 | easy | [1543](https://www.acmicpc.net/problem/1543) | [1543.cpp](./1543/1543.cpp) |  |
 | easy | [1769](https://www.acmicpc.net/problem/1769) | [1769.cpp](./1769/1769.cpp) |  |
 | easy | [20291](https://www.acmicpc.net/problem/20291) | [20291.cpp](./20291/20291.cpp) |  |
@@ -28,3 +38,11 @@
 | ? | [15353](https://www.acmicpc.net/problem/15353) | [15353.cpp](./15353/15353.cpp) |  |
 | easy | [1427](https://www.acmicpc.net/problem/1427) | [1427.cpp](./1427/1427.cpp) |  |
 | easy | [1622](https://www.acmicpc.net/problem/1622) | [1622.cpp](./1622/1622.cpp) |  |
+| mid | [17609](https://www.acmicpc.net/problem/17609) | [17609.cpp](./17609/17609.cpp) | edge case?? consider left move, right move 2 cases. |
+| easy | [9996](https://www.acmicpc.net/problem/9996) | [9996.cpp](./9996/9996.cpp) | how to split with star?, be careful with str length. cpp use rfind(end_pattern) |
+| mid | [2608](https://www.acmicpc.net/problem/2608) | [2608.cpp](./2608/2608.cpp) |  |
+| mid | [16120](https://www.acmicpc.net/problem/16120) | [16120.cpp](./16120/16120.cpp) |  |
+| easy | [1371](https://www.acmicpc.net/problem/1371) | [1371.cpp](./1371/1371.cpp) | wrong why? ->  |
+| ? | [28117](https://www.acmicpc.net/problem/28117) | [28117.cpp](./28117/28117.cpp) |  |
+| mid | [5582](https://www.acmicpc.net/problem/5582) | [5582.cpp](./5582/5582.cpp) | LCSubstring  |
+| mid | [9252](https://www.acmicpc.net/problem/9252) | [9252.cpp](./9252/9252.cpp) | LCSequence, max([i - 1][j], [i][j - 1]) |

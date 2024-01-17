@@ -38,3 +38,7 @@
 | mid | [2109](https://www.acmicpc.net/problem/2109) | [2109.cpp](./2109/2109.cpp) | memo max pay for each day |
 | mid | [2294](https://www.acmicpc.net/problem/2294) | [2294.cpp](./2294/2294.cpp) |  |
 | mid | [1477](https://www.acmicpc.net/problem/1477) | [1477.cpp](./1477/1477.cpp) |  |
+| mid | [17615](https://www.acmicpc.net/problem/17615) | [17615.cpp](./17615/17615.cpp) | calculate all the case. red move (l, r), blue move (l, r) |
+| hard | [7570](https://www.acmicpc.net/problem/7570) | [7570.cpp](./7570/7570.cpp) | not just Longest Increasing but also in row |
+| hard | [2138](https://www.acmicpc.net/problem/2138) | [2138.cpp](./2138/2138.cpp) | most left manupulation.(2 case) |
+| mid | [1339](https://www.acmicpc.net/problem/1339) | [1339.cpp](./1339/1339.cpp) | score(char) = sum(10 ^ position) |

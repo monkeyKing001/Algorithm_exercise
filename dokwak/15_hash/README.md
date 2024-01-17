@@ -111,3 +111,4 @@ String.format("%.4f", por);
 | easy | [16165](https://www.acmicpc.net/problem/16165) | [16165.cpp](./16165/16165.cpp) |  |
 | easy | [19583](https://www.acmicpc.net/problem/19583) | [19583.cpp](./19583/19583.cpp) |  |
 | hard | [1327](https://www.acmicpc.net/problem/1327) | [1327.cpp](./1327/1327.cpp) | 1) brute force 2) visit mark with string key set |
+| easy | [1380](https://www.acmicpc.net/problem/1380) | [1380.cpp](./1380/1380.cpp) |  |
