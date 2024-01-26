@@ -16,7 +16,7 @@
 | easy | [11053](https://www.acmicpc.net/problem/11053) | [11053.cpp](./11053/11053.cpp) | dp or bst. lower_bound returns what? |
 | hard | [11444](https://www.acmicpc.net/problem/11444) | [11444.cpp](./11444/11444.cpp) | dp and matrix fibonacci |
 | easy | [12852](https://www.acmicpc.net/problem/12852) | [12852.cpp](./12852/12852.cpp) | dp + brute + bfs |
-| hard | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) | looks like greedy but it's not. use 2d dp |
+| mid | [12865](https://www.acmicpc.net/problem/12865) | [12865.cpp](./12865/12865.cpp) | looks like greedy but it's not. use 2d dp. 99% index error why? -> in case j = 0 ~ cur_w and cur_w over max_w |
 | hard | [7579](https://www.acmicpc.net/problem/7579) | [7579.cpp](./7579/7579.cpp) | 2d dp, think when is the change point(copy past state -----> change point ---->  ignition), when solving with 1d dp, be careful for overlapping update.(update from end to starc) |
 | hard | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) | no path -> max, bits max doesn't mean sol case |
 | hard | [10971](https://www.acmicpc.net/problem/10971) | [10971.cpp](./10971/10971.cpp) | same as TSP |
@@ -59,3 +59,5 @@
 | hard | [10986](https://www.acmicpc.net/problem/10986) | [10986.cpp](./10986/10986.cpp) | 1) long, 2) case branching |
 | ? | [1915](https://www.acmicpc.net/problem/1915) | [1915.cpp](./1915/1915.cpp) |  |
 | easy | [1343](https://www.acmicpc.net/problem/1343) | [1343.cpp](./1343/1343.cpp) | 2 ~ 50 dp |
+| ? | [16493](https://www.acmicpc.net/problem/16493) | [16493.cpp](./16493/16493.cpp) |  |
+| hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) |  |

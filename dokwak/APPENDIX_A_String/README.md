@@ -46,3 +46,6 @@
 | ? | [28117](https://www.acmicpc.net/problem/28117) | [28117.cpp](./28117/28117.cpp) |  |
 | mid | [5582](https://www.acmicpc.net/problem/5582) | [5582.cpp](./5582/5582.cpp) | LCSubstring  |
 | mid | [9252](https://www.acmicpc.net/problem/9252) | [9252.cpp](./9252/9252.cpp) | LCSequence, max([i - 1][j], [i][j - 1]) |
+| ? | [19583](https://www.acmicpc.net/problem/19583) | [19583.cpp](./19583/19583.cpp) |  |
+| mid | [2002](https://www.acmicpc.net/problem/2002) | [2002.cpp](./2002/2002.cpp) |  |
+| mid | [9935](https://www.acmicpc.net/problem/9935) | [9935.cpp](./9935/9935.cpp) | java : replaceAll cpp : ?? X=> solbve this in O(n). stack! java : sb, c++ string buf. string can use pop_back |

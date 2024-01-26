@@ -5,45 +5,20 @@ public class Main{
 	static int n, m;
 	static ArrayList<Integer> inc = new ArrayList<>();
 	static ArrayList<Integer> dec = new ArrayList<>();
-	public static int find_min_bigger_dec(int num){
-    int test = 'a';
-    int test = 'v';
-    Map<String, Integer> m = new HashMap<>();
-    m.containsKey(key);
+	public static int bstLowerBound(ArrayList<Integer>arr, int key){
 		int idx = -1;
-		int l = 0;
-		int r = dec.size() - 1;
-		int mid = (l + r) / 2;
-		while (l <= r){
-			mid = (l + r) / 2;
-			//got idx candidate. more challenge
-			if (dec.get(mid) >= num){
-				idx = mid;
-				r = mid - 1;
-			}
+		int left = 0;
+		int right = arr.size() - 1;
+		while (left <= right){
+			int mid = (left + right) / 2;
+			if (arr.get(mid) < key)
+				left = mid + 1;
 			else{
-				l = mid + 1;
+				idx = mid;
+				right = mid - 1;
 			}
 		}
-		return (idx);
-	}
-	public static int find_min_biiger(int num){
-		int idx = -1;
-		int l = 0;
-		int r = inc.size() - 1;
-		int mid = (l + r) / 2;
-		while (l <= r){
-			mid = (l + r) / 2;
-			//got idx candidate. more challenge
-			if (inc.get(mid) >= num){
-				idx = mid;
-				r = mid - 1;
-			}
-			else{
-				l = mid + 1;
-			}
-		}
-		return (idx);
+		return idx;
 	}
 
 	public static void main (String[] args) throws IOException {
@@ -55,55 +30,47 @@ public class Main{
 
 		//input
 		n = Integer.parseInt(st.nextToken());
-		int inc_dp[] = new int[n];
-		int dec_dp[] = new int[n];
-		int arr[] = new int [n];
+		ArrayList<Integer> inOrder = new ArrayList<>();
+		ArrayList<Integer> revOrder = new ArrayList<>();
+		ArrayList<Integer> arr = new ArrayList<>();
+		int inorderDp [] = new int[n];
+		int revOrderDp [] = new int[n];
+		//inorder
 		st = new StringTokenizer(br.readLine()," ");
 		for (int i = 0; i < n; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+			int num = Integer.parseInt(st.nextToken());
+			arr.add(num);
 		}
-		//make increase seq;
+		for (int i = 0; i < arr.size(); i++) {
+			int num = arr.get(i);
+			int idx = bstLowerBound(inOrder, num);
+			if (inOrder.size() == 0 || idx == -1){
+				inOrder.add(num);
+			}
+			else{
+				inOrder.set(idx, num);
+			}
+			inorderDp[i] = inOrder.size();
+		}
+		for (int i = 0; i < arr.size(); i++) {
+			int numIdx = arr.size() - 1 - i;
+			int num = arr.get(numIdx);
+			int idx = bstLowerBound(revOrder, num);
+			if (revOrder.size() == 0 || idx == -1){
+				revOrder.add(num);
+			}
+			else{
+				revOrder.set(idx, num);
+			}
+			revOrderDp[numIdx] = revOrder.size();
+		}
+		int sol = 1;
 		for (int i = 0; i < n; i++) {
-			int num = arr[i];
-			if (inc.size() == 0 || inc.get(inc.size() - 1) < num)
-			{
-				inc.add(num);
-				inc_dp[i] = inc.size();
-			}
-			else{
-				int insert_idx = find_min_biiger(num);
-				inc.set(insert_idx, num);
-				inc_dp[i] = insert_idx + 1;
-			}
+			sol = Math.max(inorderDp[i] + revOrderDp[i] - 1, sol);
 		}
-//		for (int i = 0; i < n; i++) {
-//			System.out.print(inc_dp[i] + " ");
-//		}
-//		System.out.println();
-		int sol = 0;
-		for (int i = n - 1; i > -1; i--) {
-			int num = arr[i];
-			if (dec.size() == 0 || dec.get(dec.size() - 1) < num)
-			{
-				dec.add(num);
-				dec_dp[i] = dec.size();
-			}
-			else{
-				int insert_idx = find_min_bigger_dec(num);
-				dec.set(insert_idx, num);
-				dec_dp[i] = insert_idx + 1;
-			}
-			sol = Integer.max(sol, inc_dp[i] + dec_dp[i] - 1);
-		}
-//		for (int i = 0; i < n; i++) {
-//			System.out.print(dec_dp[i] + " ");
-//		}
-//		System.out.println();
 		System.out.println(sol);
 		bw.write(sb.toString());
 		bw.flush();
 		return ;
 	}
 }
-
-

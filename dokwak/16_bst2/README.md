@@ -35,3 +35,5 @@ long max_h = Arrays.stream(trees).max().getAsInt();
 | ? | [2467](https://www.acmicpc.net/problem/2467) | [2467.cpp](./2467/2467.cpp) |  |
 | mid | [1253](https://www.acmicpc.net/problem/1253) | [1253.cpp](./1253/1253.cpp) | two Pointer or bst. if l == i l++, r == i r++ |
 | mid | [2110](https://www.acmicpc.net/problem/2110) | [2110.cpp](./2110/2110.cpp) | binary search tree, minimum distance. |
+| mid | [2696](https://www.acmicpc.net/problem/2696) | [2696.cpp](./2696/2696.cpp) | not binary search. use pq for bigger, smaller. |
+| easy | [11568](https://www.acmicpc.net/problem/11568) | [11568.cpp](./11568/11568.cpp) | Longest Increasing Sequence. |
