@@ -61,5 +61,5 @@
 | easy | [1343](https://www.acmicpc.net/problem/1343) | [1343.cpp](./1343/1343.cpp) | 2 ~ 50 dp |
 | ? | [16493](https://www.acmicpc.net/problem/16493) | [16493.cpp](./16493/16493.cpp) |  |
 | hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) | greedy |
-| mid | [1679](https://www.acmicpc.net/problem/1679) | [1679.cpp](./1679/1679.cpp) | memset error : memset only fill 0 or 1 |
+| hard | [1679](https://www.acmicpc.net/problem/1679) | [1679.cpp](./1679/1679.cpp) | memset error : memset only set 0 or 1(set by one byte). use fill_n. make single combination |
 | easy | [14719](https://www.acmicpc.net/problem/14719) | [14719.cpp](./14719/14719.cpp) | leftMax rightMax |
