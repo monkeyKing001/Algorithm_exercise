@@ -6,8 +6,44 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
+#define RED 0
+#define GREEN 1
+#define BLUE 2
 
 using namespace std;
+int maxCost = 1100000;
+
+void printThreeDVec(vector<vector<vector<int>>>vec){
+	cout << "three Dimension vector print\n";
+	for (int i = 0; i < vec.size(); i++) {
+		for (int j = 0; j < vec[i].size(); j++) {
+			for (int k_i = 0; k_i < vec[i][j].size(); k_i++) {
+				cout << vec[i][j][k_i] << " ";
+			}
+			cout << "\n";
+		}
+		cout << "\n";
+	}
+	cout << "\n";
+}
+
+void printTwoDVec(vector<vector<int>> vec){
+	cout << "two Dimension vector print\n";
+	for (int i = 0; i < vec.size(); i++) {
+		for (int j = 0; j < vec[i].size(); j++) {
+			cout << vec[i][j] << " ";
+		}
+		cout << "\n";
+	}
+}
+
+void printOneDVec(vector<int> vec){
+	cout << "one Dimension vector print\n";
+	for (int i = 0; i < vec.size(); i++) {
+		cout << vec[i] << " ";
+	}
+	cout << "\n";
+}
 
 int	main(int argc, char **argv)
 {
@@ -17,43 +53,41 @@ int	main(int argc, char **argv)
 	int n;
 	cin >> n;
 	int cost[n][3];
-	for (int i = 0; i < n; i++)
-	{
-		int r,g,b;
-		cin >> r >> g >> b;
-		cost[i][0] = r;
-		cost[i][1] = g;
-		cost[i][2] = b;
+	for (int i = 0; i < n; i++) {
+		cin >> cost[i][RED] >> cost[i][GREEN] >> cost[i][BLUE];
 	}
-	int dp0[n][3];
-	int dp1[n][3];
-	int dp2[n][3];
-	dp0[0][0] = cost[0][0];
-	dp0[0][1] = 5000;
-	dp0[0][2] = 5000;
-	dp1[0][1] = cost[0][1];
-	dp1[0][0] = 5000;
-	dp1[0][2] = 5000;
-	dp2[0][2] = cost[0][2];
-	dp2[0][1] = 5000;
-	dp2[0][0] = 5000;
-	for (int i = 1; i < n; i++)
-	{
-		dp0[i][0] = min(dp0[i - 1][1], dp0[i - 1][2]) + cost[i][0];
-		dp0[i][1] = min(dp0[i - 1][0], dp0[i - 1][2]) + cost[i][1];
-		dp0[i][2] = min(dp0[i - 1][1], dp0[i - 1][0]) + cost[i][2];
-		dp1[i][0] = min(dp1[i - 1][1], dp1[i - 1][2]) + cost[i][0];
-		dp1[i][1] = min(dp1[i - 1][0], dp1[i - 1][2]) + cost[i][1];
-		dp1[i][2] = min(dp1[i - 1][1], dp1[i - 1][0]) + cost[i][2];
-		dp2[i][0] = min(dp2[i - 1][1], dp2[i - 1][2]) + cost[i][0];
-		dp2[i][1] = min(dp2[i - 1][0], dp2[i - 1][2]) + cost[i][1];
-		dp2[i][2] = min(dp2[i - 1][1], dp2[i - 1][0]) + cost[i][2];
+	vector<vector<vector<int>>>dp(3);
+	for (int i = 0; i < 3; i++) {
+		vector<vector<int>>temp(n);
+		dp[i] = temp;
+		for (int j = 0; j < n; j++) {
+			vector<int> ent(3, maxCost);
+			dp[i][j] = ent;
+		}
 	}
-	int sol = min(dp1[n-1][0], dp2[n-1][0]);
-	if (sol > min(dp0[n-1][1], dp2[n-1][1]))
-		sol = min(dp0[n-1][1], dp2[n-1][1]);
-	if (sol > min(dp1[n-1][2], dp0[n-1][2]))
-		sol = min(dp1[n-1][2], dp0[n-1][2]);
+	
+	int sol = maxCost;
+	dp[RED][0][RED] = cost[0][RED];
+	dp[BLUE][0][BLUE] = cost[0][BLUE];
+	dp[GREEN][0][GREEN] = cost[0][GREEN];
+	for (int i = 1; i < n; i++) {
+		dp[RED][i][RED] = min(dp[RED][i - 1][BLUE], dp[RED][i - 1][GREEN]) + cost[i][RED];
+		dp[RED][i][GREEN] = min(dp[RED][i - 1][BLUE], dp[RED][i - 1][RED]) + cost[i][GREEN];
+		dp[RED][i][BLUE] = min(dp[RED][i - 1][RED], dp[RED][i - 1][GREEN]) + cost[i][BLUE];
+		dp[BLUE][i][BLUE] = min(dp[BLUE][i - 1][RED], dp[BLUE][i - 1][GREEN]) + cost[i][BLUE];
+		dp[BLUE][i][RED] = min(dp[BLUE][i - 1][BLUE], dp[BLUE][i - 1][GREEN]) + cost[i][RED];
+		dp[BLUE][i][GREEN] = min(dp[BLUE][i - 1][RED], dp[BLUE][i - 1][BLUE]) + cost[i][GREEN];
+		dp[GREEN][i][GREEN] = min(dp[GREEN][i - 1][RED], dp[GREEN][i - 1][BLUE]) + cost[i][GREEN];
+		dp[GREEN][i][RED] = min(dp[GREEN][i - 1][BLUE], dp[GREEN][i - 1][GREEN]) + cost[i][RED];
+		dp[GREEN][i][BLUE] = min(dp[GREEN][i - 1][RED], dp[GREEN][i - 1][GREEN]) + cost[i][BLUE];
+	}
+	
+	sol = min(dp[RED][n - 1][GREEN], sol);
+	sol = min(dp[RED][n - 1][BLUE], sol);
+	sol = min(dp[GREEN][n - 1][BLUE], sol);
+	sol = min(dp[GREEN][n - 1][RED], sol);
+	sol = min(dp[BLUE][n - 1][GREEN], sol);
+	sol = min(dp[BLUE][n - 1][RED], sol);
 	cout << sol;
 	return (0);
 }

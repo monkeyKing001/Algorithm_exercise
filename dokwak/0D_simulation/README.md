@@ -42,3 +42,6 @@
 | easy | [15312](https://www.acmicpc.net/problem/15312) | [15312.cpp](./15312/15312.cpp) |  |
 | mid | [1347](https://www.acmicpc.net/problem/1347) | [1347.cpp](./1347/1347.cpp) |  |
 | mid | [2636](https://www.acmicpc.net/problem/2636) | [2636.cpp](./2636/2636.cpp) | how to find first air? from the wall. edge case? =>  |
+| easy | [2960](https://www.acmicpc.net/problem/2960) | [2960.cpp](./2960/2960.cpp) |  |
+| mid | [20055](https://www.acmicpc.net/problem/20055) | [20055.cpp](./20055/20055.cpp) |  |
+| easy | [2477](https://www.acmicpc.net/problem/2477) | [2477.cpp](./2477/2477.cpp) |  |

@@ -25,3 +25,4 @@ In summary, topology sort is a useful algorithm for determining the order in whi
 | ? | [1005](https://www.acmicpc.net/problem/1005) | [1005.cpp](./1005/1005.cpp) |  |
 | mid | [1325](https://www.acmicpc.net/problem/1325) | [1325.cpp](./1325/1325.cpp) | topology travel all the way and add total indegree. how to deal with cycle? |
 | hard | [2056](https://www.acmicpc.net/problem/2056) | [2056.cpp](./2056/2056.cpp) | be caution for get start time for work nodes. |
+| mid | [1516](https://www.acmicpc.net/problem/1516) | [1516.cpp](./1516/1516.cpp) | starTtime recording error. why? forgot pushing q |

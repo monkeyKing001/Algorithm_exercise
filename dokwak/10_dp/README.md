@@ -5,7 +5,7 @@
 | mid | [9095](https://www.acmicpc.net/problem/9095) | [9095.cpp](./9095/9095.cpp) | postfix |
 | mid | [2579](https://www.acmicpc.net/problem/2579) | [2579.cpp](./2579/2579.cpp) | 2d matrix or case classify |
 | mid | [1149](https://www.acmicpc.net/problem/1149) | [1149.cpp](./1149/1149.cpp) | |
-| hard | [17404](https://www.acmicpc.net/problem/17404) | [17404.cpp](./17404/17404.cpp) | dp need at least one held point. 3 cases of start rgb. last house cannot choose first_house_color |
+| hard | [17404](https://www.acmicpc.net/problem/17404) | [17404.cpp](./17404/17404.cpp) | dp need at least one held point. 3 cases of start rgb. last house cannot choose first_house_color. memset can set only 1 or 0. -> setting each one byte. |
 | hard | [9251](https://www.acmicpc.net/problem/9251) | [9251.cpp](./9251/9251.cpp) | 2d array |
 | hard | [9252](https://www.acmicpc.net/problem/9252) | [9252.cpp](./9252/9252.cpp) | concat input1, 2. trace the reason dp[i][j] = num. (same char? or why?) |
 | easy | [2407](https://www.acmicpc.net/problem/2407) | [2407.cpp](./2407/2407.cpp) | use BigInteger, Pascal triangle |
@@ -60,4 +60,6 @@
 | ? | [1915](https://www.acmicpc.net/problem/1915) | [1915.cpp](./1915/1915.cpp) |  |
 | easy | [1343](https://www.acmicpc.net/problem/1343) | [1343.cpp](./1343/1343.cpp) | 2 ~ 50 dp |
 | ? | [16493](https://www.acmicpc.net/problem/16493) | [16493.cpp](./16493/16493.cpp) |  |
-| hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) |  |
+| hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) | greedy |
+| mid | [1679](https://www.acmicpc.net/problem/1679) | [1679.cpp](./1679/1679.cpp) | memset error : memset only fill 0 or 1 |
+| easy | [14719](https://www.acmicpc.net/problem/14719) | [14719.cpp](./14719/14719.cpp) | leftMax rightMax |

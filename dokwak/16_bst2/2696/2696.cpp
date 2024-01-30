@@ -22,16 +22,18 @@ void printpq(const std::priority_queue<T, Container, Compare> pq) {
 }
 
 struct desCmp{
-	bool operator()(int top, int bottom){
-		return (top > bottom);
+	bool operator()(int bottom, int top){
+		return (bottom > top);
 	}
 };
 
+//same with less<int> -> bottom is smaller, top is bigger -> less bottom
 struct ascCmp{
-	bool operator()(int top, int bottom){
-		return (top < bottom);
+	bool operator()(int bottom, int top){
+		return (bottom < top);
 	}
 };
+
 int	main(int argc, char **argv)
 {
 	ios::sync_with_stdio(0);
@@ -41,9 +43,10 @@ int	main(int argc, char **argv)
 	cin >> T;
 	for (int t_i = 0; t_i < T; t_i++) {
 		cin >> n;
-		//priority_queue<int, vector<int>, asccmp> smaller;
-		priority_queue<int, vector<int>, ascCmp> smaller;
-		priority_queue<int, vector<int>, desCmp> bigger;
+		priority_queue<int, vector<int>, less<int>> smaller;
+//		priority_queue<int, vector<int>, ascCmp> smaller;
+		priority_queue<int, vector<int>, greater<int>> bigger;
+//		priority_queue<int, vector<int>, desCmp> bigger;
 		vector<int> sol;
 		int mean = 0;
 		for (int i = 0; i < n; i++) {

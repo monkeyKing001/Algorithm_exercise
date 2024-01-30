@@ -25,7 +25,7 @@
 | easy | [13975](https://www.acmicpc.net/problem/13975) | [13975.cpp](./13975/13975.cpp) | same with card piling problem |
 | hard | [2141](https://www.acmicpc.net/problem/2141) | [2141.cpp](./2141/2141.cpp) | need position offset. x -> long long cannot cover the solution |
 | hard | [11066](https://www.acmicpc.net/problem/11066) | [11066.cpp](./11066/11066.cpp) | `dp[i][j]` is for minimum calculation for i ~ j among all the combination case  |
-| easy | [2839](https://www.acmicpc.net/problem/2839) | [2839.cpp](./2839/2839.cpp) |  |
+| easy | [2839](https://www.acmicpc.net/problem/2839) | [2839.cpp](./2839/2839.cpp) | for |
 | easy | [1213](https://www.acmicpc.net/problem/1213) | [1213.cpp](./1213/1213.cpp) |  |
 | easy | [1246](https://www.acmicpc.net/problem/1246) | [1246.cpp](./1246/1246.cpp) |  |
 | hard | [1789](https://www.acmicpc.net/problem/1789) | [1789.cpp](./1789/1789.cpp) |  |
@@ -42,3 +42,5 @@
 | hard | [7570](https://www.acmicpc.net/problem/7570) | [7570.cpp](./7570/7570.cpp) | not just Longest Increasing but also in row |
 | hard | [2138](https://www.acmicpc.net/problem/2138) | [2138.cpp](./2138/2138.cpp) | most left manupulation.(2 case) |
 | mid | [1339](https://www.acmicpc.net/problem/1339) | [1339.cpp](./1339/1339.cpp) | score(char) = sum(10 ^ position) |
+| easy | [11497](https://www.acmicpc.net/problem/11497) | [11497.cpp](./11497/11497.cpp) |  |
+| mid | [1374](https://www.acmicpc.net/problem/1374) | [1374.cpp](./1374/1374.cpp) | pq |
