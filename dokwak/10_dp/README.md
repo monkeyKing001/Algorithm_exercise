@@ -63,3 +63,5 @@
 | hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) | greedy |
 | hard | [1679](https://www.acmicpc.net/problem/1679) | [1679.cpp](./1679/1679.cpp) | memset error : memset only set 0 or 1(set by one byte). use fill_n. make single combination |
 | easy | [14719](https://www.acmicpc.net/problem/14719) | [14719.cpp](./14719/14719.cpp) | leftMax rightMax |
+| easy | [11052](https://www.acmicpc.net/problem/11052) | [11052.cpp](./11052/11052.cpp) | dp for every price |
+| ? | [11057](https://www.acmicpc.net/problem/11057) | [11057.cpp](./11057/11057.cpp) |  |

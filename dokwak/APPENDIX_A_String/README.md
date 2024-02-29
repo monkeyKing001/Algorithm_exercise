@@ -49,3 +49,4 @@
 | ? | [19583](https://www.acmicpc.net/problem/19583) | [19583.cpp](./19583/19583.cpp) |  |
 | mid | [2002](https://www.acmicpc.net/problem/2002) | [2002.cpp](./2002/2002.cpp) |  |
 | mid | [9935](https://www.acmicpc.net/problem/9935) | [9935.cpp](./9935/9935.cpp) | java : replaceAll cpp : ?? X=> solbve this in O(n). stack! java : sb, c++ string buf. string can use pop_back |
+| mid | [14725](https://www.acmicpc.net/problem/14725) | [14725.cpp](./14725/14725.cpp) | Trie. bug : container overflow -> reference usage bug? |
