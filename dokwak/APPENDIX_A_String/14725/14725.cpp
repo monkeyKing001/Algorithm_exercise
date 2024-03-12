@@ -1,3 +1,5 @@
+#ifndef Node_HPP
+#define Node_HPP
 #include <vector>
 #include <iostream>
 #include <cmath> 
@@ -6,79 +8,88 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 int n, m;
 string del = "--";
 
+class Node
+{
 
-class Node{
+	private:
+		int _h;
+		string _str;
+		vector<Node *> _child;
+		
 
 	public:
-		int h;
-		string str;
-		vector<Node *> child;
-		Node();
-		Node(string str, int h){
-			this -> str = str;
-			this -> h = h;
-		}
-		int find(string key){
-			for (int i = 0; i < child.size(); i++) {
-				if (child[i] -> str == key)
+		Node(void);
+		Node(const Node& obj);
+		Node& operator = (const Node& obj);
+		~Node(void);
+		Node(string str, int h) { _h = h; _str = str; }
+		const int &getH(void) const { return _h; }
+		const string& getStr(void) const { return _str; }
+		Node& getChild(int idx) const { return *(_child[idx]); }
+		const int findChild(string key){
+			for (int i = 0; i < _child.size(); i++) {
+				if (_child[i]->getStr() == key)
 					return i;
 			}
-			return -1;
+			return (-1);
 		}
-		Node *getChild(int i){
-			return (this -> child[i]);
-		}
+		vector<Node*> &getChildVec(void) { return _child; }
 };
 
-bool cmp(Node *n1, Node *n2){
-	return (n1 -> str < n2 -> str);
+bool cmp(Node *node1, Node *node2){
+	return (node1 -> getStr() < node2 -> getStr());
 }
+
 
 void dfs(Node *node){
-	int cur_h = node -> h;
-	sort(node -> child.begin(), node -> child.end(), cmp);
-	for (int i = 0; i < cur_h; i++) {
+	for (int i = 0; i < node -> getH(); i++) {
 		cout << del;
 	}
-	cout << node -> str;
-	cout << "\n";
-	for (int i = 0; i < node -> child.size(); i++) {
-		dfs(node -> child[i]);
+	cout << node ->getStr() + "\n";
+	vector<Node *> childs = node ->getChildVec();
+	sort(childs.begin(), childs.end() ,cmp);
+	for (int i = 0; i < childs.size(); i++) {
+		dfs(childs[i]);
 	}
 }
 
-int	main(int argc, char **argv)
-{
+int	main(int argc, char **argv) {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
 	cin >> n;
-	Node *root = new Node("root", 0);
+	Node *root = new Node("root", -1);
 	for (int i = 0; i < n; i++) {
-		int count;
-		cin >> count;
+		int level;
 		Node *cur = root;
-		for (int j = 0; j < count; j++) {
-			string str;
-			cin >> str;
-			int childIdx = cur -> find(str);
-			if (childIdx == -1) {
-				Node *newChild = new Node(str, j);
-				cur -> child.push_back(newChild);
-				cur = newChild;
+		cin >> level;
+		for (int j = 0; j < level; j++) {
+			string strInput = "";
+			cin >> strInput;
+			int childIdx = cur -> findChild(strInput);
+			// cannot find child
+			if (childIdx == -1){
+				Node *newNode = new Node(strInput, cur -> getH() + 1);
+				vector<Node*> &curChild = cur -> getChildVec();
+				curChild.push_back(newNode);
+				cur = newNode;
 			}
-			else {
-				cur = cur -> child[childIdx];
+			else{
+				cur = &(cur -> getChild(childIdx));
 			}
 		}
 	}
-	sort(root -> child.begin(), root -> child.end(), cmp);
-	for (int i = 0; i < root -> child.size(); i++) {
-		dfs(root -> child[i]);
+	vector<Node *> childs = root ->getChildVec();
+	sort(childs.begin(), childs.end() ,cmp);
+	for (int i = 0; i < childs.size(); i++) {
+		dfs(childs[i]);
 	}
 	return (0);
 }
+#endif /* 14725_HPP */
