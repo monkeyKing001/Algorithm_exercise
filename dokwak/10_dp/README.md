@@ -65,3 +65,4 @@
 | easy | [14719](https://www.acmicpc.net/problem/14719) | [14719.cpp](./14719/14719.cpp) | leftMax rightMax |
 | easy | [11052](https://www.acmicpc.net/problem/11052) | [11052.cpp](./11052/11052.cpp) | dp for every price |
 | ? | [11057](https://www.acmicpc.net/problem/11057) | [11057.cpp](./11057/11057.cpp) |  |
+| hard | [2143](https://www.acmicpc.net/problem/2143) | [2143.cpp](./2143/2143.cpp) | prefix Sum. fail 1 : seg Fault |

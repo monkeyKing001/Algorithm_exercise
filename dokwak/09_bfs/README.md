@@ -25,3 +25,4 @@
 | hard | [14442](https://www.acmicpc.net/problem/14442) | [14442.cpp](./14442/14442.cpp) | 8.txt case. with biggest chance visiting. visited[][][] |
 | hard | [2606](https://www.acmicpc.net/problem/2606) | [2606.cpp](./2606/2606.cpp) | bfs |
 | hard | [2589](https://www.acmicpc.net/problem/2589) | [2589.cpp](./2589/2589.cpp) | bfs + dfs |
+| hard | [27440](https://www.acmicpc.net/problem/27440) | [27440.cpp](./27440/27440.cpp) | bug 1. set.find() is not working -> problem was <= vs <  sol 1. TLE. reason : long vs long long |
