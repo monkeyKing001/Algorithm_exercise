@@ -44,3 +44,5 @@
 | mid | [1339](https://www.acmicpc.net/problem/1339) | [1339.cpp](./1339/1339.cpp) | score(char) = sum(10 ^ position) |
 | easy | [11497](https://www.acmicpc.net/problem/11497) | [11497.cpp](./11497/11497.cpp) |  |
 | mid | [1374](https://www.acmicpc.net/problem/1374) | [1374.cpp](./1374/1374.cpp) | pq |
+| mid | [15903](https://www.acmicpc.net/problem/15903) | [15903.cpp](./15903/15903.cpp) |  |
+| ? | [1080](https://www.acmicpc.net/problem/1080) | [1080.cpp](./1080/1080.cpp) |  |

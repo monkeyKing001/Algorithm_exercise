@@ -66,3 +66,4 @@
 | easy | [11052](https://www.acmicpc.net/problem/11052) | [11052.cpp](./11052/11052.cpp) | dp for every price |
 | ? | [11057](https://www.acmicpc.net/problem/11057) | [11057.cpp](./11057/11057.cpp) |  |
 | hard | [2143](https://www.acmicpc.net/problem/2143) | [2143.cpp](./2143/2143.cpp) | prefix Sum. fail 1 : seg Fault |
+| mid | [11501](https://www.acmicpc.net/problem/11501) | [11501.cpp](./11501/11501.cpp) | memoization for future max price |

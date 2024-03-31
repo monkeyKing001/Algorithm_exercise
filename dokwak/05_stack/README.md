@@ -1,3 +1,6 @@
+# Tips
+1. stack이다 비었는지 프로그램 마지막에 꼭 확인을 하자.
+
 # 05_stack
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |

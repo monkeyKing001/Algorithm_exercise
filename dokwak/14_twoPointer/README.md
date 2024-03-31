@@ -1,3 +1,6 @@
+# Tips
+1. l, r인덱스에 주의하자. r이 범위를 넘진 않는지, r을 계산에 포함시킬지 말지, 다음 l은 r인지 r + 1인지
+
 # 14_towPointer
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
