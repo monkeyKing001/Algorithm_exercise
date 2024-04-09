@@ -7,3 +7,7 @@
 | ? | [25205](https://www.acmicpc.net/problem/25205) | [25205.cpp](./25205/25205.cpp) |  |
 | ? | [25176](https://www.acmicpc.net/problem/25176) | [25176.cpp](./25176/25176.cpp) |  |
 | ? | [29767](https://www.acmicpc.net/problem/29767) | [29767.cpp](./29767/29767.cpp) |  |
+| ? | [21313](https://www.acmicpc.net/problem/21313) | [21313.cpp](./21313/21313.cpp) |  |
+| ? | [2716](https://www.acmicpc.net/problem/2716) | [2716.cpp](./2716/2716.cpp) |  |
+| ? | [15881](https://www.acmicpc.net/problem/15881) | [15881.cpp](./15881/15881.cpp) |  |
+| ? | [12841](https://www.acmicpc.net/problem/12841) | [12841.cpp](./12841/12841.cpp) |  |
