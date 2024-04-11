@@ -12,3 +12,10 @@
 | ? | [15881](https://www.acmicpc.net/problem/15881) | [15881.cpp](./15881/15881.cpp) |  |
 | ? | [12841](https://www.acmicpc.net/problem/12841) | [12841.cpp](./12841/12841.cpp) |  |
 | ? | [15810](https://www.acmicpc.net/problem/15810) | [15810.cpp](./15810/15810.cpp) |  |
+| ? | [6246](https://www.acmicpc.net/problem/6246) | [6246.cpp](./6246/6246.cpp) |  |
+| ? | [30236](https://www.acmicpc.net/problem/30236) | [30236.cpp](./30236/30236.cpp) |  |
+| ? | [29615](https://www.acmicpc.net/problem/29615) | [29615.cpp](./29615/29615.cpp) |  |
+| ? | [24516](https://www.acmicpc.net/problem/24516) | [24516.cpp](./24516/24516.cpp) |  |
+| ? | [24938](https://www.acmicpc.net/problem/24938) | [24938.cpp](./24938/24938.cpp) |  |
+| ? | [2232](https://www.acmicpc.net/problem/2232) | [2232.cpp](./2232/2232.cpp) |  |
+| ? | [5619](https://www.acmicpc.net/problem/5619) | [5619.cpp](./5619/5619.cpp) |  |
