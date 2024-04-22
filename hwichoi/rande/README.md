@@ -19,3 +19,9 @@
 | ? | [24938](https://www.acmicpc.net/problem/24938) | [24938.cpp](./24938/24938.cpp) |  |
 | ? | [2232](https://www.acmicpc.net/problem/2232) | [2232.cpp](./2232/2232.cpp) |  |
 | ? | [5619](https://www.acmicpc.net/problem/5619) | [5619.cpp](./5619/5619.cpp) |  |
+| ? | [1987](https://www.acmicpc.net/problem/1987) | [1987.cpp](./1987/1987.cpp) |  |
+| ? | [25178](https://www.acmicpc.net/problem/25178) | [25178.cpp](./25178/25178.cpp) |  |
+| ? | [28721](https://www.acmicpc.net/problem/28721) | [28721.cpp](./28721/28721.cpp) |  |
+| ? | [19721](https://www.acmicpc.net/problem/19721) | [19721.cpp](./19721/19721.cpp) |  |
+| ? | [29721](https://www.acmicpc.net/problem/29721) | [29721.cpp](./29721/29721.cpp) |  |
+| ? | [19637](https://www.acmicpc.net/problem/19637) | [19637.cpp](./19637/19637.cpp) |  |
