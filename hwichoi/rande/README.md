@@ -25,3 +25,4 @@
 | ? | [19721](https://www.acmicpc.net/problem/19721) | [19721.cpp](./19721/19721.cpp) |  |
 | ? | [29721](https://www.acmicpc.net/problem/29721) | [29721.cpp](./29721/29721.cpp) |  |
 | ? | [19637](https://www.acmicpc.net/problem/19637) | [19637.cpp](./19637/19637.cpp) |  |
+| ? | [25916](https://www.acmicpc.net/problem/25916) | [25916.cpp](./25916/25916.cpp) |  |
