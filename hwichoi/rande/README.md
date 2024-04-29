@@ -26,3 +26,6 @@
 | ? | [29721](https://www.acmicpc.net/problem/29721) | [29721.cpp](./29721/29721.cpp) |  |
 | ? | [19637](https://www.acmicpc.net/problem/19637) | [19637.cpp](./19637/19637.cpp) |  |
 | ? | [25916](https://www.acmicpc.net/problem/25916) | [25916.cpp](./25916/25916.cpp) |  |
+| ? | [24499](https://www.acmicpc.net/problem/24499) | [24499.cpp](./24499/24499.cpp) |  |
+| ? | [25214](https://www.acmicpc.net/problem/25214) | [25214.cpp](./25214/25214.cpp) |  |
+| ? | [27376](https://www.acmicpc.net/problem/27376) | [27376.cpp](./27376/27376.cpp) |  |
