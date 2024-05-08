@@ -18,3 +18,5 @@
 | ? | [13549](https://www.acmicpc.net/problem/13549) | [13549.cpp](./13549/13549.cpp) |  |
 | ? | [20166](https://www.acmicpc.net/problem/20166) | [20166.cpp](./20166/20166.cpp) |  |
 | ? | [2583](https://www.acmicpc.net/problem/2583) | [2583.cpp](./2583/2583.cpp) |  |
+| ? | [2206](https://www.acmicpc.net/problem/2206) | [2206.cpp](./2206/2206.cpp) |  |
+| ? | [14442](https://www.acmicpc.net/problem/14442) | [14442.cpp](./14442/14442.cpp) |  |
