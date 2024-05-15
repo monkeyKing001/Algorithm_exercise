@@ -67,3 +67,5 @@
 | ? | [11057](https://www.acmicpc.net/problem/11057) | [11057.cpp](./11057/11057.cpp) |  |
 | hard | [2143](https://www.acmicpc.net/problem/2143) | [2143.cpp](./2143/2143.cpp) | prefix Sum. fail 1 : seg Fault |
 | mid | [11501](https://www.acmicpc.net/problem/11501) | [11501.cpp](./11501/11501.cpp) | memoization for future max price |
+| ? | [1106](https://www.acmicpc.net/problem/1106) | [1106.cpp](./1106/1106.cpp) |  |
+| ? | [2515](https://www.acmicpc.net/problem/2515) | [2515.cpp](./2515/2515.cpp) |  |

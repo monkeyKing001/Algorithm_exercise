@@ -11,21 +11,20 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	int step_num;
 	cin >> step_num;
-	vector <int> steps(step_num + 1, 0);
-	vector <int> score_of_step_s(step_num + 1, 0);
-	vector <int> dp(step_num + 1, 0);
-	for (int i = 1; i <= step_num; i++)
-	{
-		int score;
-		cin >> score;
-		score_of_step_s[i] = score;
-	}
-	dp[1] = score_of_step_s[1];
-	dp[2] = score_of_step_s[1] + score_of_step_s[2];
-	dp[3] = max(score_of_step_s[1], score_of_step_s[2]) + score_of_step_s[3];
-	for (int j = 4; j <= step_num; j++)
-		dp[j] = max(dp[j - 3] + score_of_step_s[j - 1], dp[j - 2]) + score_of_step_s[j];
-	cout << dp[step_num];
+	vector <int> steps(step_num, 0);
+	vector <int> score_of_step_s(step_num, 0);
+	vector <int> dp(step_num, 0);
+	for (int i = 0; i < step_num; i++) 
+		cin >> steps[i];
+	dp[0] = steps[0];
+	dp[1] = steps[1] + dp[0];
+	dp[2] = max(0 + steps[1], steps[0]) + steps[2];
+	//max
+	//1 -> jump 2 steps
+	//2 -> jump 1 step(should be 1 prev is from 3 prev)
+	for (int i = 3; i < step_num; i++) 
+		dp[i] = max(dp[i - 2], dp[i - 3] + steps[i - 1]) + steps[i];
+	cout << dp[step_num - 1];
 	return (0);
 }
 

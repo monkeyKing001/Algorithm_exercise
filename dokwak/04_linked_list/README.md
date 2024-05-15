@@ -8,3 +8,5 @@
 | ? | [1000](https://www.acmicpc.net/problem/1000) | [1000.cpp](./1000/1000.cpp) |  |
 | easy | [10845](https://www.acmicpc.net/problem/10845) | [10845.cpp](./10845/10845.cpp) | Deque |
 | easy | [1966](https://www.acmicpc.net/problem/1966) | [1966.cpp](./1966/1966.cpp) |  |
+| easy | [1158](https://www.acmicpc.net/problem/1158) | [1158.cpp](./1158/1158.cpp) | josephus seq |
+| easy | [14713](https://www.acmicpc.net/problem/14713) | [14713.cpp](./14713/14713.cpp) |  |
