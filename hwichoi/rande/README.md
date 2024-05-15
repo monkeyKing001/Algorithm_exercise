@@ -32,3 +32,6 @@
 | ? | [25215](https://www.acmicpc.net/problem/25215) | [25215.cpp](./25215/25215.cpp) |  |
 | ? | [17264](https://www.acmicpc.net/problem/17264) | [17264.cpp](./17264/17264.cpp) |  |
 | ? | [30702](https://www.acmicpc.net/problem/30702) | [30702.cpp](./30702/30702.cpp) |  |
+| ? | [29808](https://www.acmicpc.net/problem/29808) | [29808.cpp](./29808/29808.cpp) |  |
+| ? | [30645](https://www.acmicpc.net/problem/30645) | [30645.cpp](./30645/30645.cpp) |  |
+| ? | [27375](https://www.acmicpc.net/problem/27375) | [27375.cpp](./27375/27375.cpp) |  |
