@@ -46,3 +46,4 @@
 | mid | [20055](https://www.acmicpc.net/problem/20055) | [20055.cpp](./20055/20055.cpp) |  |
 | easy | [2477](https://www.acmicpc.net/problem/2477) | [2477.cpp](./2477/2477.cpp) |  |
 | ? | [14503](https://www.acmicpc.net/problem/14503) | [14503.cpp](./14503/14503.cpp) |  |
+| ? | [1966](https://www.acmicpc.net/problem/1966) | [1966.cpp](./1966/1966.cpp) |  |
