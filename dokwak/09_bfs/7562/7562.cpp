@@ -6,11 +6,13 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
+#define row first;
+#define col second;
 
 using namespace std;
 int dr[8] = {2, 2, -1, 1, -2, -2, -1, 1};
 int dc[8] = {1, -1, -2, -2, -1, 1, 2, 2};
-int board[301][301];
+vector<vector<int>> board(301, vector<int> (301, -1));
 
 int	main(int argc, char **argv)
 {
@@ -21,39 +23,40 @@ int	main(int argc, char **argv)
 	for (int t = 0; t < T; t++)
 	{
 		cin >> size;
-		for (int i = 0; i < size; i++)
-		{
+		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++)
-				board[i][j] = 0;
+				board[i][j] = -1;
 		}
-		int start_r, start_c;
-		int target_r, target_c;
+		bool find = false;
+		int minStepCount = 0;
+		int start_r = 0, start_c = 0, target_r = 0, target_c = 0;
 		cin >> start_r >> start_c >> target_r >> target_c;
-		board[start_r][start_c] = 1;
+		if (start_r == target_r && start_c == target_c)
+			find = true;
+		board[start_r][start_c] = 0;
 		queue <pair <int, int> > q;
 		q.push(make_pair(start_r, start_c));
-		while (q.size())
-		{
-			int c_r = q.front().first;
-			int c_c = q.front().second;
-			int c_step = board[c_r][c_c];
+		while (q.size() && !find) {
+			int curR = q.front().row;
+			int curC = q.front().col;
+			int curStep = board[curR][curC];
 			q.pop();
-			if (c_r == target_r && c_c == target_c)
-			{
-				cout << c_step - 1 << "\n";
-				break ;
-			}
-			for (int i = 0; i < 8; i++)
-			{
-				int n_r = c_r + dr[i]; 
-				int n_c = c_c + dc[i]; 
-				if (n_r > -1 && n_r < size && n_c > -1 && n_c < size && !board[n_r][n_c])
-				{
-					board[n_r][n_c] = c_step + 1;
-					q.push(make_pair(n_r, n_c));
+			int nextStep = curStep + 1;
+			for (int i = 0; i < 8 && !find; i++) {
+				int nextR = curR + dr[i];
+				int nextC = curC + dc[i];
+				if (nextR >= 0  && nextR < size && nextC >= 0 && nextC < size && board[nextR][nextC] == -1){
+					board[nextR][nextC] = nextStep;
+					if (nextR == target_r && nextC == target_c){
+						find = true;
+						minStepCount = nextStep;
+						break;
+					}
+					q.push({nextR, nextC});
 				}
 			}
 		}
+		cout << minStepCount << "\n";
 	}
 	return (0);
 }
