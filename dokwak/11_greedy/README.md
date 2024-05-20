@@ -45,4 +45,5 @@
 | easy | [11497](https://www.acmicpc.net/problem/11497) | [11497.cpp](./11497/11497.cpp) |  |
 | mid | [1374](https://www.acmicpc.net/problem/1374) | [1374.cpp](./1374/1374.cpp) | pq |
 | mid | [15903](https://www.acmicpc.net/problem/15903) | [15903.cpp](./15903/15903.cpp) |  |
-| ? | [1080](https://www.acmicpc.net/problem/1080) | [1080.cpp](./1080/1080.cpp) |  |
+| hard | [1080](https://www.acmicpc.net/problem/1080) | [1080.cpp](./1080/1080.cpp) | every move |
+| mid | [2437](https://www.acmicpc.net/problem/2437) | [2437.cpp](./2437/2437.cpp) |  |

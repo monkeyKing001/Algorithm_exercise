@@ -11,3 +11,4 @@
 | hard | [2473](https://www.acmicpc.net/problem/2473) | [2473.cpp](./2473/2473.cpp) |  |
 | hard | [20922](https://www.acmicpc.net/problem/20922) | [20922.cpp](./20922/20922.cpp) | updating length is super tricky |
 | hard | [2470](https://www.acmicpc.net/problem/2470) | [2470.cpp](./2470/2470.cpp) | Math.abs. be caution for what to compare to what. adding int + int cannot convert to long correctly. overflow first |
+| ? | [1484](https://www.acmicpc.net/problem/1484) | [1484.cpp](./1484/1484.cpp) |  |

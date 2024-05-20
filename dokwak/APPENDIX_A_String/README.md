@@ -52,3 +52,5 @@
 | mid | [14725](https://www.acmicpc.net/problem/14725) | [14725.cpp](./14725/14725.cpp) | Trie. bug : container overflow -> reference usage bug? |
 | hard | [7490](https://www.acmicpc.net/problem/7490) | [7490.cpp](./7490/7490.cpp) |  |
 | mid | [4659](https://www.acmicpc.net/problem/4659) | [4659.cpp](./4659/4659.cpp) |  |
+| ? | [1251](https://www.acmicpc.net/problem/1251) | [1251.cpp](./1251/1251.cpp) |  |
+| ? | [2941](https://www.acmicpc.net/problem/2941) | [2941.cpp](./2941/2941.cpp) |  |

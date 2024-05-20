@@ -37,3 +37,9 @@ long max_h = Arrays.stream(trees).max().getAsInt();
 | mid | [2110](https://www.acmicpc.net/problem/2110) | [2110.cpp](./2110/2110.cpp) | binary search tree, minimum distance. |
 | mid | [2696](https://www.acmicpc.net/problem/2696) | [2696.cpp](./2696/2696.cpp) | not binary search. use pq for bigger, smaller. |
 | easy | [11568](https://www.acmicpc.net/problem/11568) | [11568.cpp](./11568/11568.cpp) | Longest Increasing Sequence. |
+| easy | [2343](https://www.acmicpc.net/problem/2343) | [2343.cpp](./2343/2343.cpp) |  |
+| ? | [1939](https://www.acmicpc.net/problem/1939) | [1939.cpp](./1939/1939.cpp) |  |
+| ? | [3020](https://www.acmicpc.net/problem/3020) | [3020.cpp](./3020/3020.cpp) |  |
+| ? | [2512](https://www.acmicpc.net/problem/2512) | [2512.cpp](./2512/2512.cpp) |  |
+| ? | [2428](https://www.acmicpc.net/problem/2428) | [2428.cpp](./2428/2428.cpp) |  |
+| ? | [17266](https://www.acmicpc.net/problem/17266) | [17266.cpp](./17266/17266.cpp) |  |
