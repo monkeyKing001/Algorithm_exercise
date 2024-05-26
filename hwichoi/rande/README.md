@@ -39,3 +39,7 @@
 | ? | [30804](https://www.acmicpc.net/problem/30804) | [30804.cpp](./30804/30804.cpp) |  |
 | ? | [28017](https://www.acmicpc.net/problem/28017) | [28017.cpp](./28017/28017.cpp) |  |
 | ? | [20165](https://www.acmicpc.net/problem/20165) | [20165.cpp](./20165/20165.cpp) |  |
+| ? | [31861](https://www.acmicpc.net/problem/31861) | [31861.cpp](./31861/31861.cpp) |  |
+| ? | [28420](https://www.acmicpc.net/problem/28420) | [28420.cpp](./28420/28420.cpp) |  |
+| ? | [30459](https://www.acmicpc.net/problem/30459) | [30459.cpp](./30459/30459.cpp) |  |
+| ? | [31863](https://www.acmicpc.net/problem/31863) | [31863.cpp](./31863/31863.cpp) |  |
