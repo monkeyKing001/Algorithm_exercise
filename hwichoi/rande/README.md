@@ -43,3 +43,11 @@
 | ? | [28420](https://www.acmicpc.net/problem/28420) | [28420.cpp](./28420/28420.cpp) |  |
 | ? | [30459](https://www.acmicpc.net/problem/30459) | [30459.cpp](./30459/30459.cpp) |  |
 | ? | [31863](https://www.acmicpc.net/problem/31863) | [31863.cpp](./31863/31863.cpp) |  |
+| ? | [2015](https://www.acmicpc.net/problem/2015) | [2015.cpp](./2015/2015.cpp) |  |
+| ? | [1546](https://www.acmicpc.net/problem/1546) | [1546.cpp](./1546/1546.cpp) |  |
+| ? | [31784](https://www.acmicpc.net/problem/31784) | [31784.cpp](./31784/31784.cpp) |  |
+| ? | [28471](https://www.acmicpc.net/problem/28471) | [28471.cpp](./28471/28471.cpp) |  |
+| ? | [26259](https://www.acmicpc.net/problem/26259) | [26259.cpp](./26259/26259.cpp) |  |
+| ? | [24262](https://www.acmicpc.net/problem/24262) | [24262.cpp](./24262/24262.cpp) |  |
+| ? | [1092](https://www.acmicpc.net/problem/1092) | [1092.cpp](./1092/1092.cpp) |  |
+| ? | [25712](https://www.acmicpc.net/problem/25712) | [25712.cpp](./25712/25712.cpp) |  |
