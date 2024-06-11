@@ -30,3 +30,5 @@
 | ? | [2133](https://www.acmicpc.net/problem/2133) | [2133.cpp](./2133/2133.cpp) |  |
 | ? | [1915](https://www.acmicpc.net/problem/1915) | [1915.cpp](./1915/1915.cpp) |  |
 | ? | [14002](https://www.acmicpc.net/problem/14002) | [14002.cpp](./14002/14002.cpp) |  |
+| ? | [4095](https://www.acmicpc.net/problem/4095) | [4095.cpp](./4095/4095.cpp) |  |
+| ? | [25706](https://www.acmicpc.net/problem/25706) | [25706.cpp](./25706/25706.cpp) |  |
