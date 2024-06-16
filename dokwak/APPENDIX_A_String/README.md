@@ -54,3 +54,6 @@
 | mid | [4659](https://www.acmicpc.net/problem/4659) | [4659.cpp](./4659/4659.cpp) |  |
 | ? | [1251](https://www.acmicpc.net/problem/1251) | [1251.cpp](./1251/1251.cpp) |  |
 | ? | [2941](https://www.acmicpc.net/problem/2941) | [2941.cpp](./2941/2941.cpp) |  |
+| ? | [2852](https://www.acmicpc.net/problem/2852) | [2852.cpp](./2852/2852.cpp) |  |
+| easy | [3613](https://www.acmicpc.net/problem/3613) | [3613.cpp](./3613/3613.cpp) |  |
+| ? | [5430](https://www.acmicpc.net/problem/5430) | [5430.cpp](./5430/5430.cpp) |  |

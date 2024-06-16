@@ -9,42 +9,40 @@
 #include <vector>
 using namespace std;
 int n, m;
-long long v1, v2, cost;
-long long total_cost[200][200];
 #define MAX 100000000
+#define ll long long
 
 int	main(int argc, char **argv)
 {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cin >> n >> m;
-	for (int i = 0; i < n; ++i) {
-		for (int j = 0; j < n; j++) {
-				total_cost[i+1][j+1] = MAX;
-		}
+	vector<vector<ll>> g(n + 1, vector<ll> (n + 1 ,MAX));
+	for (int i = 0; i < m; i++) {
+		ll u, v, cost;
+		cin >> u >> v >> cost;
+		g[u][v] = min(g[u][v], cost);
 	}
-	for (int i = 0; i < m; ++i) {
-		cin >> v1 >> v2 >> cost;
-		total_cost[v1][v2] = min(total_cost[v1][v2], cost);
-	}
-	for (int i = 0; i < n; ++i) {
-		int bridge = i + 1;
-		for (int j = 0; j < n; ++j) {
-			for (int k = 0; k < n; ++k) {
-				total_cost[j+1][k+1] = min(total_cost[j+1][k+1], total_cost[j+1][bridge] + total_cost[bridge][k+1]);
+	for (int i = 1; i < n + 1; i++) {
+		ll bridge = i;
+		g[bridge][bridge] = 0;
+		for (int j = 1; j < n + 1; j++) {
+			ll start = j;
+			for (int k = 1; k < n + 1; k++) {
+				ll end = k;
+				g[start][end] = min(g[start][bridge] + g[bridge][end], g[start][end]);
 			}
 		}
 	}
-	for (int i = 0; i < n; ++i)
-	{
-		for (int j = 0; j < n; ++j)
-		{
-			if (total_cost[i+1][j+1] != MAX && i != j)	
-				cout << total_cost[i+1][j+1] << " ";
+	for (int i = 1; i < n + 1; i++) {
+		for (int j = 1; j < n + 1; j++) {
+			if (g[i][j] == MAX)
+				cout << "0";
 			else
-				cout << "0 ";
+				cout << g[i][j];
+			cout << " ";
 		}
-		cout << "\n";
+		cout <<"\n";
 	}
 	return (0);
 }
