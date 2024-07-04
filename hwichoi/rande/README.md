@@ -63,3 +63,16 @@
 | ? | [31923](https://www.acmicpc.net/problem/31923) | [31923.cpp](./31923/31923.cpp) |  |
 | ? | [1874](https://www.acmicpc.net/problem/1874) | [1874.cpp](./1874/1874.cpp) |  |
 | ? | [13305](https://www.acmicpc.net/problem/13305) | [13305.cpp](./13305/13305.cpp) |  |
+| ? | [12933](https://www.acmicpc.net/problem/12933) | [12933.cpp](./12933/12933.cpp) |  |
+| ? | [26646](https://www.acmicpc.net/problem/26646) | [26646.cpp](./26646/26646.cpp) |  |
+| ? | [13423](https://www.acmicpc.net/problem/13423) | [13423.cpp](./13423/13423.cpp) |  |
+| ? | [15829](https://www.acmicpc.net/problem/15829) | [15829.cpp](./15829/15829.cpp) |  |
+| ? | [15501](https://www.acmicpc.net/problem/15501) | [15501.cpp](./15501/15501.cpp) |  |
+| ? | [29726](https://www.acmicpc.net/problem/29726) | [29726.cpp](./29726/29726.cpp) |  |
+| ? | [27313](https://www.acmicpc.net/problem/27313) | [27313.cpp](./27313/27313.cpp) |  |
+| ? | [16988](https://www.acmicpc.net/problem/16988) | [16988.cpp](./16988/16988.cpp) |  |
+| ? | [23088](https://www.acmicpc.net/problem/23088) | [23088.cpp](./23088/23088.cpp) |  |
+| ? | [25376](https://www.acmicpc.net/problem/25376) | [25376.cpp](./25376/25376.cpp) |  |
+| ? | [27114](https://www.acmicpc.net/problem/27114) | [27114.cpp](./27114/27114.cpp) |  |
+| ? | [1253](https://www.acmicpc.net/problem/1253) | [1253.cpp](./1253/1253.cpp) |  |
+| ? | [23352](https://www.acmicpc.net/problem/23352) | [23352.cpp](./23352/23352.cpp) |  |
