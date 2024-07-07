@@ -63,3 +63,4 @@
 | ? | [31923](https://www.acmicpc.net/problem/31923) | [31923.cpp](./31923/31923.cpp) |  |
 | ? | [1874](https://www.acmicpc.net/problem/1874) | [1874.cpp](./1874/1874.cpp) |  |
 | ? | [13305](https://www.acmicpc.net/problem/13305) | [13305.cpp](./13305/13305.cpp) |  |
+| ? | [25049](https://www.acmicpc.net/problem/25049) | [25049.cpp](./25049/25049.cpp) |  |
