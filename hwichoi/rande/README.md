@@ -76,3 +76,7 @@
 | ? | [27114](https://www.acmicpc.net/problem/27114) | [27114.cpp](./27114/27114.cpp) |  |
 | ? | [1253](https://www.acmicpc.net/problem/1253) | [1253.cpp](./1253/1253.cpp) |  |
 | ? | [23352](https://www.acmicpc.net/problem/23352) | [23352.cpp](./23352/23352.cpp) |  |
+| ? | [23830](https://www.acmicpc.net/problem/23830) | [23830.cpp](./23830/23830.cpp) |  |
+| ? | [22936](https://www.acmicpc.net/problem/22936) | [22936.cpp](./22936/22936.cpp) |  |
+| ? | [25046](https://www.acmicpc.net/problem/25046) | [25046.cpp](./25046/25046.cpp) |  |
+| ? | [25049](https://www.acmicpc.net/problem/25049) | [25049.cpp](./25049/25049.cpp) |  |
