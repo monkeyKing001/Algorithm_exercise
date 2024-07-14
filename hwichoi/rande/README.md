@@ -78,3 +78,10 @@
 | ? | [23352](https://www.acmicpc.net/problem/23352) | [23352.cpp](./23352/23352.cpp) |  |
 >>>>>>> 6845a89bf1059e46c650c2e80b4875476d2e4832
 >>>>>>> 582e797c6dd63ddad247c883db5982a2ac558c51
+| ? | [14621](https://www.acmicpc.net/problem/14621) | [14621.cpp](./14621/14621.cpp) |  |
+| ? | [1098](https://www.acmicpc.net/problem/1098) | [1098.cpp](./1098/1098.cpp) |  |
+| ? | [22116](https://www.acmicpc.net/problem/22116) | [22116.cpp](./22116/22116.cpp) |  |
+| ? | [24453](https://www.acmicpc.net/problem/24453) | [24453.cpp](./24453/24453.cpp) |  |
+| ? | [14411](https://www.acmicpc.net/problem/14411) | [14411.cpp](./14411/14411.cpp) |  |
+| ? | [27210](https://www.acmicpc.net/problem/27210) | [27210.cpp](./27210/27210.cpp) |  |
+| ? | [gogo](https://www.acmicpc.net/problem/gogo) | [gogo.cpp](./gogo/gogo.cpp) |  |

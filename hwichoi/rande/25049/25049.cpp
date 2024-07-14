@@ -22,27 +22,22 @@ int	main()
 	// ldp[k]: k까지 봤을 때 acm의 최솟값
 	// rdp[k]: n ~ n-k까지 봤을 때 acm의 최댓값
 	// ldp2[k]: k까지 봤을 때 부분합의 최댓값
-	rdp[n+1] = -2147483648;
+  ldp[0] = 2000000000;
 	for (int i = 1; i <= n; ++i) {
 		ldp[i] = min(ldp[i-1], acm[i]);
 		ldp2[i] = max(ldp2[i-1], acm[i] - ldp[i]);
-		rdp[n+1-i] = max(rdp[n+1-i+1], acm[n+1-i]);
-	}
-	rdp[0] = max(rdp[1], acm[0]);
-	long long res = rdp[0] - acm[0];
-	for (int i = 1; i <= n; ++i) {
-		res = max(ldp2[i] + rdp[i] - acm[i], res);
 	}
 
-	for (int i = 0; i <= n; ++i) cout << acm[i] << ' ';
-	cout << '\n';
-	for (int i = 0; i <= n; ++i) cout << ldp[i] << ' ';
-	cout << '\n';
-	for (int i = 0; i <= n; ++i) cout << rdp[i] << ' ';
-	cout << '\n';
-	for (int i = 0; i <= n; ++i) cout << ldp2[i] << ' ';
-	cout << '\n';
+	rdp[n+1] = -2000000000;
+  for (int i = n; i > 0; --i) {
+    rdp[i] = max(rdp[i+1], acm[i]);
+  }
 
-	cout << res << ' ' <<  acm[n];
+	long long res = 0;
+	for (int i = 0; i < n; ++i) {
+		res = max(ldp2[i] + rdp[i+1] - acm[i], res);
+	}
+
+	cout << res + acm[n];
 }
 
