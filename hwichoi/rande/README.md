@@ -85,3 +85,6 @@
 | ? | [14411](https://www.acmicpc.net/problem/14411) | [14411.cpp](./14411/14411.cpp) |  |
 | ? | [27210](https://www.acmicpc.net/problem/27210) | [27210.cpp](./27210/27210.cpp) |  |
 | ? | [gogo](https://www.acmicpc.net/problem/gogo) | [gogo.cpp](./gogo/gogo.cpp) |  |
+| ? | [23829](https://www.acmicpc.net/problem/23829) | [23829.cpp](./23829/23829.cpp) |  |
+| ? | [16974](https://www.acmicpc.net/problem/16974) | [16974.cpp](./16974/16974.cpp) |  |
+| ? | [15926](https://www.acmicpc.net/problem/15926) | [15926.cpp](./15926/15926.cpp) |  |
