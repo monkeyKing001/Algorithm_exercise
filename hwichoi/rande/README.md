@@ -91,3 +91,7 @@
 | ? | [31778](https://www.acmicpc.net/problem/31778) | [31778.cpp](./31778/31778.cpp) |  |
 | ? | [28422](https://www.acmicpc.net/problem/28422) | [28422.cpp](./28422/28422.cpp) |  |
 | ? | [1885](https://www.acmicpc.net/problem/1885) | [1885.cpp](./1885/1885.cpp) |  |
+| ? | [23069](https://www.acmicpc.net/problem/23069) | [23069.cpp](./23069/23069.cpp) |  |
+| ? | [32069](https://www.acmicpc.net/problem/32069) | [32069.cpp](./32069/32069.cpp) |  |
+| ? | [27979](https://www.acmicpc.net/problem/27979) | [27979.cpp](./27979/27979.cpp) |  |
+| ? | [25381](https://www.acmicpc.net/problem/25381) | [25381.cpp](./25381/25381.cpp) |  |
