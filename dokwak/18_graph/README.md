@@ -85,3 +85,4 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | ? | [samsung_sw_01](https://swexpertacademy.com/main/code/codeBattle/problemDetail.do?contestProbId=AYkfqUaKLp0DFASe&categoryId=AYkf6zw6MwMDFASe&categoryType=BATTLE&battleMainPageIndex=) | [samsung_sw_01.cpp](./samsung_sw_01/samsung_sw_01.cpp) | cycle doesnt work. why? edge_index wrong coding |
 | ? | [2533](https://www.acmicpc.net/problem/2533) | [2533.cpp](./2533/2533.cpp) |  |
 | ? | [15681](https://www.acmicpc.net/problem/15681) | [15681.cpp](./15681/15681.cpp) |  |
+| ? | [1033](https://www.acmicpc.net/problem/1033) | [1033.cpp](./1033/1033.cpp) |  |

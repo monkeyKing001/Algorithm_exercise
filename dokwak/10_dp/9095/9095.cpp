@@ -11,17 +11,18 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	int n;
 	cin >> n;
-	vector <int> way(12, 0);
-	way[1] = 1;
-	way[2] = 2;
-	way[3] = 4;
-	for (int i = 4; i < 12; i++)
-		way[i] = way[i - 1] + way[i - 2] + way[i - 3];
-	for (int i = 0; i < n; i ++)
-	{
-		int out;
-		cin >> out;
-		cout << way[out] << "\n";
+	int T = n;
+	vector <int> dp(11, 0);
+	dp[0] = 0;
+	dp[1] = 1;
+	dp[2] = (dp[1] + (dp[0] + 1));  //2
+	dp[3] = (dp[2] + dp[1] + dp[0] + 1); //4
+	for (int i = 4; i < 11; i++) 
+		dp[i] = dp[i- 1] + dp[i - 2] + dp[i - 3];  
+	for (int t_i = 0; t_i < T; t_i++) {
+		int num;
+		cin >> num;
+		cout << dp[num] << "\n";
 	}
 	return (0);
 }

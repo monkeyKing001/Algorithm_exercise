@@ -6,12 +6,12 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
+#define COST first
+#define CUSTOMER second
 using namespace std;
 int n, m;
-int minCustomer = 0;
-int maxCost = 100001;
-#define getCustomer first
-#define costToPromo second
+int max_cost = 100001;
+int sol = max_cost;
 
 int	main(int argc, char **argv)
 {
@@ -19,27 +19,25 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	cout.tie(0);
 	vector<pair<int, int>> info;
-	cin >> minCustomer >> n;
-	int limit = (minCustomer + 101);
-	vector<int> dp(limit, maxCost);
-	for (int i = 0; i < n; i++) {
-		int cost, customer;
-		cin >> cost >> customer;
-		info.push_back({customer, cost});
+	vector<int> dp(1111, max_cost);//min cost for customer
+	int customer, city_count;
+	dp[0] = 0;
+	cin >> customer >> city_count;
+	for (int i = 0; i < city_count; i++) {
+		int cost, return_customer;
+		cin >> cost >> return_customer;
+		info.push_back({return_customer, cost});
 	}
 	sort(info.begin(), info.end());
 	for (int i = 0; i < info.size(); i++) {
-		int customer = info[i].getCustomer;
-		int cost = info[i].costToPromo;
-		dp[customer] = min(dp[customer], cost);
-	}
-	int sol = 100001;
-	for (int i = 0; i < limit; i++) {
-		for (int j = 0; j <= i - j; j++) {
-			dp[i] = min(dp[i], dp[i - j] + dp[j]);
-			if (i >= minCustomer)
-				sol = min(sol, dp[i]);
+		int return_customer = info[i].first;
+		int cur_cost = info[i].second;
+		for (int j = return_customer; j < customer + 101; j++) {
+			dp[j] = min(dp[j], cur_cost + dp[j - return_customer]);
 		}
+	}
+	for (int i = customer; i < customer + 101; i++) {
+		sol = min(sol, dp[i]);
 	}
 	cout << sol;
 	return (0);

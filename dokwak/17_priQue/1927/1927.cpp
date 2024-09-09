@@ -5,6 +5,7 @@
 #include <climits>
 #include <map>
 #include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 int pq[100001] = {};
@@ -106,23 +107,19 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	int n;
 	cin >> n;
-//	for (int i = 0; i < 10; i++)
-//	{
-//		cout << pq[i] << "\n";
-//	}
-	for (int i = 0; i < n; i++)
-	{
+	priority_queue<int, vector<int>, greater<int>> pq;
+	for (int i = 0; i < n; i++) {
 		int cmd;
 		cin >> cmd;
-		if (cmd == 0)
-		{
-//			cout << "pop out!\n";
-			pop();
-		}
-		else
-		{
-			push(cmd);
-//			cout << "push " << cmd << "\n";
+		if (cmd > 0)
+			pq.push(cmd);
+		else{
+			int out = 0;
+			if (!pq.empty()){
+				out = pq.top();
+				pq.pop();
+			}
+			cout << out << "\n";
 		}
 	}
 	return (0);

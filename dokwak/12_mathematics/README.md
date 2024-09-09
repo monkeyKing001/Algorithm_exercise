@@ -19,3 +19,4 @@
 | hard | [1300](https://www.acmicpc.net/problem/1300) | [1300.cpp](./1300/1300.cpp) | Hint 1) B[k]를 T라 하자.(T는 행렬 내에 존재하는 수 중에 k 번째 큰 수이다.) 행렬 내의 임의의 값 x에 대해서 n(x ≤ B[k]) ≥ T를 만족해야한다. 
 Hint 2) n(x ≤ B[k])는 for i = 1; i ≤ n 중에 k / i 값을 이용해 쉽게 구할 수 있다. 갯수 구하는 것은 복잡도 n이다. 연산 시간은 충분하다. |
 | mid | [1027](https://www.acmicpc.net/problem/1027) | [1027.cpp](./1027/1027.cpp) |  |
+| hard | [10830](https://www.acmicpc.net/problem/10830) | [10830.cpp](./10830/10830.cpp) | not dp. |
