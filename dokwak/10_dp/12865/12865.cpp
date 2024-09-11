@@ -7,93 +7,41 @@
 #include <string>
 
 using namespace std;
-int max_w;
-int dp[101][100001];
-bool comp(pair <int, int> a, pair<int, int> b)
-{
-	return (a.first < b.first);
-}
+int max_weight = 100001;
 int	main(int argc, char **argv)
 {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	int n, k;
 	cin >> n >> k;
-	vector <pair <int, int> > load;
-	for (int i = 0; i < n; i++)
-	{
+	vector<vector<int>> weight_dp(n, vector<int> (k + 1, 0));
+	vector<pair<int, int>> info_weight;
+	for (int i = 0; i < n; i++) {
 		int w, v;
 		cin >> w >> v;
-		load.push_back(make_pair(w, v));
+		info_weight.push_back({w, v});
 	}
-	for (int i = 1; i <= k; i++)
-	{
-		int item_w = load[0].first;
-		int item_v = load[0].second;
-		if (item_w <= i)
-			dp[0][i] = item_v;
-	}
-	for (int i = 1; i < n; i++)
-	{
-		int item_w = load[i].first;
-		int item_v = load[i].second;
-		for (int j = 1; j <= k; j++)
-		{
-			int max_w = j;
-			//max(not choose, choose)
-			if (max_w - item_w >= 0)
-			{
-				dp[i][j] = max(dp[i - 1][max_w],
-						dp[i - 1][max_w - item_w] + item_v);
+	sort(info_weight.begin(), info_weight.end());
+	//solve with weight dp
+	for (int i = 0; i < info_weight.size(); i++) {
+		int cur_w = info_weight[i].first;
+		int cur_value = info_weight[i].second;
+		if (i == 0){
+			weight_dp[i][cur_w] = cur_value;
+		}
+		else{
+			for (int j = 0; j < cur_w; j++) {
+				weight_dp[i][j] = weight_dp[i - 1][j];
 			}
-			else {
-				dp[i][j] = dp[i-1][j];
+			for (int j = cur_w; j < k + 1; j++) {
+				weight_dp[i][j] = max(weight_dp[i - 1][j], weight_dp[i - 1][j - cur_w] + cur_value);
 			}
 		}
 	}
-//	for (int i = 0; i < n; i++)
-//	{
-//		int item_w = load[i].first;
-//		int item_v = load[i].second;
-//		for (int j = 1; j <= k; j++)
-//		{
-//			int max_w = j;
-//			//max(not choose, choose)
-//			cout << dp[i][j] << " ";
-//		}
-//		cout << "\n";
-//	}
-	cout << dp[n-1][k] << "\n";
-//	sort(load.begin(), load.end(), comp);
-	//wrong way
-//	for (int i = 1; i <= k; i++)
-//	{
-//		for (int j = 1; j <= i / 2; j++)
-//		{
-//			if (j != i - j 
-//					&&
-//					dp[i - j]
-//					&&
-//					dp[j]
-//					&&
-//					dp[i] < dp[j] + dp[i - j])
-//			{
-////				cout
-////					<< "dp["
-////					<< i
-////					<< "] : "
-////					<< dp[i]
-////					<< " =  dp["
-////					<< j
-////					<< "] : "
-////					<< dp[j]
-////					<< " dp["
-////					<< i - j
-////					<< "] : "
-////					<< dp[i - j] << "\n";
-//				dp[i] = dp[j] + dp[i - j];
-//			}
-//		}
-//	}
+	int sol = INT_MIN;
+	for (int i = 0; i < k + 1; i++) {
+		sol = max(sol, weight_dp[n - 1][i]);
+	}
+	cout << sol << "\n";
 	return (0);
 }
