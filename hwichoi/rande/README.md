@@ -5,3 +5,4 @@
 | ? | [30108](https://www.acmicpc.net/problem/30108) | [30108.cpp](./30108/30108.cpp) |  |
 | ? | [11918](https://www.acmicpc.net/problem/11918) | [11918.cpp](./11918/11918.cpp) |  |
 | ? | [3061](https://www.acmicpc.net/problem/3061) | [3061.cpp](./3061/3061.cpp) |  |
+| ? | [32203](https://www.acmicpc.net/problem/32203) | [32203.cpp](./32203/32203.cpp) |  |
