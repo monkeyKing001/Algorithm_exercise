@@ -4,8 +4,10 @@
 *.txt
 .DS_Store
 *.txt
-*.out
+*.out*
 *.Class
 *.class
 Makefile
 *.o
+a.out
+.gdb_history

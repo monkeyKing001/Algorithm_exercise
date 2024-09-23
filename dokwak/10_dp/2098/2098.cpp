@@ -6,63 +6,50 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
-
-#define MAX 987654321
 using namespace std;
 int n, m;
-int dp[17][(2 << 16)];
-int dist[17][17];
+int max_cost = 16111111;
 
-int TSP(int cur, int bits_visited) //bits_visited -> 0 ~ 2^n;
-{
-	if (bits_visited == (1 << n) - 1)
-	{
-//		cout << "traveling from "<< cur <<" has end.\n";
-//		cout << "cost : " << dist[cur][0] << "\n";
-		if (dist[cur][0] == 0)
-			return MAX;
-		return dist[cur][0]; //base case; 
+vector<vector<int>> g;
+vector<vector<int>> dp;
+int all_visited_bits = 0;
+int start = 0;
+
+int TSP(int cur, int visited_bits){
+	if (visited_bits == all_visited_bits)
+		return (g[cur][start]);
+	if (dp[cur][visited_bits] != -1)
+		return (dp[cur][visited_bits]);
+	dp[cur][visited_bits] = max_cost;
+	for (int i = 0; i < n; i++){
+		int next = i;
+		int next_bits = 1 << next;
+		if (next_bits & visited_bits)
+			continue;
+		dp[cur][visited_bits] = min(dp[cur][visited_bits], TSP(next, visited_bits | next_bits) + g[cur][next]);
 	}
-	int &cur_cost = dp[cur][bits_visited];
-	if (cur_cost != -1)//if visited, return visited cost
-	{
-//		cout << cur <<" has been visited. the cost is " << cur_cost << "\n";
-		return cur_cost;
-	}
-	//dp start
-	cur_cost = MAX;
-	for (int next = 0; next < n; next++)
-	{
-		//1st fixt
-		if ((bits_visited & (1 << next)) == (1 << next))//according to bits_visited, next has been visited?
-			continue ;//then continue;
-		if (dist[cur][next] == 0)//next has not visited but no path btw cur and next 
-			continue ;//then continue;
-//		cout << "going from, to : " << cur << ", " << next << "\n";
-		cur_cost = min(cur_cost, TSP(next, bits_visited | (1 << next)) + dist[cur][next]);
-//		cout << "after travel, from, next, bits_visited, cost is " << cur << ", " 
-//			<< next << ", " << bits_visited << ", " << cur_cost << "\n";
-		//next hasn't visited and has path btw cur - next
-	}
-	return (cur_cost);
+	return (dp[cur][visited_bits]);
 }
 
-int	main(int argc, char **argv)
-{
+int	main(int argc, char **argv) {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
 	cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			cin >> dist[i][j];
-//			cout << dist[i][j] << " ";
+	all_visited_bits = (1 << n) - 1;
+    g.resize(n, vector<int>(n));  // Resize and initialize the cost matrix
+    dp.resize(n, vector<int>(all_visited_bits, -1));  // DP table to store results
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cin >> g[i][j];
+			if (g[i][j] == 0)
+				g[i][j] = max_cost;
 		}
 	}
-	memset(dp, -1 ,sizeof(dp));
-	cout << TSP(0, 1) << "\n";
+	start = n / 2;
+	int visited_bits = 1 << start;
+	int sol = TSP(start, visited_bits);
+	cout << sol;
 	return (0);
 }
 
