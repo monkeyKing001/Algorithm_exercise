@@ -1,6 +1,7 @@
 # 10_dp
 * tip
 * dp_index starts from 0; *
+* sol을 for에서 찾을 때 vs 마지막 배열에서 찾을 때를 잘 구별하기
 
 | level | problem | my_ans | hint |
 | :--: | :--: | :--: | :--: |
@@ -72,4 +73,9 @@
 | mid | [11501](https://www.acmicpc.net/problem/11501) | [11501.cpp](./11501/11501.cpp) | memoization for future max price |
 | mid | [1106](https://www.acmicpc.net/problem/1106) | [1106.cpp](./1106/1106.cpp) |  |
 | hard | [2515](https://www.acmicpc.net/problem/2515) | [2515.cpp](./2515/2515.cpp) | memo : limitHeight[n], dp[n] |
-| hard`| [1311](https://www.acmicpc.net/problem/1311) | [1311.cpp](./1311/1311.cpp) | mem access error -> mistake TSP(next + 1, ...)  not TSP(cur + 1 )|
+| hard| [1311](https://www.acmicpc.net/problem/1311) | [1311.cpp](./1311/1311.cpp) | mem access error -> mistake TSP(next + 1, ...)  not TSP(cur + 1 )|
+| mid | [1937](https://www.acmicpc.net/problem/1937) | [1937.cpp](./1937/1937.cpp) | edge case : all of grids have same value |
+| hard | [2631](https://www.acmicpc.net/problem/2631) | [2631.cpp](./2631/2631.cpp) | LIS |
+| hard | [2011](https://www.acmicpc.net/problem/2011) | [2011.cpp](./2011/2011.cpp) | be careful for '0' case |
+| hard | [5557](https://www.acmicpc.net/problem/5557) | [5557.cpp](./5557/5557.cpp) |  |
+| ? | [2240](https://www.acmicpc.net/problem/2240) | [2240.cpp](./2240/2240.cpp) |  |

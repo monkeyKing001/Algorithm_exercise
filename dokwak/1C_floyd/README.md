@@ -6,3 +6,4 @@
 | easy | [1865](https://www.acmicpc.net/problem/1865) | [1865.cpp](./1865/1865.cpp) | be cautious for overflow, no way case |
 | easy | [1389](https://www.acmicpc.net/problem/1389) | [1389.cpp](./1389/1389.cpp) |  |
 | easy | [1976](https://www.acmicpc.net/problem/1976) | [1976.cpp](./1976/1976.cpp) |  |
+| ? | [1240](https://www.acmicpc.net/problem/1240) | [1240.cpp](./1240/1240.cpp) |  |

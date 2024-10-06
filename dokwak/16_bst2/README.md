@@ -44,3 +44,4 @@ long max_h = Arrays.stream(trees).max().getAsInt();
 | ? | [2428](https://www.acmicpc.net/problem/2428) | [2428.cpp](./2428/2428.cpp) |  |
 | ? | [17266](https://www.acmicpc.net/problem/17266) | [17266.cpp](./17266/17266.cpp) |  |
 | hard | [1300](https://www.acmicpc.net/problem/1300) | [1300.cpp](./1300/1300.cpp) | bst. |
+| ? | [25343](https://www.acmicpc.net/problem/25343) | [25343.cpp](./25343/25343.cpp) |  |

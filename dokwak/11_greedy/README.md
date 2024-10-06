@@ -49,3 +49,7 @@
 | mid | [2437](https://www.acmicpc.net/problem/2437) | [2437.cpp](./2437/2437.cpp) |  |
 | mid | [13164](https://www.acmicpc.net/problem/13164) | [13164.cpp](./13164/13164.cpp) | diff in pq, total_cost |
 | ? | [1311](https://www.acmicpc.net/problem/1311) | [1311.cpp](./1311/1311.cpp) |  |
+| hard | [1700](https://www.acmicpc.net/problem/1700) | [1700.cpp](./1700/1700.cpp) |  |
+| hard | [1052](https://www.acmicpc.net/problem/1052) | [1052.cpp](./1052/1052.cpp) |  |
+| hard | [1781](https://www.acmicpc.net/problem/1781) | [1781.cpp](./1781/1781.cpp) | 1) use pq. 2) update prev jobs. 3) time vs pq.size() |
+| hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) |  |

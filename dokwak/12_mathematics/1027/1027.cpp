@@ -8,6 +8,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+double min_tan = -1110000000;
 int n, m;
 
 int	main(int argc, char **argv)
@@ -19,41 +20,41 @@ int	main(int argc, char **argv)
 	vector<int> buildings(n, 0);
 	for (int i = 0; i < n; i++) 
 		cin >> buildings[i];
-	vector<vector<double>> tan(n, vector<double> (n, 0));
+	vector<vector<double>> info(n, vector<double> (n, 0));
 	for (int i = 0; i < n; i++) {
-		int curH = buildings[i];
+		int cur_building = i;
+		int cur_h = buildings[i];
 		for (int j = i + 1; j < n; j++) {
-			int nextH = buildings[j];
-			tan[i][j] = (double)(nextH - curH) / (double)abs(j - i);
-			tan[j][i] = -tan[i][j];
+			int w = (j - i);
+			int next_h = buildings[j];
+			double tan = (double)(next_h - cur_h) / (double)w;
+			info[i][j] = tan;
+			info[j][i] = -tan;
 		}
 	}
-	vector<int> count (n, 0);
-	int sol = -1;
+	int sol = 0;
 	for (int i = 0; i < n; i++) {
-		int cur = i;
-//		cout << "cur : " << cur << "\n";
-		//leftCount
-
-		double leftMax = INT_MIN;
-		for (int j = cur - 1; j >= 0; j--) {
-			if (tan[cur][j] > leftMax){
-				count[cur]++;
-				leftMax = tan[cur][j];
+		//left view count;
+		int count = 0;
+//		cout << "cur building, h : " << i << ", " << buildings[i] << "\n";
+		double left_max = min_tan;
+		for (int j = i - 1; j >= 0; j--) {
+			if (info[i][j] > left_max){
+				count++;
+				left_max = info[i][j];
 			}
 		}
-		//right count
-		double rightMax = INT_MIN;
-		for (int j = cur + 1; j < n; j++) {
-			if (tan[cur][j] > rightMax){
-				count[cur]++;
-				rightMax = tan[cur][j];
+		//right view count;
+		double right_max = min_tan;
+		for (int j = i + 1; j < n; j++) {
+			if (info[i][j] > right_max){
+				count++;
+				right_max = info[i][j];
 			}
 		}
-//		cout << "count of cur : " << count[cur] << "\n";
-		sol = max(sol, count[cur]);
+		sol = max(sol, count);
 	}
-	cout <<sol;
+	cout << sol;
 	return (0);
 }
 
