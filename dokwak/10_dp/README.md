@@ -79,3 +79,5 @@
 | hard | [2011](https://www.acmicpc.net/problem/2011) | [2011.cpp](./2011/2011.cpp) | be careful for '0' case |
 | hard | [5557](https://www.acmicpc.net/problem/5557) | [5557.cpp](./5557/5557.cpp) |  |
 | ? | [2240](https://www.acmicpc.net/problem/2240) | [2240.cpp](./2240/2240.cpp) |  |
+| ? | [11055](https://www.acmicpc.net/problem/11055) | [11055.cpp](./11055/11055.cpp) |  |
+| ? | [9084](https://www.acmicpc.net/problem/9084) | [9084.cpp](./9084/9084.cpp) |  |
