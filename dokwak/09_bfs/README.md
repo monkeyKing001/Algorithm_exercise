@@ -27,3 +27,5 @@
 | hard | [2589](https://www.acmicpc.net/problem/2589) | [2589.cpp](./2589/2589.cpp) | bfs + dfs |
 | hard | [27440](https://www.acmicpc.net/problem/27440) | [27440.cpp](./27440/27440.cpp) | bug 1. set.find() is not working -> problem was <= vs <  sol 1. TLE. reason : long vs long long |
 | easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
+| ? | [2573](https://www.acmicpc.net/problem/2573) | [2573.cpp](./2573/2573.cpp) |  |
+| ? | [3109](https://www.acmicpc.net/problem/3109) | [3109.cpp](./3109/3109.cpp) |  |

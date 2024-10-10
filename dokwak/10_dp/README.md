@@ -81,3 +81,6 @@
 | ? | [2240](https://www.acmicpc.net/problem/2240) | [2240.cpp](./2240/2240.cpp) |  |
 | ? | [11055](https://www.acmicpc.net/problem/11055) | [11055.cpp](./11055/11055.cpp) |  |
 | ? | [9084](https://www.acmicpc.net/problem/9084) | [9084.cpp](./9084/9084.cpp) |  |
+| ? | [1699](https://www.acmicpc.net/problem/1699) | [1699.cpp](./1699/1699.cpp) |  |
+| ? | [1949](https://www.acmicpc.net/problem/1949) | [1949.cpp](./1949/1949.cpp) |  |
+| ? | [2533](https://www.acmicpc.net/problem/2533) | [2533.cpp](./2533/2533.cpp) |  |
