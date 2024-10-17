@@ -9,7 +9,7 @@
 | hard | [2342](https://www.acmicpc.net/problem/2342) | [2342.cpp](./2342/2342.cpp) | 3d dp array |
 | ? | [2012](https://www.acmicpc.net/problem/2012) | [2012.cpp](./2012/2012.cpp) |  |
 | ? | [7830](https://www.acmicpc.net/problem/7830) | [7830.cpp](./7830/7830.cpp) |  |
-| ? | [1715](https://www.acmicpc.net/problem/1715) | [1715.cpp](./1715/1715.cpp) |  |
+| hard | [1715](https://www.acmicpc.net/problem/1715) | [1715.cpp](./1715/1715.cpp) | caution :  |
 | mid | [1041](https://www.acmicpc.net/problem/1041) | [1041.cpp](./1041/1041.cpp) | 1d, 2d, 3d case |
 | mid | [11000](https://www.acmicpc.net/problem/11000) | [11000.cpp](./11000/11000.cpp) | sort, pq |
 | mid | [1744](https://www.acmicpc.net/problem/1744) | [1744.cpp](./1744/1744.cpp) | many case or pq for + - 0 1 |
@@ -53,3 +53,4 @@
 | hard | [1052](https://www.acmicpc.net/problem/1052) | [1052.cpp](./1052/1052.cpp) |  |
 | hard | [1781](https://www.acmicpc.net/problem/1781) | [1781.cpp](./1781/1781.cpp) | 1) use pq. 2) update prev jobs. 3) time vs pq.size() |
 | hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) |  |
+| hard | [2841](https://www.acmicpc.net/problem/2841) | [2841.cpp](./2841/2841.cpp) |  |

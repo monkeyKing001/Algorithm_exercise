@@ -8,3 +8,4 @@
 | easy | [11399](https://www.acmicpc.net/problem/11399) | [11399.cpp](./11399/11399.cpp) | `priority_queue<int, vector<int>, greater<int>>` |
 | ? | [15903](https://www.acmicpc.net/problem/15903) | [15903.cpp](./15903/15903.cpp) |  |
 | mid | [1931](https://www.acmicpc.net/problem/1931) | [1931.cpp](./1931/1931.cpp) |  |
+| mid | [1655](https://www.acmicpc.net/problem/1655) | [1655.cpp](./1655/1655.cpp) |  |

@@ -6,3 +6,4 @@
 | mid | [11053](https://www.acmicpc.net/problem/11053) | [11053.cpp](./11053/11053.cpp) | can be solved by DP |
 | ? | [12015](https://www.acmicpc.net/problem/12015) | [12015.cpp](./12015/12015.cpp) |  |
 | easy | [7795](https://www.acmicpc.net/problem/7795) | [7795.cpp](./7795/7795.cpp) | bst |
+| mid | [13334](https://www.acmicpc.net/problem/13334) | [13334.cpp](./13334/13334.cpp) |  |
