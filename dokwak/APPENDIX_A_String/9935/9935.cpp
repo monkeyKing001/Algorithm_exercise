@@ -15,29 +15,25 @@ int	main(int argc, char **argv)
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
-	string origin, target;
+	string origin, bomb;
 	string buf = "";
-	cin >> origin >> target;
+	cin >> origin >> bomb;
 	for (int i = 0; i < origin.length(); i++) {
-		char chr = origin[i];
-		buf += chr;
-		if (chr == target[target.length() - 1]){
-			bool made = false;
-			for (int j = 0; j < target.length(); j++) {
-				int bufIdx = buf.length() - 1 - j;
-				int targetIdx = target.length() - 1 - j;
-				if (bufIdx < 0)
+		char cur_char = origin[i];
+		buf.push_back(cur_char);
+		if (buf.back() == bomb.back()){
+			//check bomb
+			bool bomb_made = false;
+			int cur_i = buf.size() - 1;
+			for (int j = 0; j < bomb.size() && cur_i - j >= 0; j++) {
+				if (bomb[bomb.size() - 1 - j] != buf[cur_i - j])
 					break;
-				if (buf[bufIdx] != target[targetIdx])
-					break;
-				if (targetIdx == 0)
-					made = true;
+				if (j == bomb.size() - 1)
+					bomb_made = true;
 			}
-			if (made){
-				for (int i = 0; i < target.length(); i++) {
+			if (bomb_made){
+				for (int i = 0; i < bomb.size(); i++) 
 					buf.pop_back();
-				}
-//				cout << "now buf is : "<<  buf << "\n";
 			}
 		}
 	}
