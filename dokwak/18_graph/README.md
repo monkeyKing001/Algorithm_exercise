@@ -86,3 +86,5 @@ Edge List: An edge list is a simple list of edges, where each edge is represente
 | ? | [2533](https://www.acmicpc.net/problem/2533) | [2533.cpp](./2533/2533.cpp) |  |
 | ? | [15681](https://www.acmicpc.net/problem/15681) | [15681.cpp](./15681/15681.cpp) |  |
 | ? | [1033](https://www.acmicpc.net/problem/1033) | [1033.cpp](./1033/1033.cpp) |  |
+| ? | [2098](https://www.acmicpc.net/problem/2098) | [2098.cpp](./2098/2098.cpp) |  |
+| ? | [1199](https://www.acmicpc.net/problem/1199) | [1199.cpp](./1199/1199.cpp) |  |

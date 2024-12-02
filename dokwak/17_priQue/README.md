@@ -9,3 +9,5 @@
 | ? | [15903](https://www.acmicpc.net/problem/15903) | [15903.cpp](./15903/15903.cpp) |  |
 | mid | [1931](https://www.acmicpc.net/problem/1931) | [1931.cpp](./1931/1931.cpp) |  |
 | mid | [1655](https://www.acmicpc.net/problem/1655) | [1655.cpp](./1655/1655.cpp) |  |
+| hard | [1700](https://www.acmicpc.net/problem/1700) | [1700.cpp](./1700/1700.cpp) | page exchange algorithm. |
+| hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) | 3% WA ->  |

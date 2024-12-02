@@ -6,17 +6,15 @@
 #include <map>
 #include <string>
 #include <bits/stdc++.h>
-#define ll long long
 
 using namespace std;
-ll n, m, k;
-bool inRange(ll target){
-	ll count = 0;
-	for (int i = 1; i < n + 1; i++)
-		count += min(target / (ll)i, n);
-	if (count >= k)
-		return (true);
-	return (false);
+int n, m, k;
+bool possible(int target){
+	int count = 0;
+	for (int i = 1; i <= n; i++){
+		count += min((target / i), n);
+	}
+	return (count >= k);
 }
 
 int	main(int argc, char **argv) {
@@ -25,16 +23,15 @@ int	main(int argc, char **argv) {
 	cout.tie(0);
 	cin >> n >> m;
 	k = m;
-	ll l = 1;
-	ll r = k;
-	ll temp = -1;
-	while (l <= r) {
-		ll mid = (l + r) / 2;
-		if (inRange(mid)){
-			temp = mid;
+	int l = 0, r = k;
+	int temp = -1;
+	while (l <= r){
+		int mid = (l + r) / 2;
+		if (possible(mid)){
 			r = mid - 1;
+			temp = mid;
 		}
-		else
+		else 
 			l = mid + 1;
 	}
 	cout << temp;

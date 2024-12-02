@@ -2,7 +2,7 @@ SRC = 2098.cpp
 #input manual cpp
 #SRC = main.cpp
 CFLAGS =
-CDEBUG = -g -fsanitize=address -std=c++11
+CDEBUG = -g -fsanitize=address -std=c++17
 RM = rm -f
 CC = g++
 SRC_DIR = .

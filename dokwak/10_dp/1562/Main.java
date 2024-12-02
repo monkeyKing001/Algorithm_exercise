@@ -31,9 +31,9 @@ public class Main{
 		//make dp
 		for (int layer = 1; layer < n; layer++) {
 			for (int last_num = 0; last_num < 10; last_num++) {
+				int post_num = last_num + 1;
+				int prev_num = last_num - 1;
 				for (int bits = 0; bits < (1 << 10); bits++) {
-					int post_num = last_num + 1;
-					int prev_num = last_num - 1;
 					if (prev_num > -1)
 					{
 						dp[layer + 1][prev_num][bits | 1 << prev_num] += dp[layer][last_num][bits];
