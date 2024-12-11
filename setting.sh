@@ -48,10 +48,13 @@ printf "\033[1;34m"
 printf "downloading skeleton files for LINUX\n"
 printf ".\n.\n.\n"
 printf "\033[0m"
+url=https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.java -o ~/.vim/${temp_dir}/skeleton.java
 curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
+curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/README.md -o ~/.vim/${temp_dir}/README.md
 printf "\033[1;34m"
 printf ".\n.\n.\n"
 printf "completed downloading skeleton files.\n"
@@ -91,7 +94,6 @@ do
 done
 
 vim -c "source %" -c "PluginInstall" -c "q" -c "q"
-
 
 ########################################
 #######     setting alias       ########

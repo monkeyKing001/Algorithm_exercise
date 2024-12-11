@@ -219,13 +219,13 @@ if [ ! -d ${problem_num} ];
 	then
 	readme="README.md"
 	# if no README, make new one
-	if [ ! -e README.md ];then
-		echo "# ${dir}" > README.md
-		echo "| level | problem | my_ans | hint |" >> README.md
-		echo "| :--: | :--: | :--: | :--: |" >> README.md
+	if [ ! -e ${readme} ];then
+		echo "# ${dir}" > ${readme}
+		echo "| level | problem | my_ans | hint |" >> ${readme}
+		echo "| :--: | :--: | :--: | :--: |" >> ${readme}
 	fi
 	# append problem num
-	echo "| ? | [${problem_num}](${url}/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> README.md
+	echo "| ? | [${problem_num}](${url}/${problem_num}) | [${problem_num}.cpp](./${problem_num}/${problem_num}.cpp) |  |" >> ${readme}
 
 	########################################
 	#######    problem initalize    ########
