@@ -3,6 +3,11 @@
 Welcome. This is *Room of Spirit and Time*. In this place, you can train yourself for problem solving efficiently. we have automated for some tiresome and trivial tasks you would face during solving algorithm problems. (ex. making main func, including libraries, compiling and testing... etc.).
 this repository would help if you are working out with cpp(or java) and vim(or neovim) editor.
 
+## Dependencies
+```
+wget
+```
+
 ## Step 1. Setting (Linux and Macos)
 run below codes in your terminal console.
 ```

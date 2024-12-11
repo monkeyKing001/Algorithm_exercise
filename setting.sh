@@ -48,13 +48,14 @@ printf "\033[1;34m"
 printf "downloading skeleton files for LINUX\n"
 printf ".\n.\n.\n"
 printf "\033[0m"
-url=https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
+templates_url=https://github.com/monkeyKing001/Algorithm_exercise/.tools/
 
-curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp
-curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.java -o ~/.vim/${temp_dir}/skeleton.java
-curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
-curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/README.md -o ~/.vim/${temp_dir}/README.md
+wget --no-parent -r ${templates_url}
+
+#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
+#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.java -o ~/.vim/${temp_dir}/skeleton.java
+#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
+#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/README.md -o ~/.vim/${temp_dir}/README.md
 printf "\033[1;34m"
 printf ".\n.\n.\n"
 printf "completed downloading skeleton files.\n"
@@ -62,7 +63,7 @@ printf "\033[0m"
 
 # update vimrc
 # c_template
-temp_list=(skeleton.c skeleton.cpp skeleton.java skeleton_makefile) 
+temp_list=(skeleton.c skeleton.cpp skeleton.java skeleton_makefile README.md) 
 for temp_file in "${temp_list[@]}"
 do
 	exist=`cat ~/.vimrc | grep "~/.vim/templates/${temp_file}"`
@@ -86,6 +87,10 @@ do
 		if [ "${temp_file}" = "skeleton_makefile" ];
 		then
 			cmd="Makefile"
+		fi
+		if [ "${temp_file}" = "README.md" ];
+		then
+			cmd="README.md"
 		fi
 		printf "updated vimrc; :autocmd BufNewFile ${cmd} 0r ~/.vim/templates/${temp_file}\n"
 		printf "\033[0m"

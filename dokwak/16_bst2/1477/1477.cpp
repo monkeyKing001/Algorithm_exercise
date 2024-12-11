@@ -1,10 +1,3 @@
-#include <vector>
-#include <iostream>
-#include <cmath> 
-#include <algorithm>
-#include <climits>
-#include <map>
-#include <string>
 #include <bits/stdc++.h>
 
 using namespace std;

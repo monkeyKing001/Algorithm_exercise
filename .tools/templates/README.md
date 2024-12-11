@@ -15,7 +15,7 @@ $$ O(n) $$
 # Hint
 
 <details>
-<summary> <font size="5"> hint 1. </font> </summary>
+<summary> <font size="4"> hint 1 </font> </summary>
 <div markdown="1">
 
  contents
@@ -23,11 +23,27 @@ $$ O(n) $$
 </div>
 </details>
 
-- Time complexity:
-<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+# Tricky point
 
-- Space complexity:
-<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+<details>
+<summary> <font size="4"> Tricky point 1. </font> </summary>
+<div markdown="1">
+
+ contents
+
+</div>
+</details>
+
+# Trouble shooting
+
+<details>
+<summary> <font size="4"> Trouble 1. </font> </summary>
+<div markdown="1">
+
+ contents
+
+</div>
+</details>
 
 # Code
 ```cpp []
