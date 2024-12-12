@@ -1,6 +1,6 @@
 # Welcome to Algorithm training room
 
-![Room of Spirit and Time](https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EC%25A0%2595%25EC%258B%25A0%25EA%25B3%25BC%2520%25EC%258B%259C%25EA%25B0%2584%25EC%259D%2598%2520%25EB%25B0%25A9&psig=AOvVaw3yZKeDhF9STcVaWCGdlBtL&ust=1734007460560000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDLgqffn4oDFQAAAAAdAAAAABAE)
+![Room of Spirit and Time](https://i.namu.wiki/i/WWpoWs9ZOC-KvA5k-f-R4V0hW4eiChD_5aDTGQ1YtDEzKjZCQDTCl1g0wUytqqs1QjrZ_daJ88sZZzo3NiKb_LKghsAtPeCREfta8dfNciG4feUvZxns0DiUk0y4HBii5nMp33namhOvgyfAL0Kd2A.webp)
 
 Welcome to the Room of Spirit and Time! In this place, you can efficiently train yourself in problem-solving. We have automated many tiresome and trivial tasks you might face while solving algorithm problems, such as creating a main function, including libraries, compiling, testing, etc. This repository is especially helpful if you work with C++ (or Java) and use Vim (or Neovim) as your editor.
 
