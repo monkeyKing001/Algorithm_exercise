@@ -43,19 +43,14 @@ then
 	mkdir ~/.vim/${temp_dir} 
 fi
 
-# download templates
+#download templates
 printf "\033[1;34m"
 printf "downloading skeleton files for LINUX\n"
 printf ".\n.\n.\n"
 printf "\033[0m"
-templates_url=https://github.com/monkeyKing001/Algorithm_exercise/.tools/
 
-wget --no-parent -r ${templates_url}
+cp -r ./.tools/templates/ ~/.vim/${temp_dir}
 
-#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.cpp -o ~/.vim/${temp_dir}/skeleton.cpp curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.c -o ~/.vim/${temp_dir}/skeleton.c
-#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton.java -o ~/.vim/${temp_dir}/skeleton.java
-#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/skeleton_makefile -o ~/.vim/${temp_dir}/skeleton_makefile
-#curl https://raw.githubusercontent.com/monkeyKing001/Vim_Settings_LNX/main/templates/README.md -o ~/.vim/${temp_dir}/README.md
 printf "\033[1;34m"
 printf ".\n.\n.\n"
 printf "completed downloading skeleton files.\n"
