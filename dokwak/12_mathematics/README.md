@@ -20,3 +20,4 @@
 Hint 2) n(x ≤ B[k])는 for i = 1; i ≤ n 중에 k / i 값을 이용해 쉽게 구할 수 있다. 갯수 구하는 것은 복잡도 n이다. 연산 시간은 충분하다. |
 | mid | [1027](https://www.acmicpc.net/problem/1027) | [1027.cpp](./1027/1027.cpp) |  |
 | hard | [10830](https://www.acmicpc.net/problem/10830) | [10830.cpp](./10830/10830.cpp) | not dp. |
+| ? | [30802](https://www.acmicpc.net/problem/30802) | [30802.cpp](./30802/30802.cpp) |  |

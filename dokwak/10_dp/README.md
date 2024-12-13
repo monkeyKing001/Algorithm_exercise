@@ -87,3 +87,5 @@
 | easy | [15988](https://www.acmicpc.net/problem/15988) | [15988.cpp](./15988/15988.cpp) | be careful for mod. |
 | easy | [9655](https://www.acmicpc.net/problem/9655) | [9655.cpp](./9655/9655.cpp) |  |
 | mid | [2616](https://www.acmicpc.net/problem/2616) | [2616.cpp](./2616/2616.cpp) |  |
+| hard | [2629](https://www.acmicpc.net/problem/2629) | [2629.cpp](./2629/2629.cpp) | unordered_set |
+| mid | [15989](https://www.acmicpc.net/problem/15989) | [15989.cpp](./15989/15989.cpp) | last digit |
