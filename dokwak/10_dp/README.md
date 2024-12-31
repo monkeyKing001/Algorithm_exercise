@@ -90,3 +90,6 @@
 | hard | [2629](https://www.acmicpc.net/problem/2629) | [2629.cpp](./2629/2629.cpp) | unordered_set |
 | mid | [15989](https://www.acmicpc.net/problem/15989) | [15989.cpp](./15989/15989.cpp) | last digit |
 | mid | [4811](https://www.acmicpc.net/problem/4811) | [4811.cpp](./4811/4811.cpp) | same with 1,2,3 problem |
+| mid | [9184](https://www.acmicpc.net/problem/9184) | [9184.cpp](./9184/9184.cpp) |  |
+| ? | [1309](https://www.acmicpc.net/problem/1309) | [1309.cpp](./1309/1309.cpp) |  |
+| ? | [2169](https://www.acmicpc.net/problem/2169) | [2169.cpp](./2169/2169.cpp) |  |
