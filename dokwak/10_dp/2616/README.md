@@ -1,14 +1,64 @@
-#include <vector>
-#include <iostream>
-#include <cmath> 
-#include <algorithm>
-#include <climits>
-#include <map>
-#include <string>
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+same with leetcode not overlapping maximum 3 subarray.
+
+# Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+$$ O(n) $$
+
+- Space complexity:
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+$$ O(n) $$
+
+# Hint
+
+<details>
+<summary> <font size="4"> hint 1 </font> </summary>
+<div markdown="1">
+
+need left dp, right dp, dp.
+
+</div>
+</details>
+
+# Tricky point
+
+<details>
+<summary> <font size="4"> Tricky point 1. </font> </summary>
+<div markdown="1">
+
+check correctly left idx, right idx, now idx 
+
+</div>
+</details>
+
+# Trouble shooting
+
+<details>
+<summary> <font size="4"> Trouble 1. when m = 1, idx can be out of range </font> </summary>
+<div markdown="1">
+
+fixed with
+```c++
+	if (i + 1 <= n - 1)
+		dp_right[i] = max(dp_right[i], dp_right[i + 1]);
+```
+
+</div>
+</details>
+
+# Code
+```cpp []
+
 #include <bits/stdc++.h>
 
 using namespace std;
 int n, m;
+
 
 int	main(int argc, char **argv)
 {
@@ -56,3 +106,5 @@ int	main(int argc, char **argv)
 	cout << ans;
 	return (0);
 }
+```
+
