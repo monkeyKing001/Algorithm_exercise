@@ -10,6 +10,7 @@ vector<vector<int>> map_;
 vector<vector<info>> path_;
 vector<vector<vector<int>>> dp;
 vector<vector<bool>> visited_;
+
 int rec(int r, int c, int dir){
 	if (r == n - 1 && c == m - 1)
 		return(map_[n - 1][m - 1]);

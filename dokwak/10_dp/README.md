@@ -93,3 +93,5 @@
 | mid | [9184](https://www.acmicpc.net/problem/9184) | [9184.cpp](./9184/9184.cpp) |  |
 | ? | [1309](https://www.acmicpc.net/problem/1309) | [1309.cpp](./1309/1309.cpp) |  |
 | hard | [2169](https://www.acmicpc.net/problem/2169) | [2169.cpp](./2169/2169.cpp) |  |
+| easy | [17175](https://www.acmicpc.net/problem/17175) | [17175.cpp](./17175/17175.cpp) |  |
+| mid | [4781](https://www.acmicpc.net/problem/4781) | [4781.cpp](./4781/4781.cpp) |  |
