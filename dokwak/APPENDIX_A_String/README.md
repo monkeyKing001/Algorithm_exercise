@@ -59,3 +59,4 @@
 | ? | [5430](https://www.acmicpc.net/problem/5430) | [5430.cpp](./5430/5430.cpp) |  |
 | ? | [20437](https://www.acmicpc.net/problem/20437) | [20437.cpp](./20437/20437.cpp) |  |
 | ? | [2870](https://www.acmicpc.net/problem/2870) | [2870.cpp](./2870/2870.cpp) |  |
+| easy | [26546](https://www.acmicpc.net/problem/26546) | [26546.cpp](./26546/26546.cpp) |  |

@@ -11,11 +11,12 @@ $$ O(n) $$
 
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
+$$ O(n) $$
 
 # Hint
 
 <details>
-<summary> <font size="4"> hint 1 </font> </summary>
+<summary> <font size="3"> hint 1 </font> </summary>
 <div markdown="1">
 
  contents
@@ -26,7 +27,7 @@ $$ O(n) $$
 # Tricky point
 
 <details>
-<summary> <font size="4"> Tricky point 1. </font> </summary>
+<summary> <font size="3"> Tricky point 1. </font> </summary>
 <div markdown="1">
 
  contents
@@ -37,7 +38,7 @@ $$ O(n) $$
 # Trouble shooting
 
 <details>
-<summary> <font size="4"> Trouble 1. </font> </summary>
+<summary> <font size="3"> Trouble 1. </font> </summary>
 <div markdown="1">
 
  contents

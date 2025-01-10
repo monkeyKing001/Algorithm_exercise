@@ -22,3 +22,4 @@ Hint 2) n(x ≤ B[k])는 for i = 1; i ≤ n 중에 k / i 값을 이용해 쉽게
 | hard | [10830](https://www.acmicpc.net/problem/10830) | [10830.cpp](./10830/10830.cpp) | not dp. |
 | ? | [30802](https://www.acmicpc.net/problem/30802) | [30802.cpp](./30802/30802.cpp) |  |
 | ? | [5014](https://www.acmicpc.net/problem/5014) | [5014.cpp](./5014/5014.cpp) |  |
+| easy | [2358](https://www.acmicpc.net/problem/2358) | [2358.cpp](./2358/2358.cpp) |  |
