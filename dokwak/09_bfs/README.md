@@ -29,3 +29,4 @@
 | easy | [1260](https://www.acmicpc.net/problem/1260) | [1260.cpp](./1260/1260.cpp) |  |
 | ? | [2573](https://www.acmicpc.net/problem/2573) | [2573.cpp](./2573/2573.cpp) |  |
 | ? | [3109](https://www.acmicpc.net/problem/3109) | [3109.cpp](./3109/3109.cpp) |  |
+| ? | [6593](https://www.acmicpc.net/problem/6593) | [6593.cpp](./6593/6593.cpp) |  |
