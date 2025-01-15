@@ -54,3 +54,4 @@
 | hard | [1781](https://www.acmicpc.net/problem/1781) | [1781.cpp](./1781/1781.cpp) | 1) use pq. 2) update prev jobs. 3) time vs pq.size() |
 | hard | [1202](https://www.acmicpc.net/problem/1202) | [1202.cpp](./1202/1202.cpp) |  |
 | hard | [2841](https://www.acmicpc.net/problem/2841) | [2841.cpp](./2841/2841.cpp) |  |
+| ? | [31845](https://www.acmicpc.net/problem/31845) | [31845.cpp](./31845/31845.cpp) |  |

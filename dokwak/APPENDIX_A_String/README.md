@@ -60,3 +60,5 @@
 | ? | [20437](https://www.acmicpc.net/problem/20437) | [20437.cpp](./20437/20437.cpp) |  |
 | ? | [2870](https://www.acmicpc.net/problem/2870) | [2870.cpp](./2870/2870.cpp) |  |
 | easy | [26546](https://www.acmicpc.net/problem/26546) | [26546.cpp](./26546/26546.cpp) |  |
+| easy | [5338](https://www.acmicpc.net/problem/5338) | [5338.cpp](./5338/5338.cpp) |  |
+| ? | [15725](https://www.acmicpc.net/problem/15725) | [15725.cpp](./15725/15725.cpp) |  |
