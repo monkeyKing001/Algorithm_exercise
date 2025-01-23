@@ -9,23 +9,18 @@
 
 using namespace std;
 int n, m, startPoint;
-string dfsPath;
-string bfsPath;
-void dfs(int cur, vector<set<int>> &g, vector<bool> &visited){
-	if (visited[cur])
-		return;
-//	cout << "visiting : " << cur << "\n";
-	string nextStr = to_string(cur);
-	dfsPath += nextStr;
-	dfsPath.push_back(' ');
-	visited[cur] = true;
-	set<int>::iterator it = g[cur].begin();
-	while (it != g[cur].end()){
-		int next = *it;
-		if (!visited[next])
-			dfs(next, g, visited);
-		it++;
-	}
+string dfsPath = "";
+string bfsPath = "";
+vector<set<int>> g;
+vector<bool> visitedDfs;
+vector<bool> visitedBfs;
+
+void dfs(int node){
+  dfsPath += (to_string(node) + " "); 
+  visitedDfs[node] = true;
+  for (auto child : g[node]){
+    if (!visitedDfs[child]) dfs(child);
+  }
 }
 
 int	main(int argc, char **argv)
@@ -34,40 +29,37 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	cout.tie(0);
 	cin >> n >> m >> startPoint;
-	vector<set<int>> g(n + 1);
-	vector<bool> visitedDfs(n + 1, false);
+  g.resize(n + 1);
+  bfsPath.reserve(min(n * 4, m * 4));
+  dfsPath.reserve(min(n * 4, m * 4));
 	for (int i = 0; i < m; i++) {
 		int u, v;
 		cin >> u >> v;
 		g[u].insert(v);
 		g[v].insert(u);
 	}
+
 	//dfs
-	dfs(startPoint, g, visitedDfs);
+
+  visitedDfs.resize(n + 1, false);
+  dfs(startPoint);
+
 	//bfs
+  visitedBfs.resize(n + 1, false);
 	queue<int> q;
-	vector<bool> visitedBfs(n + 1, false);
 	q.push(startPoint);
-	string nextStr = to_string(startPoint);
-	bfsPath += nextStr;
-	bfsPath.push_back(' ');
-	visitedBfs[startPoint] = true;
-	while (!q.empty()){
-		int cur = q.front();
-		q.pop();
-		set<int>::iterator it = g[cur].begin();
-		while (it != g[cur].end()){
-			int next = *it;
-			if (!visitedBfs[next]){
-				q.push(next);
-				string nextStr = to_string(next);
-				bfsPath += nextStr;
-				bfsPath.push_back(' ');
-				visitedBfs[next] = true;
-			}
-			it++;
-		}
-	}
+  visitedBfs[startPoint] = true;
+  while (q.size()){
+    int cur = q.front();
+    q.pop();
+    bfsPath += to_string(cur) + " ";
+    for (auto child : g[cur]){
+      if (!visitedBfs[child]){
+        visitedBfs[child] = true;
+        q.push(child);
+      }
+    }
+  }
 	cout << dfsPath << "\n";
 	cout << bfsPath << "\n";
 	return (0);

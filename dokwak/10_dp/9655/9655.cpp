@@ -9,7 +9,6 @@
 
 using namespace std;
 int n, m;
-vector<int> dp(1001, -1);
 
 int	main(int argc, char **argv)
 {
@@ -17,10 +16,8 @@ int	main(int argc, char **argv)
 	cin.tie(0);
 	cout.tie(0);
 	cin >> n;
-	if (n % 2 == 0)
-		cout << "CY";
-	if (n % 2 == 1)
-		cout << "SK";
+  if (n & 1) cout << "SK";
+  else cout << "CY";
 	return (0);
 }
 
