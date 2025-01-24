@@ -1,3 +1,10 @@
+#include <vector>
+#include <iostream>
+#include <cmath> 
+#include <algorithm>
+#include <climits>
+#include <map>
+#include <string>
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,15 +14,13 @@ vector<int> ind;
 
 int	main(int argc, char **argv)
 {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  cout.tie(0);
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
   int T;
   cin >> T;
   for (int t_i = 0; t_i < T; t_i++) {
     cin >> n;
-    g.clear();
-    ind.clear();
     g.resize(n + 1);
     ind.resize(n + 1, 0);
     for (int i = 1; i < n + 1; i++) {

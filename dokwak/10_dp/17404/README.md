@@ -25,25 +25,6 @@ $$ O(n) $$
 
 # Hint
 
-<details>
-<summary> <font size="3"> hint 1 </font> </summary>
-<div markdown="1">
-
- contents
-
-</div>
-</details>
-
-# Tricky point
-
-<details>
-<summary> <font size="3"> Tricky point 1. </font> </summary>
-<div markdown="1">
-
- contents
-
-</div>
-</details>
 
 # Trouble shooting
 
