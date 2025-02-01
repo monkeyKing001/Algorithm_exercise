@@ -96,3 +96,4 @@
 | easy | [17175](https://www.acmicpc.net/problem/17175) | [17175.cpp](./17175/17175.cpp) |  |
 | mid | [4781](https://www.acmicpc.net/problem/4781) | [4781.cpp](./4781/4781.cpp) |  |
 | ? | [14012](https://www.acmicpc.net/problem/14012) | [14012.cpp](./14012/14012.cpp) |  |
+| ? | [13398](https://www.acmicpc.net/problem/13398) | [13398.cpp](./13398/13398.cpp) |  |
