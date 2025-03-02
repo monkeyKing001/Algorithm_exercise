@@ -1,54 +1,41 @@
-#include <vector>
-#include <iostream>
-#include <cmath> 
-#include <algorithm>
-#include <climits>
+#include <bits/stdc++.h>
+
 #define START first
 #define END second
 
 using namespace std;
+using info = pair<int, int>;
 int n;
-bool comp(pair <int, int> table1, pair <int, int> table2)
-{
-	if (table1.END == table2.END)
-		return (table1.START < table2.START);
-	return (table1.END < table2.END);
-}
-pair <int, int> find_min_time(vector <pair<int, int> > time_table, int start_time)
-{
-	return (time_table[0]);
+
+bool cmp (info i1 ,info i2){
+  if (i1.END== i2. END) 
+    return (i1.START < i2.START);
+  return (i1.END < i2.END);
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cin >> n;
-	vector <pair <int, int> > time_table;
-	int current_time = 0;
-	long long time_sum;
-	int meeting_num = 0;
-	for (int i = 0; i < n; ++i)
-	{
-		int start, end;
-		cin >> start >> end;
-		time_table.push_back(make_pair(start, end));
-	}
-	//sort time_table
-	sort(time_table.begin(), time_table.end(), comp);
-//	for (int i = 0; i < n; ++i)
-//	{
-//		cout << "time_table[" << i <<"]: "<<time_table[i].START << " ~ " << time_table[i].END << endl;
-//	}
-	for (int i = 0; i < n; ++i) 
-	{
-		if (current_time <= time_table[i].START)
-		{
-			meeting_num++;
-			current_time = time_table[i].END;
-//			cout << "adding time_table[" << i <<"]: "<<time_table[i].START << " ~ " << time_table[i].END << endl;
-		}
-	}
-	cout << meeting_num;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> n;
+  vector <info> time_table(n);
+  int class_num = 0;
+  for (int i = 0; i < n; i++)
+    cin >> time_table[i].START >> time_table[i].END;
+  sort(time_table.begin(), time_table.end(), cmp);
+  int last_end = 0;
+  for (auto &t: time_table){
+    if (t.START < last_end)
+      continue;
+//    cout
+//      << "next class start, end : " 
+//      << t.START
+//      << ", "
+//      << t.END
+//      << "\n";
+    last_end = t.END;
+    class_num++;
+  }
+  cout << class_num;
 	return (0);
 }

@@ -97,3 +97,8 @@
 | mid | [4781](https://www.acmicpc.net/problem/4781) | [4781.cpp](./4781/4781.cpp) |  |
 | ? | [14012](https://www.acmicpc.net/problem/14012) | [14012.cpp](./14012/14012.cpp) |  |
 | ? | [13398](https://www.acmicpc.net/problem/13398) | [13398.cpp](./13398/13398.cpp) |  |
+| ? | [1670](https://www.acmicpc.net/problem/1670) | [1670.cpp](./1670/1670.cpp) |  |
+| easy | [1598](https://www.acmicpc.net/problem/1598) | [1598.cpp](./1598/1598.cpp) |  |
+| easy | [14916](https://www.acmicpc.net/problem/14916) | [14916.cpp](./14916/14916.cpp) |  |
+| ? | [11048](https://www.acmicpc.net/problem/11048) | [11048.cpp](./11048/11048.cpp) |  |
+| ? | [1890](https://www.acmicpc.net/problem/1890) | [1890.cpp](./1890/1890.cpp) |  |

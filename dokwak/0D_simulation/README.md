@@ -49,3 +49,4 @@
 | ? | [1966](https://www.acmicpc.net/problem/1966) | [1966.cpp](./1966/1966.cpp) |  |
 | mid | [13459](https://www.acmicpc.net/problem/13459) | [13459.cpp](./13459/13459.cpp) |  |
 | ? | [16392](https://www.acmicpc.net/problem/16392) | [16392.cpp](./16392/16392.cpp) |  |
+| ? | [25206](https://www.acmicpc.net/problem/25206) | [25206.cpp](./25206/25206.cpp) |  |

@@ -27,7 +27,8 @@ Example
 
 1. it is clearly sure that you have to use previous infomation to make current case.
 
-2. let's make every sequence as weak increasing
+2. however, we have to count distinct combinations that make sum i
+3. how can we remove duplicate 
 
 # Complexity
 - Time complexity:
@@ -45,7 +46,7 @@ $$ O(n) $$
 # Hint
 
 <details>
-<summary> <font size="4"> hint 1 </font> </summary>
+<summary> <font size="3"> hint 1 </font> </summary>
 <div markdown="1">
 
 how make an seq increasing? what is feature of weak increasing seq?
@@ -54,7 +55,7 @@ how make an seq increasing? what is feature of weak increasing seq?
 </details>
 
 <details>
-<summary> <font size="4"> hint 2 </font> </summary>
+<summary> <font size="3"> hint 2. </font> </summary>
 <div markdown="1">
 
 memo the case count by last digit
@@ -65,15 +66,35 @@ memo the case count by last digit
 # Tricky point
 
 <details>
-<summary> <font size="4"> Tricky point 1. ?  </font> </summary>
+<summary> <font size="3"> Tricky point 1. Why weakly increasing seq guarantees distinct combination?  </font> </summary>
 <div markdown="1">
 
- contents
 
 </div>
 </details>
 
 # Trouble shooting
+
+<details>
+<summary> <font size="3"> Error 1. error on case count for 3  </font> </summary>
+<div markdown="1">
+
+wrong:
+```c++
+dp[1][1] = 1;
+dp[2][1] = 1, dp[2][2] = 1;
+
+```
+
+correct:
+```c++
+
+dp[0][1] = 1;
+dp[1][1] = 1;
+dp[2][1] = 1, dp[2][2] = 1;
+```
+</div>
+</details>
 
 # Code
 ```cpp []
@@ -83,30 +104,29 @@ memo the case count by last digit
 using namespace std;
 int n, m;
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cout.tie(0);
-	int T;
-	cin >> T;
-	vector<vector<int>> dp(10001, vector<int>(4, 0));
-	dp[1][1] = 1;
-	dp[2][1] = 1, dp[2][2] = 1;
-	dp[3][1] = 1, dp[3][2] = 1, dp[3][3] = 1;
-	for (int i = 4; i < 10001; i++){
-		for (int j = 1; j <= 3; j++) {
-			for (int k = 1; k <= j; k++){
-				dp[i][j] += dp[i - j][k];
-			}
-		}
-	}
-	for (int t_i = 0; t_i < T; t_i++) {
-		int num;
-		cin >> num;
-		cout << dp[num][1] + dp[num][2] + dp[num][3] << "\n";
-	}
-	return (0);
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  int T;
+  cin >> T;
+  vector<vector<int>> dp(10001, vector<int>(4, 0));
+  dp[1][1] = 1;
+  dp[2][1] = 1, dp[2][2] = 1;
+  for (int i = 3; i < dp.size(); i++){
+    for (int j = 1; j <= 3; j++) {
+      for (int k = 1; k <= j; k++){
+        dp[i][j] += dp[i - j][k];
+      }
+    }
+  }
+  for (int t_i = 0; t_i < T; t_i++) {
+    int num;
+    cin >> num;
+    cout << dp[num][1] + dp[num][2] +  dp[num][3] << "\n";
+  }
+  return (0);
 }
 
 ```
