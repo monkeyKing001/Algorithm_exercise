@@ -1,42 +1,30 @@
-//#include <bits/stdc++.h>
-#include <vector>
-#include <iostream>
-#include <cmath> 
-#include <algorithm>
-#include <climits>
+#include <bits/stdc++.h>
+
 using namespace std;
 int n;
 
-int make_one(int index, vector <int> &num)
-{
-	if (num[index] != INT_MAX)
-		return (num[index]);
-	//cout << "index : " << index << "\n";
-	if (index == 1)
-		num[index] = 0;
-	else
-	{
-		if (index % 3 == 0)
-			num[index] = min(num[index], make_one(index / 3, num) + 1);
-		if (index % 2 == 0)
-			num[index] = min(num[index], make_one(index / 2, num) + 1);
-		num[index] = min(num[index], make_one(index - 1, num) + 1);
-	}
-	//cout << "updated vec[" << index << "] : " << num[index] << endl;
-	return (num[index]);
-}
-
-
 int	main(int argc, char **argv)
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cin >> n; 
-	vector <int> num(n + 1, INT_MAX);
-//	cout << INT_MAX << endl;;
-//	cout << num[n] << endl;;
-	int sol = make_one(n, num);
-	cout << sol;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> n; 
+  vector <int> nums(n + 1, INT_MAX);
+  queue<pair<int, int>>q;
+  q.push({1, 0});
+  nums[1] = 0;
+  while (q.size() && nums[n] == INT_MAX){
+    auto [num, steps] = q.front();
+    q.pop();
+    for (int i = 0; i < 3; i++) {
+      int next_num = num + 1;
+      if (i == 1) next_num = num * 2;
+      if (i == 2) next_num = num * 3;
+      if (next_num <= n && nums[next_num] == INT_MAX) {
+        nums[next_num] = steps + 1;
+        q.push({next_num, steps + 1});
+      }    
+    }
+  }
+  cout << nums[n];
 	return (0);
 }
-
