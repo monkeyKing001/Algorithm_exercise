@@ -102,3 +102,4 @@
 | easy | [14916](https://www.acmicpc.net/problem/14916) | [14916.cpp](./14916/14916.cpp) |  |
 | ? | [11048](https://www.acmicpc.net/problem/11048) | [11048.cpp](./11048/11048.cpp) |  |
 | ? | [1890](https://www.acmicpc.net/problem/1890) | [1890.cpp](./1890/1890.cpp) |  |
+| ? | [2493](https://www.acmicpc.net/problem/2493) | [2493.cpp](./2493/2493.cpp) |  |

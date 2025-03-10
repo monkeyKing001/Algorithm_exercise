@@ -1,3 +1,14 @@
+# Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+$$ O(n) $$
+
+- Space complexity:
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+$$ O(n) $$
+
+# Code
+```cpp []
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -24,4 +35,7 @@ int	main(int argc, char **argv)
   }
 	return (0);
 }
+
+
+```
 
