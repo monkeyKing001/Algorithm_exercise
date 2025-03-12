@@ -1,2 +1,6 @@
 ACAYKP
 CAPCAK
+
+ans
+4
+ACAK

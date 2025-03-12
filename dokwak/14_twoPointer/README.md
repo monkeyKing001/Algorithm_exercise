@@ -13,3 +13,4 @@
 | hard | [2470](https://www.acmicpc.net/problem/2470) | [2470.cpp](./2470/2470.cpp) | Math.abs. be caution for what to compare to what. adding int + int cannot convert to long correctly. overflow first. abs sum vs sum |
 | ? | [1484](https://www.acmicpc.net/problem/1484) | [1484.cpp](./1484/1484.cpp) |  |
 | ? | [2283](https://www.acmicpc.net/problem/2283) | [2283.cpp](./2283/2283.cpp) |  |
+| ? | [2003](https://www.acmicpc.net/problem/2003) | [2003.cpp](./2003/2003.cpp) |  |

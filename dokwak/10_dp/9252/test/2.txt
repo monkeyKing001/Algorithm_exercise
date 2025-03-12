@@ -1,2 +1,6 @@
 BKCAK
 ABDCKA
+
+ans
+3
+BKA
