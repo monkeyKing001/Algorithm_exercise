@@ -1,16 +1,10 @@
-#include <vector>
-#include <iostream>
-#include <cmath> 
-#include <algorithm>
-#include <climits>
-#include <map>
-#include <string>
 #include <bits/stdc++.h>
 
 using namespace std;
+using info = pair<int, int>;
 int n, m;
 int sol = INT_MAX;
-int dp[101][10001];
+vector<vector<int>> dp(101, vector<int>(10001, 0)); //r = app i, c = total cost;
 
 int	main(int argc, char **argv)
 {
@@ -19,40 +13,27 @@ int	main(int argc, char **argv)
 	cout.tie(0);
 	cin >> n; //app num
 	cin >> m; //need memory
-	vector <pair<int, int>> app;
-	int total_cost = 0;
-	for (int i = 0; i < n; i++)
-	{
-		int mem;
-		cin >> mem;
-		app.push_back({mem, 0});
-	}
-	for (int i = 0; i < n; i++)
-	{
-		int cost;
-		cin >> cost;
-		app[i].second = cost;
-		total_cost += cost;
-	}
-	for (int i = 1; i <= n; i++)
-	{
-		for (int j = 0; j <= total_cost; j++)
-		{
-			int app_mem = app[i - 1].first;
-			int app_cost = app[i - 1].second;
-			if (j >= app_cost)
-			{
-				if (app_mem + dp[i - 1][j - app_cost] > dp[i - 1][j])
-					dp[i][j] = app_mem + dp[i - 1][j - app_cost];
-				else
-					dp[i][j] = dp[i- 1][j];
-			}
-			else {
-				dp[i][j] = dp[i-1][j];
-			}
-			if (dp[i][j] >= m && j < sol)
-				sol = j;
-		}
-	}
-	cout << sol;
+  vector<int> mems(n);
+  vector<int> costs(n);
+  vector<pair<int, int>> apps(n);
+  for (int i = 0; i < n; i++) cin >> apps[i].first;
+  for (int i = 0; i < n; i++) cin >> apps[i].second;
+  int sol = INT_MAX;
+  for (int i = 0; i < n; i++) {
+    auto [mem, cost] = apps[i];
+    if (i == 0){
+      dp[0][cost] = mem;
+      continue;
+    }  
+    else{
+      dp[i] = dp[i - 1];
+      for (int j = 0; j < dp[i].size(); j++){
+        if (j + cost < dp[i].size()) dp[i][j + cost] = max(dp[i][j + cost], dp[i - 1][j] + mem);
+      }
+    }
+  }
+  for (int i = 0; i < dp.back().size() && sol == INT_MAX; i++) 
+    if (dp[n - 1][i] >= m) sol = i;
+  cout << sol;
+  return (0);
 }

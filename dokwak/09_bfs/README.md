@@ -30,3 +30,6 @@
 | ? | [2573](https://www.acmicpc.net/problem/2573) | [2573.cpp](./2573/2573.cpp) |  |
 | ? | [3109](https://www.acmicpc.net/problem/3109) | [3109.cpp](./3109/3109.cpp) |  |
 | ? | [6593](https://www.acmicpc.net/problem/6593) | [6593.cpp](./6593/6593.cpp) |  |
+| ? | [14716](https://www.acmicpc.net/problem/14716) | [14716.cpp](./14716/14716.cpp) |  |
+| ? | [10282](https://www.acmicpc.net/problem/10282) | [10282.cpp](./10282/10282.cpp) |  |
+| ? | [2468](https://www.acmicpc.net/problem/2468) | [2468.cpp](./2468/2468.cpp) |  |
