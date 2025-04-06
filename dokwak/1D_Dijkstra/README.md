@@ -8,3 +8,4 @@
 | mid | [1753](https://www.acmicpc.net/problem/1753) | [1753.cpp](./1753/1753.cpp) | naive Dijkstra |
 | ? | [9372](https://www.acmicpc.net/problem/9372) | [9372.cpp](./9372/9372.cpp) |  |
 | ? | [1446](https://www.acmicpc.net/problem/1446) | [1446.cpp](./1446/1446.cpp) |  |
+| ? | [18352](https://www.acmicpc.net/problem/18352) | [18352.cpp](./18352/18352.cpp) |  |

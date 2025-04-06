@@ -104,3 +104,5 @@
 | ? | [1890](https://www.acmicpc.net/problem/1890) | [1890.cpp](./1890/1890.cpp) |  |
 | ? | [2493](https://www.acmicpc.net/problem/2493) | [2493.cpp](./2493/2493.cpp) |  |
 | ? | [11726](https://www.acmicpc.net/problem/11726) | [11726.cpp](./11726/11726.cpp) |  |
+| ? | [1459](https://www.acmicpc.net/problem/1459) | [1459.cpp](./1459/1459.cpp) |  |
+| ? | [2572](https://www.acmicpc.net/problem/2572) | [2572.cpp](./2572/2572.cpp) |  |

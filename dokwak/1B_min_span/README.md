@@ -145,3 +145,4 @@ priority_queue<int*, vector<int*>, my_compare> pq;
 | ? | [1976](https://www.acmicpc.net/problem/1976) | [1976.cpp](./1976/1976.cpp) |  |
 | ? | [1717](https://www.acmicpc.net/problem/1717) | [1717.cpp](./1717/1717.cpp) |  |
 | ? | [1922](https://www.acmicpc.net/problem/1922) | [1922.cpp](./1922/1922.cpp) |  |
+| ? | [20955](https://www.acmicpc.net/problem/20955) | [20955.cpp](./20955/20955.cpp) |  |

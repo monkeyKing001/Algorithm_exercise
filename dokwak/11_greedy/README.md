@@ -56,3 +56,5 @@
 | hard | [2841](https://www.acmicpc.net/problem/2841) | [2841.cpp](./2841/2841.cpp) |  |
 | ? | [31845](https://www.acmicpc.net/problem/31845) | [31845.cpp](./31845/31845.cpp) |  |
 | ? | [1417](https://www.acmicpc.net/problem/1417) | [1417.cpp](./1417/1417.cpp) |  |
+| ? | [8980](https://www.acmicpc.net/problem/8980) | [8980.cpp](./8980/8980.cpp) |  |
+| ? | [1459](https://www.acmicpc.net/problem/1459) | [1459.cpp](./1459/1459.cpp) |  |
